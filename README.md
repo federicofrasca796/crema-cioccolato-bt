@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Crema e Cioccolato Barletta - Showcase and Menu site
+
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Getting Started
 
@@ -6,21 +8,29 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Commit convention
+
+Commits must follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
+Commitizen has been implemented to help you (aka. me) follow this convention. [Learn more about Commitizen](https://commitizen.github.io/cz-cli/)
+
+To have a guidance on properly formatted commit messages you (again, talking to myself here) should use:
+
+```bash
+git cz
+# or
+npm run commit-msg
+```
+
+Commitizen is configured to use the custom [cz-emoji-conventional](https://github.com/promet99/cz-emoji-conventional) adapter to achieve fancier commits. Emojis help in a sea of text afterall.
+For a classic look switch to commitizen owned [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog) adapter.
+
+## A Next.js project
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -28,9 +38,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
