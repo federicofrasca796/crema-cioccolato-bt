@@ -2,26 +2,48 @@
   "name": "crema-cioccolato-bt",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Federico Frascà",
+    "email": "federico.frasca796@gmail.com",
+    "url": "https://github.com/federicofrasca796/"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write --list-different .",
+    "prepare": "husky install",
+    "commit-msg": "cz"
   },
   "dependencies": {
+    "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "commitizen": "^4.3.0",
+    "cz-emoji-conventional": "^1.0.2",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "typescript": "^5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-emoji-conventional"
+    }
   }
 }
