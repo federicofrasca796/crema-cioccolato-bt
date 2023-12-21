@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Dancing_Script, Nunito_Sans, Rozha_One } from 'next/font/google'
+import { Suspense } from 'react'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const nunitoSans = Nunito_Sans({ subsets: ['latin'], variable: '--font-nunito-sans' })
+export const rhozaOne = Rozha_One({ subsets: ['latin'], variable: '--font-rhoza-one', weight: ['400'] })
+export const dancingScript = Dancing_Script({ subsets: ['latin'], variable: '--font-dancing-script' })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +18,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="it">
+      <body className={nunitoSans.className}>
+        {/* TODO - add navbar */}
+        {/* TODO - Do I really need a Suspense? */}
+        <Suspense>
+          <main>
+            {children}
+          </main>
+        </Suspense>
+      </body>
     </html>
   )
 }
