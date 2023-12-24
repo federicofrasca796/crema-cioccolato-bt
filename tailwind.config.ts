@@ -1,10 +1,10 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
     extend: {
@@ -26,7 +26,7 @@ const config: Config = {
           600: '#C9252B',
           700: '#B31A1F',
           800: '#9A1216',
-          900: '#800D11',
+          900: '#800D11'
         },
         secondary: {
           base: '#58340E',
@@ -39,7 +39,7 @@ const config: Config = {
           600: '#B46D21',
           700: '#955715',
           800: '#72410D',
-          900: '#4D2B08',
+          900: '#4D2B08'
         },
         smokyBrown: {
           base: '#160D03',
@@ -52,7 +52,7 @@ const config: Config = {
           600: '#907D69',
           700: '#6D5E4E',
           800: '#443B30',
-          900: '#1A1612',
+          900: '#1A1612'
         },
         antiqueWhite: {
           base: '#FEEFDD',
@@ -65,12 +65,12 @@ const config: Config = {
           600: '#CDB495',
           700: '#BDA587',
           800: '#AC9579',
-          900: '#99846B',
-        },
+          900: '#99846B'
+        }
       }
-    },
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};
 
-export default config
+export default config;
