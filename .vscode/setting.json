@@ -6,5 +6,6 @@
   "editor.formatOnSaveMode": "file",  
   "files.autoSave": "onFocusChange", 
   "vs-code-prettier-eslint.prettierLast": "false",
-  "eslint.enable": true
+  "eslint.enable": true,
+  "typescript.preferences.quoteStyle": "single"
 }

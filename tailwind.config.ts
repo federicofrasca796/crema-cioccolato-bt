@@ -16,7 +16,7 @@ const config: Config = {
       colors: {
         babyPowder: '#F7F7F2',
         primary: {
-          base: '#FF5A5F',
+          DEFAULT: '#FF5A5F',
           0: '#FFE6E6',
           100: '#FDB9BC',
           200: '#F88F92',
@@ -29,7 +29,7 @@ const config: Config = {
           900: '#800D11'
         },
         secondary: {
-          base: '#58340E',
+          DEFAULT: '#58340E',
           0: '#FFF3E6',
           100: '#FCDBB9',
           200: '#F6C38D',
@@ -42,7 +42,7 @@ const config: Config = {
           900: '#4D2B08'
         },
         smokyBrown: {
-          base: '#160D03',
+          DEFAULT: '#160D03',
           0: '#E6E3E1',
           100: '#E2D9D0',
           200: '#DBCDBD',
@@ -55,7 +55,7 @@ const config: Config = {
           900: '#1A1612'
         },
         antiqueWhite: {
-          base: '#FEEFDD',
+          DEFAULT: '#FEEFDD',
           0: '#FAF3EB',
           100: '#F1E6DA',
           200: '#EEDECB',
@@ -67,6 +67,15 @@ const config: Config = {
           800: '#AC9579',
           900: '#99846B'
         }
+      }
+    },
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem'
       }
     }
   },
