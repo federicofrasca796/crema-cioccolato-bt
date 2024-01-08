@@ -1,5 +1,5 @@
 export default function Logo({
-  className,
+  className = 'h-5 w-5 fill-smokyBrown',
   secondary,
   ...props
 }: {
@@ -22,7 +22,3 @@ export default function Logo({
     </svg>
   );
 }
-
-Logo.defaultProps = {
-  className: 'h-5 w-5 fill-smokyBrown'
-};

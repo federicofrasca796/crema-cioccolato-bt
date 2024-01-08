@@ -1,5 +1,5 @@
 export default function Instagram({
-  className,
+  className = 'h-5 w-5 fill-smokyBrown',
   ...props
 }: {
   className?: React.HTMLAttributes<SVGElement>['className'];
@@ -18,7 +18,3 @@ export default function Instagram({
     </svg>
   );
 }
-
-Instagram.defaultProps = {
-  className: 'h-5 w-5 fill-smokyBrown'
-};
