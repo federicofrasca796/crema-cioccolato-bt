@@ -19,7 +19,7 @@ export default function RootLayout({
       lang='it'
       className={`${nunitoSans.variable} ${rhozaOne.variable} ${dancingScript.variable}`}
     >
-      <body className='bg-babyPowder text-smokyBrown-900'>
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />

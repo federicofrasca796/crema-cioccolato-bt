@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss';
 
 const ccPalette = {
   babyPowder: '#F7F7F2',
-  primary: {
+  accent: {
     DEFAULT: '#FF5A5F',
     0: '#FFE6E6',
     100: '#FDB9BC',
@@ -15,7 +15,7 @@ const ccPalette = {
     800: '#9A1216',
     900: '#800D11'
   },
-  secondary: {
+  primary: {
     DEFAULT: '#58340E',
     0: '#FFF3E6',
     100: '#FCDBB9',
@@ -27,6 +27,19 @@ const ccPalette = {
     700: '#955715',
     800: '#72410D',
     900: '#4D2B08'
+  },
+  secondary: {
+    DEFAULT: '#FEEFDD',
+    0: '#FAF3EB',
+    100: '#F1E6DA',
+    200: '#EEDECB',
+    300: '#E9D5BC',
+    400: '#E2CBAF',
+    500: '#D9C0A2',
+    600: '#CDB495',
+    700: '#BDA587',
+    800: '#AC9579',
+    900: '#99846B'
   },
   smokyBrown: {
     DEFAULT: '#160D03',
@@ -40,19 +53,6 @@ const ccPalette = {
     700: '#6D5E4E',
     800: '#443B30',
     900: '#1A1612'
-  },
-  antiqueWhite: {
-    DEFAULT: '#FEEFDD',
-    0: '#FAF3EB',
-    100: '#F1E6DA',
-    200: '#EEDECB',
-    300: '#E9D5BC',
-    400: '#E2CBAF',
-    500: '#D9C0A2',
-    600: '#CDB495',
-    700: '#BDA587',
-    800: '#AC9579',
-    900: '#99846B'
   }
 };
 
@@ -67,10 +67,14 @@ const config: Config = {
       {
         light: {
           ...require('daisyui/src/theming/themes')['light'],
+          accent: ccPalette.accent.DEFAULT,
+          'accent-content': ccPalette.babyPowder,
           primary: ccPalette.primary.DEFAULT,
           'primary-content': ccPalette.babyPowder,
           secondary: ccPalette.secondary.DEFAULT,
-          'secondary-content': ccPalette.antiqueWhite.DEFAULT
+          'secondary-content': ccPalette.primary[900],
+          'base-100': ccPalette.babyPowder,
+          neutral: ccPalette.secondary[200]
         }
       }
     ],
