@@ -71,10 +71,11 @@ const config: Config = {
           'accent-content': ccPalette.babyPowder,
           primary: ccPalette.primary.DEFAULT,
           'primary-content': ccPalette.babyPowder,
-          secondary: ccPalette.secondary.DEFAULT,
-          'secondary-content': ccPalette.primary[900],
+          secondary: ccPalette.primary[400],
+          'secondary-content': ccPalette.babyPowder,
           'base-100': ccPalette.babyPowder,
-          neutral: ccPalette.secondary[200]
+          neutral: ccPalette.secondary[200],
+          'neutral-content': ccPalette.smokyBrown[900]
         }
       }
     ],

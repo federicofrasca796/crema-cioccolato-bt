@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Customize DaisyUI components */
+.btn {
+  @apply border-2 font-bold;
+}
+
+.badge {
+  @apply h-auto rounded font-semibold;
+}
+
+.badge,
+.badge-md {
+  @apply px-1.5 py-0.5;
+}
+
+/* Custom classes */
+.top-wave {
+  @apply relative after:absolute after:-top-8 after:block after:h-8 after:w-full after:bg-primary-0 after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
+}
