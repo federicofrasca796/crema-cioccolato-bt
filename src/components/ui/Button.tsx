@@ -12,21 +12,23 @@ export type ButtonColors =
   | 'success'
   | 'info';
 export type ButtonSizes = 'tiny' | 'small' | 'medium' | 'large';
-export type ButtonProps = {
-  className?: React.HTMLAttributes<HTMLButtonElement>['className'];
+
+export interface ButtonProps {
   children: React.ReactNode;
+  className?: React.HTMLAttributes<HTMLButtonElement>['className'];
   color?: ButtonColors;
+  disabled?: boolean;
   endIcon?: React.ReactNode;
+  fullWidth?: boolean;
+  href?: string;
   onClick: React.ButtonHTMLAttributes<HTMLButtonElement>['onClick'];
   size?: ButtonSizes;
-  startIcon?: any;
+  startIcon?: React.ReactNode;
   type?: React.ButtonHTMLAttributes<HTMLButtonElement>['type'];
   variant?: ButtonVariants;
-  disabled?: boolean;
-  fullWidth?: boolean;
-};
+}
 
-const COLORS: Record<
+const BUTTON_COLORS: Record<
   ButtonColors,
   React.HTMLAttributes<HTMLButtonElement>['className'] | null
 > = {
@@ -40,7 +42,7 @@ const COLORS: Record<
   info: 'btn-info'
 };
 
-const VARIANTS: Record<
+export const BUTTON_VARIANTS: Record<
   ButtonVariants,
   React.HTMLAttributes<HTMLButtonElement>['className'] | null
 > = {
@@ -49,7 +51,7 @@ const VARIANTS: Record<
   text: 'btn-link'
 };
 
-const SIZES: Record<
+const BUTTON_SIZES: Record<
   ButtonSizes,
   React.HTMLAttributes<HTMLButtonElement>['className'] | null
 > = {
@@ -60,8 +62,8 @@ const SIZES: Record<
 };
 
 export default function Button({
-  className,
   children,
+  className,
   color = 'primary',
   disabled,
   endIcon,
@@ -78,9 +80,9 @@ export default function Button({
       onClick={onClick}
       className={clsx([
         'btn',
-        VARIANTS[variant],
-        COLORS[color],
-        SIZES[size],
+        BUTTON_VARIANTS[variant],
+        BUTTON_COLORS[color],
+        BUTTON_SIZES[size],
         className,
         { 'btn-block': fullWidth }
       ])}

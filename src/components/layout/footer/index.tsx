@@ -1,7 +1,7 @@
 'use client';
 import WeeklySchedule from '@/components/WeeklySchedule';
 import Logo from '@/components/icons/Logo';
-import Button from '@/components/ui/Button';
+import Link from '@/components/ui/Link';
 import { MapPinIcon } from '@heroicons/react/24/solid';
 
 export default function Footer() {
@@ -30,15 +30,16 @@ export default function Footer() {
             <p>Via Giacomo Piccininni, 62 Barletta (BT) +39 333 1234567</p>
           </div>
           <div>
-            <Button
-              onClick={() => console.log('test')}
-              fullWidth
-              variant='outlined'
-              startIcon={<MapPinIcon className='w-5' />}
+            <Link
+              look='button'
+              buttonVariant='outlined'
               className='bg-primary-0 drop-shadow-lg'
+              href='https://www.instagram.com/crema_e_cioccolato_barletta/'
+              target='_blank'
             >
+              <MapPinIcon className='w-5' />
               Mappa
-            </Button>
+            </Link>
           </div>
         </section>
       </div>
