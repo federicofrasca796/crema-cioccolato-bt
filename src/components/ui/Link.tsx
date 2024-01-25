@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import NextLink from 'next/link';
 import { BUTTON_VARIANTS, ButtonVariants } from './Button';
 
-type LinkLooks = 'link' | 'button';
+type LinkTypes = 'link' | 'button';
 export type LinkColors =
   | 'neutral'
   | 'accent'
@@ -23,15 +23,53 @@ export interface LinkProps {
   href: string;
   target?: React.HTMLAttributeAnchorTarget;
   underlineOnHover?: boolean;
-  look?: LinkLooks;
+  type?: LinkTypes;
 }
 
-const LINK_LOOKS: Record<
-  LinkLooks,
+const LINK_TYPES: Record<
+  LinkTypes,
   React.HTMLAttributes<HTMLAnchorElement>['className']
 > = {
   button: 'btn',
   link: 'link'
+};
+
+const LINK_COLORS: Record<
+  LinkColors,
+  Record<LinkTypes, React.HTMLAttributes<HTMLAnchorElement>['className']>
+> = {
+  neutral: {
+    button: 'btn-neutral',
+    link: 'link-neutral'
+  },
+  accent: {
+    button: 'btn-accent',
+    link: 'link-accent'
+  },
+  primary: {
+    button: 'btn-primary',
+    link: 'link-primary'
+  },
+  secondary: {
+    button: 'btn-secondary',
+    link: 'link-secondary'
+  },
+  success: {
+    button: 'btn-success',
+    link: 'link-success'
+  },
+  warning: {
+    button: 'btn-warning',
+    link: 'link-warning'
+  },
+  error: {
+    button: 'btn-error',
+    link: 'link-error'
+  },
+  info: {
+    button: 'btn-info',
+    link: 'link-info'
+  }
 };
 
 export default function Link({
@@ -41,29 +79,18 @@ export default function Link({
   fullWidth,
   href,
   target = '_self',
-  look = 'link',
+  type = 'link',
   buttonVariant,
   underlineOnHover = false
 }: LinkProps) {
-  const LINK_COLORS: Record<LinkColors, string> = {
-    neutral: `${LINK_LOOKS[look]}-neutral`,
-    accent: `${LINK_LOOKS[look]}-accent`,
-    primary: `${LINK_LOOKS[look]}-primary`,
-    secondary: `${LINK_LOOKS[look]}-secondary`,
-    success: `${LINK_LOOKS[look]}-success`,
-    warning: `${LINK_LOOKS[look]}-warning`,
-    error: `${LINK_LOOKS[look]}-error`,
-    info: `${LINK_LOOKS[look]}-info`
-  };
-
   return (
     <NextLink
       href={href}
       target={target}
       className={clsx([
-        LINK_LOOKS[look],
+        LINK_TYPES[type],
         buttonVariant && BUTTON_VARIANTS[buttonVariant],
-        LINK_COLORS[color],
+        LINK_COLORS[color][type],
         underlineOnHover && 'link-hover',
         fullWidth && 'btn-block',
         className

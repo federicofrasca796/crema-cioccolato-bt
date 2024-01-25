@@ -7,7 +7,7 @@ import { MapPinIcon } from '@heroicons/react/24/solid';
 export default function Footer() {
   return (
     <footer className='top-wave relative bg-primary-0 pb-5 pt-4'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto grid gap-10'>
         <section className='flex items-center gap-4'>
           <Logo secondary className='w-[5.625rem] fill-primary' />
           <div>
@@ -26,8 +26,14 @@ export default function Footer() {
 
         <section className='mt-16 flex items-center justify-between'>
           <div className='max-w-52'>
-            <div className='font-serif text-2xl text-primary'>Ci trovi qui</div>
-            <p>Via Giacomo Piccininni, 62 Barletta (BT) +39 333 1234567</p>
+            <div className='mb-1 font-serif text-2xl text-primary'>
+              Ci trovi qui
+            </div>
+            <span>
+              Via Giacomo Piccininni, 62 <br />
+              Barletta (BT) <br />
+              +39 333 1234567
+            </span>
           </div>
           <div>
             <Link
@@ -41,6 +47,39 @@ export default function Footer() {
               Mappa
             </Link>
           </div>
+        </section>
+
+        <section>
+          <div>Seguici su Instagram</div>
+          <Link
+            href='https://www.instagram.com/crema_e_cioccolato_barletta/'
+            target='_blank'
+            underlineOnHover
+          >
+            @crema_e_cioccolato_barletta
+          </Link>
+        </section>
+
+        <section className='flex flex-col justify-between gap-y-4 text-xs md:flex-row'>
+          <div>
+            {/* TODO - Check for copyright  */}
+            © 2023 Crema e Cioccolato di Andrea Bufo <br />
+            Tutti i diritti riservati.
+          </div>
+
+          <ul className='inline-flex items-end gap-2'>
+            {/* TODO - Insert real P.Iva and handle policies */}
+            <li>P.Iva 03830581207</li>
+            <li>
+              <Link href='#'>Privacy Policy</Link>
+            </li>
+            <li>
+              <Link href='#'>Cookie Policy</Link>
+            </li>
+            <li>
+              <Link href='#'>Preferenze Cookie</Link>
+            </li>
+          </ul>
         </section>
       </div>
     </footer>
