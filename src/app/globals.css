@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply leading-snug;
+}
+
 /* Customize DaisyUI components */
 .btn {
   @apply border-2 font-bold;
@@ -18,5 +22,5 @@
 
 /* Custom classes */
 .top-wave {
-  @apply relative after:absolute after:-top-8 after:block after:h-8 after:w-full after:bg-primary-0 after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
+  @apply relative after:absolute after:-top-14 after:block after:h-14 after:w-full after:bg-primary-0 after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
 }

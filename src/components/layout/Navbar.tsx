@@ -29,13 +29,13 @@ const LINKS = [
 
 export default function Navbar() {
   return (
-    <nav className='flex justify-center'>
+    <nav className='hidden justify-center md:flex'>
       <ul className='inline-flex gap-3 rounded-full bg-secondary-100 p-1.5'>
         {LINKS.map((link, idx) => (
           <li key={idx} className='inline-flex'>
             <Link
               href={`#${link.href}`}
-              className='rounded-full px-5 py-1 font-semibold text-secondary-900 transition-colors ease-in-out hover:bg-secondary-300'
+              className='rounded-full py-1 text-center font-semibold text-secondary-900 transition-colors ease-in-out hover:bg-secondary-300 md:px-3 lg:px-6'
             >
               {link.label}
             </Link>

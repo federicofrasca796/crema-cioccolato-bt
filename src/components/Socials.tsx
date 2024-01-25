@@ -1,11 +1,16 @@
+import clsx from 'clsx';
 import Grid from './grid';
 import Facebook from './icons/socials/Facebook';
 import Instagram from './icons/socials/Instagram';
 import Whatsapp from './icons/socials/Whatsapp';
 
-export default function Socials() {
+export default function Socials({
+  className
+}: {
+  className?: React.ComponentProps<'div'>['className'];
+}) {
   return (
-    <Grid className='auto-cols-min grid-flow-col gap-1'>
+    <Grid className={clsx(['auto-cols-min grid-flow-col gap-1', className])}>
       <Grid.Item>
         <a
           href='#'
