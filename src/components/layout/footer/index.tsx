@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
           <div>
             <Link
-              look='button'
+              type='button'
               buttonVariant='outlined'
               className='bg-primary-0 drop-shadow-lg'
               href='https://www.instagram.com/crema_e_cioccolato_barletta/'
