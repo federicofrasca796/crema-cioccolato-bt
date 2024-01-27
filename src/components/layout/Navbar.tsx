@@ -29,7 +29,7 @@ const LINKS = [
 
 export default function Navbar() {
   return (
-    <nav className='hidden justify-center md:flex'>
+    <nav className='mt-8 hidden justify-center md:flex'>
       <ul className='inline-flex gap-3 rounded-full bg-secondary-100 p-1.5'>
         {LINKS.map((link, idx) => (
           <li key={idx} className='inline-flex'>
