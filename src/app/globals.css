@@ -8,7 +8,7 @@ html {
 
 /* Customize DaisyUI components */
 .btn {
-  @apply border-2 font-bold;
+  @apply border-2 text-base font-bold;
 }
 
 .badge {
@@ -22,5 +22,5 @@ html {
 
 /* Custom classes */
 .top-wave {
-  @apply relative after:absolute after:-top-14 after:block after:h-14 after:w-full after:bg-primary-0 after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
+  @apply relative after:absolute after:-top-10 after:block after:h-10 after:w-full after:bg-primary-0 after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
 }
