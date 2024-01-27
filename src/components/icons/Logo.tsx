@@ -8,7 +8,7 @@ export default function Logo({
 } & React.HTMLAttributes<SVGElement>) {
   return (
     <svg
-      viewBox={secondary ? '0 0 24 24' : '0 0 20 18'}
+      viewBox={secondary ? '0 0 24 24' : '0 0 20 20'}
       xmlns='http://www.w3.org/2000/svg'
       role='img'
       {...props}
