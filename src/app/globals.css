@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply leading-snug;
+@layer base {
+  html {
+    @apply leading-snug text-smokyBrown;
+  }
 }
 
 /* Customize DaisyUI components */
