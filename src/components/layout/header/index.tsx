@@ -1,13 +1,17 @@
 'use client';
-import Logo from '@/components/icons/Logo';
-import { MapPinIcon } from '@heroicons/react/20/solid';
-import NextLink from 'next/link';
-import Navbar from '../Navbar';
+import MobileMenu from '@/components/MobileMenu';
 import Socials from '@/components/Socials';
+import Logo from '@/components/icons/Logo';
 import Button from '@/components/ui/Button';
+import { MapPinIcon } from '@heroicons/react/20/solid';
 import { Bars2Icon } from '@heroicons/react/24/solid';
+import NextLink from 'next/link';
+import { useState } from 'react';
+import Navbar from '../Navbar';
 
 export default function Header() {
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <header className='container mx-auto mt-5 md:overflow-x-hidden'>
       <section className='grid min-h-[72px] grid-cols-3 items-center'>
@@ -29,15 +33,18 @@ export default function Header() {
         </NextLink>
 
         <Button
-          onClick={() => alert('open mobile menu')}
+          onClick={() => setOpenMenu(!openMenu)}
           variant='text'
-          className='ml-auto w-fit pr-0 md:hidden'
+          className='ml-auto w-fit px-0 text-smokyBrown-800 md:hidden'
+          color='neutral'
         >
-          <Bars2Icon className='w-10 fill-smokyBrown-800' />
+          <Bars2Icon className='w-10' />
         </Button>
       </section>
 
       <Navbar />
+
+      <MobileMenu open={openMenu} />
     </header>
   );
 }
