@@ -21,7 +21,7 @@ export interface ButtonProps {
   endIcon?: React.ReactNode;
   fullWidth?: boolean;
   href?: string;
-  onClick: React.ButtonHTMLAttributes<HTMLButtonElement>['onClick'];
+  onClick?: React.ButtonHTMLAttributes<HTMLButtonElement>['onClick'];
   size?: ButtonSizes;
   startIcon?: React.ReactNode;
   type?: React.ButtonHTMLAttributes<HTMLButtonElement>['type'];

@@ -6,7 +6,7 @@ import { MapPinIcon } from '@heroicons/react/24/solid';
 
 export default function Footer() {
   return (
-    <footer className='top-wave relative mt-24 bg-primary-0 pb-5 pt-4 after:-top-14 after:h-14'>
+    <footer className='top-wave relative mt-24 bg-secondary pb-5 pt-4 after:-top-14 after:h-14'>
       <div className='container mx-auto grid gap-10'>
         <section className='flex items-center gap-4'>
           <Logo secondary className='w-[5.625rem] fill-primary' />
@@ -39,7 +39,7 @@ export default function Footer() {
             <Link
               type='button'
               buttonVariant='outlined'
-              className='bg-primary-0 drop-shadow-lg'
+              className='bg-secondary drop-shadow-lg'
               href='https://maps.app.goo.gl/sVoKqYm29TAbSjht9'
               target='_blank'
             >

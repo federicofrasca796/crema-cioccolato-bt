@@ -3,38 +3,47 @@ import Grid from './grid';
 import Facebook from './icons/socials/Facebook';
 import Instagram from './icons/socials/Instagram';
 import Whatsapp from './icons/socials/Whatsapp';
+import Link from 'next/link';
+
+const SOCIALS = [
+  {
+    icon: Whatsapp,
+    href: 'https://www.instagram.com/crema_e_cioccolato_barletta/'
+  },
+  {
+    icon: Instagram,
+    href: 'https://www.instagram.com/crema_e_cioccolato_barletta/'
+  },
+  {
+    icon: Facebook,
+    href: 'https://www.facebook.com/crema_e_cioccolato_barletta/'
+  }
+];
 
 export default function Socials({
-  className
+  className,
+  rounded = false
 }: {
   className?: React.ComponentProps<'div'>['className'];
+  rounded?: boolean;
 }) {
   return (
-    <Grid className={clsx(['auto-cols-min grid-flow-col gap-1', className])}>
-      <Grid.Item>
-        <a
-          href='#'
-          className='inline-block w-full rounded-full bg-secondary-100 p-1.5 transition ease-in-out hover:bg-smokyBrown-200'
-        >
-          <Whatsapp className='w-5 fill-smokyBrown-700' />
-        </a>
-      </Grid.Item>
-      <Grid.Item>
-        <a
-          href='#'
-          className='inline-block w-full rounded-full bg-secondary-100 p-1.5 transition ease-in-out hover:bg-smokyBrown-200'
-        >
-          <Instagram className='w-5 fill-smokyBrown-700' />
-        </a>
-      </Grid.Item>
-      <Grid.Item>
-        <a
-          href='#'
-          className='inline-block w-full rounded-full bg-secondary-100 p-1.5 transition ease-in-out hover:bg-smokyBrown-200'
-        >
-          <Facebook className='w-5 fill-smokyBrown-700' />
-        </a>
-      </Grid.Item>
+    <Grid className={clsx(['auto-cols-min grid-flow-col gap-2', className])}>
+      {SOCIALS.map((social, idx) => (
+        <Grid.Item key={idx}>
+          <Link
+            href={social.href}
+            className={clsx([
+              'inline-block w-full rounded-full fill-smokyBrown-700 p-1.5 transition ease-in-out hover:fill-smokyBrown-600',
+              {
+                'bg-secondary-100 hover:bg-smokyBrown-200': rounded
+              }
+            ])}
+          >
+            <social.icon className='w-5' />
+          </Link>
+        </Grid.Item>
+      ))}
     </Grid>
   );
 }

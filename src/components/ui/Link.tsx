@@ -91,7 +91,7 @@ export default function Link({
         LINK_TYPES[type],
         buttonVariant && BUTTON_VARIANTS[buttonVariant],
         LINK_COLORS[color][type],
-        underlineOnHover && 'link-hover',
+        underlineOnHover && 'md:link-hover',
         fullWidth && 'btn-block',
         className
       ])}
