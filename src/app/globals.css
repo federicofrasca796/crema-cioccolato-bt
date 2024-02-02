@@ -22,7 +22,25 @@
   @apply px-1.5 py-0.5;
 }
 
+/* Swiper customization */
+.swiper .swiper-pagination {
+  @apply static mt-2;
+}
+
+.swiper-outside-pagination .swiper-pagination-bullet {
+  @apply h-2 w-2 rounded-full bg-smokyBrown-700 transition-opacity duration-200;
+}
+
+.swiper-outside-pagination.swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  @apply w-5 bg-primary-900 opacity-90;
+}
+
 /* Custom classes */
 .top-wave {
-  @apply relative after:absolute after:-top-10 after:block after:h-10 after:w-full after:bg-primary-0 after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
+  @apply relative mt-10 after:absolute after:-top-10 after:left-0 after:block after:h-10    after:w-full after:bg-secondary after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
+}
+
+.bottom-wave {
+  @apply relative mb-10 after:absolute after:left-0 after:top-[99.9%] after:block after:h-10 after:w-full after:rotate-180 after:bg-secondary after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
 }
