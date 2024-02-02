@@ -3,9 +3,9 @@ import MobileMenu from '@/components/MobileMenu';
 import Socials from '@/components/Socials';
 import Logo from '@/components/icons/Logo';
 import Button from '@/components/ui/Button';
+import Link from '@/components/ui/Link';
 import { MapPinIcon } from '@heroicons/react/20/solid';
 import { Bars2Icon } from '@heroicons/react/24/solid';
-import NextLink from 'next/link';
 import { useState } from 'react';
 import Navbar from '../Navbar';
 
@@ -13,24 +13,24 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <header className='container mx-auto mt-5 md:overflow-x-hidden'>
+    <header className='container mx-auto mb-5 pt-5 md:overflow-x-hidden'>
       <section className='grid min-h-[72px] grid-cols-3 items-center'>
-        <Socials className='hidden md:grid' />
+        <Socials className='hidden md:grid' rounded />
 
-        <NextLink href='/' className='mx-auto h-full'>
+        <Link href='/' className='mx-auto h-full rounded-lg'>
           <Logo
             className='hidden h-20 fill-primary transition-colors duration-700 ease-in hover:fill-primary-800 md:block'
             secondary
           />
           <Logo className='h-full fill-primary transition-colors duration-700 ease-in hover:fill-primary-800 md:hidden' />
-        </NextLink>
+        </Link>
 
-        <NextLink
+        <Link
           href='#'
-          className='order-first inline-block w-fit gap-1 rounded-full bg-secondary-100 p-3 transition-colors hover:bg-smokyBrown-200 md:order-none md:ml-auto'
+          className='order-first inline-block w-fit gap-1 rounded-full p-3 text-smokyBrown-800 transition-colors hover:text-smokyBrown-600 md:order-none md:ml-auto md:bg-secondary-100 md:text-smokyBrown-700 md:hover:bg-smokyBrown-200 md:hover:text-smokyBrown-800'
         >
-          <MapPinIcon className='h-5 fill-smokyBrown-700' />
-        </NextLink>
+          <MapPinIcon className='h-5' />
+        </Link>
 
         <Button
           onClick={() => setOpenMenu(!openMenu)}
@@ -44,7 +44,7 @@ export default function Header() {
 
       <Navbar />
 
-      <MobileMenu open={openMenu} />
+      <MobileMenu open={openMenu} onClose={() => setOpenMenu(false)} />
     </header>
   );
 }

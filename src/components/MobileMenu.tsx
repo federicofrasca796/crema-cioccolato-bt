@@ -8,7 +8,7 @@ import Socials from './Socials';
 // TODO - This should be centralized for Navbar and MobileMenu components
 const LINKS = [
   {
-    label: "Menu'",
+    label: 'Menù',
     href: '/#menu'
   },
   {
@@ -37,7 +37,13 @@ const LINKS = [
   }
 ];
 
-export default function MobileMenu({ open }: { open: boolean }) {
+export default function MobileMenu({
+  open,
+  onClose
+}: {
+  open: boolean;
+  onClose: () => void;
+}) {
   const modalRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -52,10 +58,14 @@ export default function MobileMenu({ open }: { open: boolean }) {
     }
   }, [open]);
 
+  const handleClose = () => {
+    onClose();
+  };
+
   return (
     <>
       <dialog
-        className={clsx([{ hidden: !open }, 'modal p-4'])}
+        className={clsx([{ hidden: !open }, 'modal p-3 backdrop-blur-sm'])}
         id='mobile-menu'
         ref={modalRef}
       >
@@ -64,7 +74,7 @@ export default function MobileMenu({ open }: { open: boolean }) {
             <Button
               variant='text'
               className='px-0 text-smokyBrown'
-              onClick={() => modalRef.current?.close()}
+              onClick={() => handleClose()}
             >
               <XMarkIcon className='w-10' />
             </Button>
