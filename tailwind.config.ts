@@ -95,7 +95,14 @@ const config: Config = {
         DEFAULT: {
           css: {
             'h1, h2, h3, h4, h5, h6': {
-              fontFamily: theme('fontFamily.serif')
+              fontFamily: `${theme('fontFamily.serif[0]')}, 
+                ${theme('fontFamily.serif[1]')}`,
+              fontWeight: 'normal',
+              lineHeight: '115%'
+            },
+            p: {
+              fontSize: '1.1em',
+              lineHeight: '130%'
             }
           }
         }
