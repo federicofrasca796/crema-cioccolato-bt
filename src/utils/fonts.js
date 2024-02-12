@@ -1,4 +1,7 @@
+/* Next fonts don't appear to currently support types */
+
 import { Nunito_Sans, Rozha_One, Dancing_Script } from 'next/font/google';
+
 export const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
   variable: '--font-nunito-sans'

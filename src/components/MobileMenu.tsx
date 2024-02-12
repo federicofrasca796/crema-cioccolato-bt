@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import Link from './ui/Link';
+import Link from './elements/Link';
 import { useEffect, useRef } from 'react';
-import Button from './ui/Button';
+import Button from './elements/Button';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import Socials from './Socials';
 

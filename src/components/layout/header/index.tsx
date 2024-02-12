@@ -2,8 +2,8 @@
 import MobileMenu from '@/components/MobileMenu';
 import Socials from '@/components/Socials';
 import Logo from '@/components/icons/Logo';
-import Button from '@/components/ui/Button';
-import Link from '@/components/ui/Link';
+import Button from '@/components/elements/Button';
+import Link from '@/components/elements/Link';
 import { MapPinIcon } from '@heroicons/react/20/solid';
 import { Bars2Icon } from '@heroicons/react/24/solid';
 import { useState } from 'react';

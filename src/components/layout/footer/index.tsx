@@ -1,7 +1,7 @@
 'use client';
 import WeeklySchedule from '@/components/WeeklySchedule';
 import Logo from '@/components/icons/Logo';
-import Link from '@/components/ui/Link';
+import Link from '@/components/elements/Link';
 import { MapPinIcon } from '@heroicons/react/24/solid';
 
 export default function Footer() {

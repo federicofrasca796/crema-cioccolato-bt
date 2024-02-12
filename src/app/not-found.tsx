@@ -1,6 +1,6 @@
 import Logo from '@/components/icons/Logo';
 import MeltedIcecream from '@/components/icons/MeltedIcecream';
-import Link from '@/components/ui/Link';
+import Link from '@/components/elements/Link';
 
 export default function NotFound() {
   return (
