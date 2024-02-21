@@ -13,8 +13,8 @@ import IcecreamTransparent from '../../public/assets/icecream-transparent.png';
 export default async function Home() {
   return (
     <>
-      <section className='bottom-wave h-[calc(100dvh-112px)] bg-gradient-to-b from-transparent to-secondary px-3.5 after:h-8 md:mt-10 md:px-0'>
-        <div className='mx-auto h-[calc(100%-150px)] md:h-[calc(100%-230px)]'>
+      <section className='bottom-wave h-[calc(100dvh-112px)] bg-gradient-to-b from-transparent to-secondary px-3.5 after:h-8 md:mt-10 md:h-[calc(100dvh-174px)] md:px-0'>
+        <div className='mx-auto h-[calc(100%-150px)] md:h-[calc(100%-180px)]'>
           <Carousel
             id='hero'
             slides={heroCarouselSlides}

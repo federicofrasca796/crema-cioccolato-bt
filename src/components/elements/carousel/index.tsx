@@ -46,7 +46,7 @@ export default function Carousel({
       ...(pagination ? [import('swiper/css/pagination')] : []),
       ...(props.navigation ? [import('swiper/css/navigation')] : [])
     ]).then(() => {
-      setLoading(true);
+      setLoading(false);
     });
   }, [pagination, props.navigation, slides]);
 
