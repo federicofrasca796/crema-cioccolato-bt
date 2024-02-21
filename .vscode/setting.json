@@ -1,0 +1,12 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": false,  
+  "editor.formatOnType": false, 
+  "editor.formatOnSave": true, 
+  "editor.formatOnSaveMode": "file",  
+  "files.autoSave": "onFocusChange", 
+  "vs-code-prettier-eslint.prettierLast": "false",
+  "eslint.enable": true,
+  "typescript.preferences.quoteStyle": "single",
+  "tailwindCSS.rootFontSize": 18
+}
