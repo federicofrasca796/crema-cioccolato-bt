@@ -1,7 +1,7 @@
 import ReviewCard from '@/components/ReviewCard';
 import Accordion from '@/components/elements/Accordion';
 import Button from '@/components/elements/Button';
-import Carousel from '@/components/elements/Carousel';
+import Carousel from '@/components/elements/carousel';
 import Link from '@/components/elements/Link';
 import { faqs, heroCarouselSlides, reviews } from '@/data/homepage';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
@@ -13,11 +13,17 @@ import IcecreamTransparent from '../../public/assets/icecream-transparent.png';
 export default async function Home() {
   return (
     <>
-      <section className='bottom-wave h-[calc(100dvh-112px)] bg-gradient-to-b from-transparent to-secondary px-3.5 after:h-8'>
-        <div className='mx-auto h-[calc(100%-150px)] md:container'>
-          <Carousel id='hero' slides={heroCarouselSlides} pagination />
+      <section className='bottom-wave h-[calc(100dvh-112px)] bg-gradient-to-b from-transparent to-secondary px-3.5 after:h-8 md:mt-10 md:px-0'>
+        <div className='mx-auto h-[calc(100%-150px)] md:h-[calc(100%-230px)]'>
+          <Carousel
+            id='hero'
+            slides={heroCarouselSlides}
+            pagination
+            spaceBetween={20}
+            autoplay
+          />
         </div>
-        <div className='mt-5 text-center'>
+        <div className='mt-5 text-center md:mt-3'>
           <Button color='accent' startIcon={<BookOpenIcon className='w-6' />}>
             Scopri il nostro menù
           </Button>
@@ -39,7 +45,7 @@ export default async function Home() {
               className='rounded-xl'
               src={IcecreamTransparent}
               alt='Icecream vanilla flavour with chocolate sprinkles on top'
-              sizes='100%'
+              sizes='(max-width: 786px) 100vw, 50vw'
               fill
               style={{
                 objectFit: 'cover'
@@ -61,7 +67,7 @@ export default async function Home() {
               className='rounded-xl'
               src={IcecreamTransparent}
               alt='Icecream vanilla flavour with chocolate sprinkles on top'
-              sizes='100%'
+              sizes='(max-width: 786px) 100vw, 50vw'
               fill
               style={{
                 objectFit: 'cover'
@@ -71,7 +77,7 @@ export default async function Home() {
         </div>
 
         <div
-          className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-primary-0 py-16 md:container md:mx-auto'
+          className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-primary-0 py-16 md:mx-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl'
           id='aperitivo'
         >
           <div className='container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-12'>
@@ -93,11 +99,12 @@ export default async function Home() {
               </Button>
             </div>
 
-            <div className='relative mx-auto mt-10 h-96 w-full'>
+            <div className='h-96 md:h-auto'>
               <Carousel
                 id={'aperitivo'}
                 slides={heroCarouselSlides}
                 pagination
+                spaceBetween={10}
               />
             </div>
           </div>
@@ -123,9 +130,11 @@ export default async function Home() {
       </section>
 
       <section className='mx-auto mb-36' id='dicono-di-noi'>
-        <h1 className='container mb-8 font-serif text-4xl'>Dicono di noi</h1>
+        <h1 className='container mx-auto mb-8 font-serif text-4xl'>
+          Dicono di noi
+        </h1>
 
-        <div className='container hidden gap-5 md:grid md:grid-cols-2 md:px-10'>
+        <div className='container mx-auto hidden gap-5 md:grid md:grid-cols-2'>
           {reviews.slice(0, 4).map((review, idx) => (
             <ReviewCard
               author={review.author}
@@ -136,7 +145,7 @@ export default async function Home() {
           ))}
         </div>
 
-        <div className='carousel carousel-center max-w-full space-x-4 p-4 md:hidden'>
+        <div className='carousel carousel-center max-w-full space-x-4 px-4 md:hidden'>
           {reviews.slice(0, 4).map((review, idx) => (
             <div
               className='carousel-item basis-11/12'
