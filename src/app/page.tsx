@@ -24,9 +24,15 @@ export default async function Home() {
           />
         </div>
         <div className='mt-5 text-center md:mt-3'>
-          <Button color='accent' startIcon={<BookOpenIcon className='w-6' />}>
+          <Link
+            href='menu'
+            type='button'
+            buttonVariant='contained'
+            color='accent'
+          >
+            <BookOpenIcon className='w-6' />
             Scopri il nostro menù
-          </Button>
+          </Link>
           <ChevronDownIcon className='mx-auto mt-4 w-10 fill-smokyBrown-600 ' />
         </div>
       </section>
@@ -90,13 +96,16 @@ export default async function Home() {
                 eius fugit laudantium accusantium libero ipsa beatae.
               </p>
 
-              <Button
-                color='accent'
-                startIcon={<BookOpenIcon className='w-6' />}
+              <Link
+                href='menu'
+                type='button'
+                buttonVariant='contained'
                 className='mt-8 md:mt-12'
+                color='accent'
               >
-                Sfoglia il menù
-              </Button>
+                <BookOpenIcon className='w-6' />
+                Sfoglia gli appetizer
+              </Link>
             </div>
 
             <div className='h-96 md:h-auto'>
