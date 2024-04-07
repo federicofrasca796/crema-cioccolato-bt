@@ -45,9 +45,14 @@ export default function Carousel({
     Promise.all([
       ...(pagination ? [import('swiper/css/pagination')] : []),
       ...(props.navigation ? [import('swiper/css/navigation')] : [])
-    ]).then(() => {
-      setLoading(false);
-    });
+    ])
+      .then(() => {
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoading(false);
+      });
   }, [pagination, props.navigation, slides]);
 
   const renderSlides = (slide: { src: string; alt: string }, idx: number) => (
