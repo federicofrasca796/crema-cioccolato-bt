@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Link from 'next/link';
 
 const LINKS = [
@@ -27,10 +28,21 @@ const LINKS = [
   }
 ];
 
-export default function Navbar() {
+export default function Navbar({ sticky }: { sticky: boolean }) {
   return (
-    <nav className='mt-8 hidden justify-center md:flex'>
-      <ul className='inline-flex items-center gap-3 rounded-full bg-secondary-100 p-1.5'>
+    <nav
+      className={clsx('mt-8 hidden justify-center transition-all md:flex', {
+        'top-10 z-10 md:sticky': sticky
+      })}
+    >
+      <ul
+        className={clsx(
+          'inline-flex items-center gap-3 rounded-full border-2 border-secondary-200/80 bg-secondary-100 p-1.5',
+          {
+            shadow: sticky
+          }
+        )}
+      >
         {LINKS.map((link, idx) => (
           <li key={idx} className='inline-flex'>
             <Link
