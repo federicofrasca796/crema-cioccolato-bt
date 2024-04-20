@@ -1,126 +1,140 @@
+'use client';
+
 import ReviewCard from '@/components/ReviewCard';
 import Accordion from '@/components/elements/Accordion';
-import Button from '@/components/elements/Button';
-import Carousel from '@/components/elements/carousel';
 import Link from '@/components/elements/Link';
+import Carousel from '@/components/elements/carousel';
 import { faqs, heroCarouselSlides, reviews } from '@/data/homepage';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { BookOpenIcon } from '@heroicons/react/24/outline';
 import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
+import { useRef } from 'react';
 import IcecreamTransparent from '../../public/assets/icecream-transparent.png';
+import Navbar from '@/components/layout/Navbar';
 
-export default async function Home() {
+export default function Home() {
+  const section1 = useRef(null);
+  const section2 = useRef(null);
+  const section3 = useRef(null);
+
+  const [onScreenIds] = useIntersectionObserver([section1, section2, section3]);
+
   return (
     <>
-      <section className='bottom-wave h-[calc(100dvh-112px)] bg-gradient-to-b from-transparent to-secondary px-3.5 after:h-8 md:mt-10 md:h-[calc(100dvh-174px)] md:px-0'>
-        <div className='mx-auto h-[calc(100%-150px)] md:h-[calc(100%-180px)]'>
-          <Carousel
-            id='hero'
-            slides={heroCarouselSlides}
-            pagination
-            spaceBetween={20}
-            autoplay
-          />
-        </div>
-        <div className='mt-5 text-center md:mt-3'>
-          <Link
-            href='menu'
-            type='button'
-            buttonVariant='contained'
-            color='accent'
-          >
-            <BookOpenIcon className='w-6' />
-            Scopri il nostro menù
-          </Link>
-          <ChevronDownIcon className='mx-auto mt-4 w-10 fill-smokyBrown-600 ' />
-        </div>
-      </section>
+      <Navbar activeSections={onScreenIds} />
 
-      <section className='mb-20 mt-40' id='offerte'>
-        <div className='container mx-auto mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
-          <div className='prose md:col-span-3'>
-            <h1>Gusta la nostra varietà di dolci e gelati</h1>
-            <p>
-              Artigianali, naturali e freschi. Le nostre preparazioni sono
-              sempre giornaliere.
-            </p>
-          </div>
-          <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2'>
-            <Image
-              className='rounded-xl'
-              src={IcecreamTransparent}
-              alt='Icecream vanilla flavour with chocolate sprinkles on top'
-              sizes='(max-width: 786px) 100vw, 50vw'
-              fill
-              style={{
-                objectFit: 'cover'
-              }}
+      <section ref={section1} id='delizie'>
+        <section className='bottom-wave h-[calc(100dvh-112px)] bg-gradient-to-b from-transparent to-secondary px-3.5 after:h-8 md:mt-10 md:h-[calc(100dvh-174px)] md:px-0'>
+          <div className='mx-auto h-[calc(100%-150px)] md:h-[calc(100%-180px)]'>
+            <Carousel
+              id='hero'
+              slides={heroCarouselSlides}
+              pagination
+              spaceBetween={20}
+              autoplay
             />
-          </figure>
-        </div>
-
-        <div className='container mx-auto mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
-          <div className='prose md:col-span-2 md:col-start-4'>
-            <h1>Prova i nostri dolci con farcitura al gelato!</h1>
-            <p>
-              Scegli tra brioches, crepes e pancakes il dolce che più desideri
-              farcire con le creme o con il nostro gelato artigianale.
-            </p>
           </div>
-          <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:-order-1 md:col-span-2'>
-            <Image
-              className='rounded-xl'
-              src={IcecreamTransparent}
-              alt='Icecream vanilla flavour with chocolate sprinkles on top'
-              sizes='(max-width: 786px) 100vw, 50vw'
-              fill
-              style={{
-                objectFit: 'cover'
-              }}
-            />
-          </figure>
-        </div>
+          <div className='mt-5 text-center md:mt-3'>
+            <Link
+              href='menu'
+              type='button'
+              buttonVariant='contained'
+              color='accent'
+            >
+              <BookOpenIcon className='w-6' />
+              Scopri il nostro menù
+            </Link>
+            <ChevronDownIcon className='mx-auto mt-4 w-10 fill-smokyBrown-600 ' />
+          </div>
+        </section>
 
-        <div
-          className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-primary-0 py-16 md:mx-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl'
-          id='aperitivo'
-        >
-          <div className='container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-12'>
-            <div className='prose prose-h1:text-primary-900'>
-              <h1>Aperitivo tra amici?</h1>
+        <section className='mb-20 mt-40'>
+          <div className='container mx-auto mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
+            <div className='prose md:col-span-3'>
+              <h1>Gusta la nostra varietà di dolci e gelati</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ratione corrupti, aspernatur consequatur alias necessitatibus
-                illo, aliquid ipsum molestias rem nesciunt dolorum ad facilis
-                eius fugit laudantium accusantium libero ipsa beatae.
+                Artigianali, naturali e freschi. Le nostre preparazioni sono
+                sempre giornaliere.
               </p>
-
-              <Link
-                href='menu'
-                type='button'
-                buttonVariant='contained'
-                className='mt-8 md:mt-12'
-                color='accent'
-              >
-                <BookOpenIcon className='w-6' />
-                Sfoglia gli appetizer
-              </Link>
             </div>
-
-            <div className='h-96 md:h-auto'>
-              <Carousel
-                id={'aperitivo'}
-                slides={heroCarouselSlides}
-                pagination
-                spaceBetween={10}
+            <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2'>
+              <Image
+                className='rounded-xl'
+                src={IcecreamTransparent}
+                alt='Icecream vanilla flavour with chocolate sprinkles on top'
+                sizes='(max-width: 786px) 100vw, 50vw'
+                fill
+                style={{
+                  objectFit: 'cover'
+                }}
               />
+            </figure>
+          </div>
+
+          <div className='container mx-auto mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
+            <div className='prose md:col-span-2 md:col-start-4'>
+              <h1>Prova i nostri dolci con farcitura al gelato!</h1>
+              <p>
+                Scegli tra brioches, crepes e pancakes il dolce che più desideri
+                farcire con le creme o con il nostro gelato artigianale.
+              </p>
+            </div>
+            <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:-order-1 md:col-span-2'>
+              <Image
+                className='rounded-xl'
+                src={IcecreamTransparent}
+                alt='Icecream vanilla flavour with chocolate sprinkles on top'
+                sizes='(max-width: 786px) 100vw, 50vw'
+                fill
+                style={{
+                  objectFit: 'cover'
+                }}
+              />
+            </figure>
+          </div>
+
+          <div
+            className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-primary-0 py-16 md:mx-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl'
+            id='aperitivo'
+          >
+            <div className='container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-12'>
+              <div className='prose prose-h1:text-primary-900'>
+                <h1>Aperitivo tra amici?</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ratione corrupti, aspernatur consequatur alias necessitatibus
+                  illo, aliquid ipsum molestias rem nesciunt dolorum ad facilis
+                  eius fugit laudantium accusantium libero ipsa beatae.
+                </p>
+
+                <Link
+                  href='menu'
+                  type='button'
+                  buttonVariant='contained'
+                  className='mt-8 md:mt-12'
+                  color='accent'
+                >
+                  <BookOpenIcon className='w-6' />
+                  Sfoglia gli appetizer
+                </Link>
+              </div>
+
+              <div className='h-96 md:h-auto'>
+                <Carousel
+                  id={'aperitivo'}
+                  slides={heroCarouselSlides}
+                  pagination
+                  spaceBetween={10}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
 
-      <section className='container mx-auto mb-20' id='faq'>
+      <section className='container mx-auto mb-20' id='faq' ref={section2}>
         <h1 className='mb-8 font-serif text-4xl'>Domande frequenti</h1>
 
         <div className='flex flex-col gap-5'>
@@ -138,7 +152,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <section className='mx-auto mb-36' id='dicono-di-noi'>
+      <section className='mx-auto mb-36' id='dicono-di-noi' ref={section3}>
         <h1 className='container mx-auto mb-8 font-serif text-4xl'>
           Dicono di noi
         </h1>

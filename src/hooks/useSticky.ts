@@ -1,19 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export default function useSticky(ref: React.RefObject<HTMLElement>): {
   isSticky: boolean;
 } {
   const [isSticky, setIsSticky] = useState<boolean>(false);
 
+  const evaluateSticky = useCallback(() => {
+    const offsetTop = ref.current?.offsetTop ?? 0;
+    const marginTop = ref.current?.style?.marginTop ?? 0;
+    const stickyThreshold = Number(offsetTop) + Number(marginTop);
+    return window.scrollY > stickyThreshold;
+  }, [ref]);
+
   useEffect(() => {
-    const getStickyThreshold = (): number => {
-      const initialOffset = Number(ref?.current?.offsetTop);
-      const initialHeight = Number(ref?.current?.offsetHeight);
+    const isSticky = evaluateSticky();
 
-      return initialHeight + initialOffset;
-    };
+    setIsSticky(isSticky);
+  }, [evaluateSticky]);
 
-    const stickyThreshold = getStickyThreshold();
+  useEffect(() => {
+    const offsetTop = ref.current?.offsetTop ?? 0;
+    const marginTop = ref.current?.style?.marginTop ?? 0;
+    const stickyThreshold = Number(offsetTop) + Number(marginTop);
 
     if (Number.isNaN(stickyThreshold)) return;
 
