@@ -38,7 +38,6 @@ export default function TopicsCarousel({
       className='md:!w-fit'
       data-history={topic.slug}
       onClick={() => {
-        console.log('click', { slug: topic.slug, idx });
         swiper?.slideTo(idx + 1);
       }}
     >
@@ -59,7 +58,7 @@ export default function TopicsCarousel({
     </SwiperSlide>
   );
 
-  const handleSwiperHistory = (swiper) => {
+  const handleSwiperHistory = (swiper: SwiperClass) => {
     const slideHistory =
       swiper.slides[swiper.activeIndex].dataset.history ?? '';
 
@@ -91,7 +90,7 @@ export default function TopicsCarousel({
         spaceBetween={60}
         slidesPerView={1.3}
         rewind
-        className='mx-auto mt-5 h-max items-start !overflow-visible max-md:!px-4 sm:max-w-[568px] md:max-w-[704px] lg:max-w-[896px] xl:max-w-[1120px] 2xl:max-w-[1344px]'
+        className='mx-auto mt-5 h-max items-start max-md:!px-4 sm:max-w-[568px] md:max-w-[704px] md:!overflow-visible lg:max-w-[896px] xl:max-w-[1120px] 2xl:max-w-[1344px]'
       >
         {renderTopic(
           {

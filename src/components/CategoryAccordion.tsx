@@ -36,6 +36,7 @@ export default function CategoryAccordion({
         subtitle={item.description}
         price={item.price}
         className='my-2.5'
+        tooltip={`Allergeni: ${item.allergens?.join(`, `)}`}
       />
     );
   };
