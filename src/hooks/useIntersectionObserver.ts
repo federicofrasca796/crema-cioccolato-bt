@@ -1,7 +1,7 @@
 import { MutableRefObject, useEffect, useRef, useState } from 'react';
 
 export default function useIntersectionObserver(
-  refs: MutableRefObject<HTMLElement | null>[],
+  refs: MutableRefObject<Element | null>[],
   observerOptions?: IntersectionObserverInit
 ) {
   const [onScreenIds, setOnScreenIds] = useState<string[]>([]);

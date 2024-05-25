@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Dancing_Script, Nunito_Sans, Rozha_One } from 'next/font/google';
 import { ReactElement } from 'react';
 import './globals.css';
+import StickyCTABottom from '@/components/layout/BottomCTA';
 
 export const metadata: Metadata = {
   title: 'Crema e Cioccolato - Barletta',

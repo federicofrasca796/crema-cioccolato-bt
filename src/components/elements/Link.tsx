@@ -14,7 +14,7 @@ export type LinkColors =
   | 'success'
   | 'info';
 
-export interface LinkProps {
+export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   buttonVariant?: ButtonVariants;
   children: React.ReactNode;
   className?: React.HTMLAttributes<HTMLAnchorElement>['className'];
@@ -81,7 +81,8 @@ export default function Link({
   target = '_self',
   type = 'link',
   buttonVariant,
-  underlineOnHover = false
+  underlineOnHover = false,
+  ...props
 }: LinkProps) {
   return (
     <NextLink
@@ -95,6 +96,7 @@ export default function Link({
         fullWidth && 'btn-block',
         className
       ])}
+      {...props}
     >
       {children}
     </NextLink>

@@ -4,28 +4,30 @@ import ReviewCard from '@/components/ReviewCard';
 import Accordion from '@/components/elements/Accordion';
 import Link from '@/components/elements/Link';
 import Carousel from '@/components/elements/carousel';
-import { faqs, heroCarouselSlides, reviews } from '@/data/homepage';
-import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import StickyCTABottom from '@/components/layout/BottomCTA';
+import Navbar from '@/components/layout/Navbar';
+import { NAV_LINKS, faqs, heroCarouselSlides, reviews } from '@/data/homepage';
+import useSticky from '@/hooks/useSticky';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { BookOpenIcon } from '@heroicons/react/24/outline';
 import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import { useRef } from 'react';
 import IcecreamTransparent from '../../public/assets/icecream-transparent.png';
-import Navbar from '@/components/layout/Navbar';
 
 export default function Home() {
   const section1 = useRef(null);
   const section2 = useRef(null);
   const section3 = useRef(null);
+  const topCTA = useRef(null);
 
-  const [onScreenIds] = useIntersectionObserver([section1, section2, section3]);
+  const { isSticky } = useSticky(topCTA);
 
   return (
     <>
-      <Navbar activeSections={onScreenIds} />
+      <Navbar trackedSections={[section1, section2, section3]} />
 
-      <section ref={section1} id='delizie'>
+      <section ref={section1} id={NAV_LINKS[0].href}>
         <section className='bottom-wave h-[calc(100dvh-112px)] bg-gradient-to-b from-transparent to-secondary px-3.5 after:h-8 md:mt-10 md:h-[calc(100dvh-174px)] md:px-0'>
           <div className='mx-auto h-[calc(100%-150px)] md:h-[calc(100%-180px)]'>
             <Carousel
@@ -36,7 +38,7 @@ export default function Home() {
               autoplay
             />
           </div>
-          <div className='mt-5 text-center md:mt-3'>
+          <div className='mt-5 text-center md:mt-3' ref={topCTA}>
             <Link
               href='menu'
               type='button'
@@ -46,17 +48,21 @@ export default function Home() {
               <BookOpenIcon className='w-6' />
               Scopri il nostro menù
             </Link>
-            <ChevronDownIcon className='mx-auto mt-4 w-10 fill-smokyBrown-600 ' />
+            <ChevronDownIcon className='mx-auto mt-3 w-10 fill-smokyBrown-600 md:mt-4' />
           </div>
         </section>
 
-        <section className='mb-20 mt-40'>
+        <section className='mb-20 mt-24 md:mt-40'>
           <div className='container mx-auto mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
             <div className='prose md:col-span-3'>
               <h1>Gusta la nostra varietà di dolci e gelati</h1>
               <p>
                 Artigianali, naturali e freschi. Le nostre preparazioni sono
-                sempre giornaliere.
+                sempre giornaliere. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Sapiente et veritatis aut, vitae sint dicta
+                fuga fugit pariatur repellendus, laboriosam distinctio!
+                Perferendis culpa labore, inventore praesentium recusandae
+                exercitationem obcaecati ex.
               </p>
             </div>
             <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2'>
@@ -78,7 +84,11 @@ export default function Home() {
               <h1>Prova i nostri dolci con farcitura al gelato!</h1>
               <p>
                 Scegli tra brioches, crepes e pancakes il dolce che più desideri
-                farcire con le creme o con il nostro gelato artigianale.
+                farcire con le creme o con il nostro gelato artigianale. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
+                commodi modi quae ab facere sit quasi numquam fuga quisquam
+                eaque iusto ipsa velit impedit perspiciatis. Id quae veritatis
+                similique.
               </p>
             </div>
             <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:-order-1 md:col-span-2'>
@@ -112,7 +122,7 @@ export default function Home() {
                 <Link
                   href='menu'
                   type='button'
-                  buttonVariant='contained'
+                  buttonVariant='outlined'
                   className='mt-8 md:mt-12'
                   color='accent'
                 >
@@ -134,7 +144,11 @@ export default function Home() {
         </section>
       </section>
 
-      <section className='container mx-auto mb-20' id='faq' ref={section2}>
+      <section
+        className='container mx-auto mb-20'
+        id={NAV_LINKS[1].href}
+        ref={section2}
+      >
         <h1 className='mb-8 font-serif text-4xl'>Domande frequenti</h1>
 
         <div className='flex flex-col gap-5'>
@@ -152,7 +166,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='mx-auto mb-36' id='dicono-di-noi' ref={section3}>
+      <section
+        className='mx-auto mb-20 md:mb-36'
+        id={NAV_LINKS[2].href}
+        ref={section3}
+      >
         <h1 className='container mx-auto mb-8 font-serif text-4xl'>
           Dicono di noi
         </h1>
@@ -193,6 +211,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      <StickyCTABottom sticky={isSticky} />
     </>
   );
 }

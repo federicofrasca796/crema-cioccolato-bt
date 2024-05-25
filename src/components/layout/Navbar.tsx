@@ -1,46 +1,23 @@
 'use client';
 
+import { NAV_LINKS } from '@/data/homepage';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import useSticky from '@/hooks/useSticky';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { MutableRefObject, useRef } from 'react';
 
-const LINKS = [
-  {
-    label: 'Le delizie',
-    href: 'delizie'
-  },
-  {
-    label: 'Domande frequenti',
-    href: 'faq'
-  },
-  {
-    label: 'Dicono di noi',
-    href: 'dicono-di-noi'
-  },
-  {
-    label: 'Dove siamo',
-    href: 'dove-siamo'
-  },
-  {
-    label: 'Orari',
-    href: 'orari'
-  },
-  {
-    label: 'Contatti',
-    href: 'contatti'
-  }
-];
-
 export default function Navbar({
-  activeSections
+  trackedSections
 }: {
-  activeSections: string[] | MutableRefObject<IntersectionObserver | null>;
+  trackedSections: MutableRefObject<Element | null>[];
 }) {
   const navRef = useRef<HTMLElement | null>(null);
 
   // TODO - use sticky in desktop only
   const { isSticky } = useSticky(navRef);
+
+  const [visibleSections] = useIntersectionObserver(trackedSections);
 
   return (
     <nav
@@ -60,16 +37,16 @@ export default function Navbar({
           }
         )}
       >
-        {LINKS.map((link, idx) => (
+        {NAV_LINKS.map((link, idx) => (
           <li key={idx} className='inline-flex'>
             <Link
               href={`#${link.href}`}
               className={clsx(
-                'rounded-full py-1 text-center font-semibold text-secondary-900 transition-colors ease-in-out hover:bg-secondary-300 md:px-3 lg:px-6',
+                'rounded-full py-1 text-center font-semibold text-primary/90 transition-colors ease-in-out hover:bg-secondary-300 md:px-3 lg:px-6',
                 {
-                  'bg-primary !text-babyPowder hover:bg-primary-700':
-                    Array.isArray(activeSections) &&
-                    activeSections.at(-1) === link.href
+                  'bg-primary !text-babyPowder hover:!bg-primary-800':
+                    Array.isArray(visibleSections) &&
+                    visibleSections.at(0) === link.href
                 }
               )}
             >

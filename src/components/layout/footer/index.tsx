@@ -1,8 +1,10 @@
 'use client';
+
 import WeeklySchedule from '@/components/WeeklySchedule';
 import Logo from '@/components/icons/Logo';
 import Link from '@/components/elements/Link';
 import { MapPinIcon } from '@heroicons/react/24/solid';
+import { NAV_LINKS } from '@/data/homepage';
 
 export default function Footer() {
   return (
@@ -20,7 +22,7 @@ export default function Footer() {
           </div>
         </section>
 
-        <section>
+        <section id={NAV_LINKS[4].href}>
           <WeeklySchedule />
         </section>
 
@@ -29,13 +31,13 @@ export default function Footer() {
             <div className='mb-1 font-serif text-2xl text-primary'>
               Ci trovi qui
             </div>
-            <span>
+            <span id={NAV_LINKS[5].href}>
               Via Rocco Chinnici, 43 <br />
               Barletta (BT) <br />
               +39 333 1234567
             </span>
           </div>
-          <div>
+          <div id={NAV_LINKS[3].href}>
             <Link
               type='button'
               buttonVariant='outlined'

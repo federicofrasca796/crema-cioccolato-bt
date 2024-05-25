@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply text-[18px] leading-snug text-smokyBrown md:text-[16px];
+    @apply scroll-smooth text-[18px] leading-snug text-smokyBrown md:text-[16px];
   }
 }
 
