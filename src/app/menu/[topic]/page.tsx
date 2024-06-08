@@ -1,13 +1,18 @@
 import CategoryAccordion from '@/components/CategoryAccordion';
-import { Category, Topic, categories, topics } from '@/data/menu';
-import { getCategoryItems } from '@/data/utils';
+import { type Category, categories } from '@/data/menu/categories';
+import { items, type MenuItem } from '@/data/menu/items';
+import { type Topic, topics } from '@/data/menu/topics';
 
 const getCategoriesByTopic = (topicSlug: Topic['slug']) => {
   const topic = topics.find((topic: Topic) => topic.slug === topicSlug);
 
   if (!topic) throw new Error(`Topic '${topicSlug}' not found`);
 
-  return categories.filter((category) => category.topics.includes(topic.id));
+  const activeCategories = categories.filter((category) =>
+    category.topics.includes(topic.id)
+  );
+
+  return activeCategories;
 };
 
 export default async function MenuByTopic({
@@ -19,13 +24,18 @@ export default async function MenuByTopic({
 
   const categoriesByTopic = getCategoriesByTopic(topic);
 
+  const filterItemsByCategory = (categorySlug: Category['slug']) =>
+    items.filter((item: MenuItem) => {
+      return item.category_id === categorySlug;
+    });
+
   const renderCategoryAccordion = (category: Category) => (
     <CategoryAccordion
       key={category.id}
       title={category.name}
       extras={category.extras}
       accordionName={category.slug}
-      items={getCategoryItems(category.id)}
+      items={filterItemsByCategory(category.slug)}
       icon={category.image}
       isOpen
     />

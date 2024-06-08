@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import MenuItem from './MenuItem';
-import type { ExtraItem, MenuItem as Item } from '@/data/menu';
+import type { MenuItem as Item } from '@/data/menu/items';
 import { StaticImageData } from 'next/image';
+import { ExtraItem } from '@/data/menu/categories';
 
 interface CategoryAccordionProps {
   items: Item[];
@@ -36,7 +37,9 @@ export default function CategoryAccordion({
         subtitle={item.description}
         price={item.price}
         className='my-2.5'
-        tooltip={`Allergeni: ${item.allergens?.join(`, `)}`}
+        {...(item?.allergens?.length && {
+          tooltip: `Allergeni: ${item?.allergens?.join(`, `)}`
+        })}
       />
     );
   };

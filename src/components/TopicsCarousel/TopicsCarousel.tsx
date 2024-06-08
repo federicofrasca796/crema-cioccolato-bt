@@ -3,13 +3,13 @@
 import 'swiper/css';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 
-import { Topic, topics } from '@/data/menu';
 import clsx from 'clsx';
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../tailwind.config';
+import { Topic, topics } from '@/data/menu/topics';
 
 export default function TopicsCarousel({
   activeTopic
@@ -75,8 +75,7 @@ export default function TopicsCarousel({
         tag='nav'
         onSwiper={(swiper) => {
           setSwiper(swiper);
-
-          // Hacky solution to overcome issue with last slides not being set as active
+          // Hacky solution to overcome issue with last slides block from being set to active
           swiper.snapGrid = [...swiper.slidesGrid];
         }}
         onReachEnd={(swiper) => (swiper.snapGrid = [...swiper.slidesGrid])}
