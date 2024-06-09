@@ -15,26 +15,21 @@ export const topics: Topic[] = [
   },
   {
     id: 2,
-    name: 'Caffetteria',
-    slug: 'caffetteria'
+    name: "Caffe' & Pasticceria",
+    slug: 'caffe-pasticceria'
   },
   {
     id: 3,
-    name: 'Pasticceria',
-    slug: 'pasticceria'
-  },
-  {
-    id: 4,
     name: 'Aperitivo',
     slug: 'aperitivo'
   },
   {
-    id: 5,
+    id: 4,
     name: 'Bibite & Drinks',
     slug: 'bibite-drinks'
   },
   {
-    id: 6,
+    id: 5,
     name: 'Cocktails & Liquori',
     slug: 'cocktails-liquori'
   }

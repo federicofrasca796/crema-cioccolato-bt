@@ -32,27 +32,15 @@ export const categories: Category[] = [
         label: 'Panna',
         slug: 'panna',
         price: 0.5,
-        allergens: ['Lactose', 'Soja'],
         available: true,
         image: '',
-        ingredients: ['Milk', 'Sugar']
+        ingredients: []
       },
       {
         id: 2,
         label: 'Cioccolato fuso',
         slug: 'cioccolato-fuso',
         price: 0.5,
-        allergens: ['Gluten', 'Lactose', 'Peanut', 'Soja'],
-        available: true,
-        image: '',
-        ingredients: []
-      },
-      {
-        id: 3,
-        label: 'Cono versione "cialda"',
-        slug: 'cono-cialda',
-        price: 0.5,
-        allergens: ['Gluten', 'Peanut'],
         available: true,
         image: '',
         ingredients: []
@@ -71,28 +59,16 @@ export const categories: Category[] = [
         id: 1,
         label: 'Panna',
         slug: 'panna',
-        price: 0.5,
-        allergens: ['Lactose', 'Soja'],
-        available: true,
-        image: '',
-        ingredients: ['Milk', 'Sugar']
-      },
-      {
-        id: 2,
-        label: 'Cioccolato fuso',
-        slug: 'cioccolato-fuso',
-        price: 0.5,
-        allergens: ['Gluten', 'Lactose', 'Peanut', 'Soja'],
+        price: 1,
         available: true,
         image: '',
         ingredients: []
       },
       {
-        id: 3,
-        label: 'Cono versione "cialda"',
-        slug: 'cono-cialda',
-        price: 0.5,
-        allergens: ['Gluten', 'Peanut'],
+        id: 2,
+        label: 'Cioccolato fuso',
+        slug: 'cioccolato-fuso',
+        price: 1,
         available: true,
         image: '',
         ingredients: []
@@ -106,7 +82,17 @@ export const categories: Category[] = [
     slug: 'caffe',
     highlight: false,
     topics: [2],
-    extras: []
+    extras: [
+      {
+        id: 3,
+        label: 'Aggiunta creme',
+        slug: 'aggiunta-creme',
+        price: 1.2,
+        available: true,
+        image: '',
+        ingredients: []
+      }
+    ]
   },
   {
     id: 4,
@@ -115,7 +101,17 @@ export const categories: Category[] = [
     slug: 'latte-cioccolato',
     highlight: false,
     topics: [2],
-    extras: []
+    extras: [
+      {
+        id: 3,
+        label: 'Aggiunta creme',
+        slug: 'aggiunta-creme',
+        price: 1.2,
+        available: true,
+        image: '',
+        ingredients: []
+      }
+    ]
   },
   {
     id: 5,
@@ -133,7 +129,17 @@ export const categories: Category[] = [
     slug: 'cornetti-paste',
     highlight: false,
     topics: [2],
-    extras: []
+    extras: [
+      {
+        id: 3,
+        label: 'Aggiunta creme',
+        slug: 'aggiunta-creme',
+        price: 1.2,
+        available: true,
+        image: '',
+        ingredients: []
+      }
+    ]
   },
   {
     id: 7,
@@ -141,7 +147,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'dolci',
     highlight: false,
-    topics: [2, 3],
+    topics: [2],
     extras: []
   },
   {
@@ -150,7 +156,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'bibite',
     highlight: false,
-    topics: [5],
+    topics: [4],
     extras: []
   },
   {
@@ -159,7 +165,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'cocktails',
     highlight: false,
-    topics: [6],
+    topics: [3, 5],
     extras: []
   },
   {
@@ -168,7 +174,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'amari-liquori',
     highlight: false,
-    topics: [6],
+    topics: [5],
     extras: []
   },
   {
@@ -177,7 +183,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'birre',
     highlight: false,
-    topics: [6],
+    topics: [3, 4, 5],
     extras: []
   },
   {
@@ -186,7 +192,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'grappe',
     highlight: false,
-    topics: [6],
+    topics: [5],
     extras: []
   },
   {
@@ -195,7 +201,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'rum',
     highlight: false,
-    topics: [6],
+    topics: [5],
     extras: []
   },
   {
@@ -204,7 +210,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'whiskey',
     highlight: false,
-    topics: [6],
+    topics: [5],
     extras: []
   },
   {
@@ -213,7 +219,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'gin',
     highlight: false,
-    topics: [6],
+    topics: [5],
     extras: []
   },
   {
@@ -222,7 +228,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'vini',
     highlight: false,
-    topics: [6],
+    topics: [5],
     extras: []
   },
   {
@@ -231,15 +237,15 @@ export const categories: Category[] = [
     image: '',
     slug: 'snacks',
     highlight: false,
-    topics: [4],
+    topics: [3],
     extras: []
   },
   {
     id: 18,
     name: 'Taglieri e panini',
     image: '',
-    slug: 'Taglieri e panini',
+    slug: 'taglieri-panini',
     highlight: false,
-    topics: [4]
+    topics: [3]
   }
 ];

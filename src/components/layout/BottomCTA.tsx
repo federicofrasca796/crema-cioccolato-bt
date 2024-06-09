@@ -13,6 +13,8 @@ export default function StickyCTABottom({
 }: {
   sticky: boolean;
 } & ComponentProps<'div'>) {
+  const canShare = !!navigator.share;
+
   const handleNativeShare = () => {
     navigator
       .share({
@@ -44,13 +46,15 @@ export default function StickyCTABottom({
         Sfoglia il menù
       </Link>
 
-      <Button
-        color='primary'
-        variant='outlined'
-        startIcon={<ShareIcon className='w-6' />}
-        className='bg-secondary-0 shadow-xl'
-        onClick={handleNativeShare}
-      />
+      {canShare && (
+        <Button
+          color='primary'
+          variant='outlined'
+          startIcon={<ShareIcon className='w-6' />}
+          className='bg-secondary-0 shadow-xl'
+          onClick={handleNativeShare}
+        />
+      )}
     </div>
   );
 }

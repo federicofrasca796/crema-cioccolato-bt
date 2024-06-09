@@ -8,7 +8,7 @@ import Link from 'next/link';
 const SOCIALS = [
   {
     icon: Whatsapp,
-    href: 'https://www.instagram.com/crema_e_cioccolato_barletta/'
+    href: 'https://wa.me/393284689986/?text=Salve!%20Vorrei%20delle%20informazioni%20riguardanti'
   },
   {
     icon: Instagram,

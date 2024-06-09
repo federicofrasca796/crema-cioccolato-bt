@@ -1,6 +1,6 @@
 'use client';
 
-import { NAV_LINKS } from '@/data/homepage';
+import { NAV_LINKS } from '@/data/navbar';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import useSticky from '@/hooks/useSticky';
 import clsx from 'clsx';

@@ -26,7 +26,8 @@ export default function Header() {
         </Link>
 
         <Link
-          href='#'
+          href='https://maps.app.goo.gl/V36pGd3jSGZ5tG7GA'
+          target='_blank'
           className='order-first inline-block w-fit gap-1 rounded-full p-3 text-smokyBrown-800 transition-colors hover:text-smokyBrown-600 md:order-none md:ml-auto md:bg-secondary-100 md:text-smokyBrown-700 md:hover:bg-smokyBrown-200 md:hover:text-smokyBrown-800'
         >
           <MapPinIcon className='h-5' />

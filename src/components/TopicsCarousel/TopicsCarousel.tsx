@@ -3,13 +3,13 @@
 import 'swiper/css';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 
+import { type Topic, topics } from '@/data/menu/topics';
 import clsx from 'clsx';
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../tailwind.config';
-import { Topic, topics } from '@/data/menu/topics';
 
 export default function TopicsCarousel({
   activeTopic
@@ -87,7 +87,7 @@ export default function TopicsCarousel({
           }
         }}
         spaceBetween={60}
-        slidesPerView={1.3}
+        slidesPerView={1.45}
         rewind
         className='mx-auto mt-5 h-max items-start max-md:!px-4 sm:max-w-[568px] md:max-w-[704px] md:!overflow-visible lg:max-w-[896px] xl:max-w-[1120px] 2xl:max-w-[1344px]'
       >

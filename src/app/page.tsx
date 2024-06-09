@@ -6,7 +6,7 @@ import Link from '@/components/elements/Link';
 import Carousel from '@/components/elements/carousel';
 import StickyCTABottom from '@/components/layout/BottomCTA';
 import Navbar from '@/components/layout/Navbar';
-import { NAV_LINKS, faqs, heroCarouselSlides, reviews } from '@/data/homepage';
+import { NAV_LINKS } from '@/data/navbar';
 import useSticky from '@/hooks/useSticky';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { BookOpenIcon } from '@heroicons/react/24/outline';
@@ -14,6 +14,9 @@ import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import { useRef } from 'react';
 import IcecreamTransparent from '../../public/assets/icecream-transparent.png';
+import { heroCarouselSlides } from '@/data/home/heroCarouselSlides';
+import { faqs } from '@/data/home/faq';
+import { reviews } from '@/data/home/reviews';
 
 export default function Home() {
   const section1 = useRef(null);
@@ -57,12 +60,12 @@ export default function Home() {
             <div className='prose md:col-span-3'>
               <h1>Gusta la nostra varietà di dolci e gelati</h1>
               <p>
-                Artigianali, naturali e freschi. Le nostre preparazioni sono
-                sempre giornaliere. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Sapiente et veritatis aut, vitae sint dicta
-                fuga fugit pariatur repellendus, laboriosam distinctio!
-                Perferendis culpa labore, inventore praesentium recusandae
-                exercitationem obcaecati ex.
+                Scegli tra una vasta selezione di deliziosi dolci artigianali,
+                preparati giornalmente con cura e passione. Utilizziamo solo
+                ingredienti naturali e freschi per garantire un sapore autentico
+                e genuino. Lasciati consigliare dai nostri esperti sui migliori
+                abbinamenti per un&apos;esperienza personalizzata sui tuoi
+                gusti.
               </p>
             </div>
             <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2'>
@@ -83,12 +86,13 @@ export default function Home() {
             <div className='prose md:col-span-2 md:col-start-4'>
               <h1>Prova i nostri dolci con farcitura al gelato!</h1>
               <p>
-                Scegli tra brioches, crepes e pancakes il dolce che più desideri
-                farcire con le creme o con il nostro gelato artigianale. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
-                commodi modi quae ab facere sit quasi numquam fuga quisquam
-                eaque iusto ipsa velit impedit perspiciatis. Id quae veritatis
-                similique.
+                Scegli tra una vasta selezione di deliziosi dolci: soffici
+                brioches, crepes sottili e leggere, oppure morbidi pancakes.
+                Qualunque sia la tua scelta, potrai farcire il tuo dolce
+                preferito con una delle nostre squisite creme o con il nostro
+                gelato artigianale, preparato con ingredienti freschi e di alta
+                qualità. Concediti un momento di puro piacere e personalizza il
+                tuo dolce per una esperienza di gusto indimenticabile.
               </p>
             </div>
             <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:-order-1 md:col-span-2'>
@@ -113,14 +117,18 @@ export default function Home() {
               <div className='prose prose-h1:text-primary-900'>
                 <h1>Aperitivo tra amici?</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ratione corrupti, aspernatur consequatur alias necessitatibus
-                  illo, aliquid ipsum molestias rem nesciunt dolorum ad facilis
-                  eius fugit laudantium accusantium libero ipsa beatae.
+                  Deliziati con abbondanti taglieri di salumi, formaggi
+                  selezionati e stuzzichini irresistibili che renderanno i tuoi
+                  incontri ancora più speciali. Accompagnati da una vasta scelta
+                  di bevande, dai classici ai creativi, il nostro aperitivo è
+                  l&apos;occasione perfetta per condividere risate e buon cibo
+                  in compagnia dei tuoi cari. Scegli la qualità e
+                  l&apos;abbondanza dei nostri taglieri per un momento di
+                  convivialità indimenticabile.
                 </p>
 
                 <Link
-                  href='menu'
+                  href='menu/aperitivo'
                   type='button'
                   buttonVariant='outlined'
                   className='mt-8 md:mt-12'
@@ -181,18 +189,20 @@ export default function Home() {
               author={review.author}
               rating={review.rating}
               content={review.content}
+              url={review.url}
               key={`review-${idx}`}
             />
           ))}
         </div>
 
         <div className='carousel carousel-center max-w-full space-x-4 px-4 md:hidden'>
-          {reviews.slice(0, 4).map((review, idx) => (
+          {reviews.map((review, idx) => (
             <div
               className='carousel-item basis-11/12'
               key={`review-carousel-${idx}`}
             >
               <ReviewCard
+                url={review.url}
                 author={review.author}
                 rating={review.rating}
                 content={review.content}
