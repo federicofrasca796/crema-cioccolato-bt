@@ -59,6 +59,14 @@ export default function TopicsCarousel({
   );
 
   const handleSwiperHistory = (swiper: SwiperClass) => {
+    /**
+     * Activate aptic feedback on topic change.
+     */
+    navigator.vibrate(1);
+
+    /**
+     * Enables soft navigation between topics.
+     */
     const slideHistory =
       swiper.slides[swiper.activeIndex].dataset.history ?? '';
 
@@ -73,12 +81,12 @@ export default function TopicsCarousel({
     <>
       <Swiper
         tag='nav'
-        onSwiper={(swiper) => {
+        onSwiper={(swiper: any) => {
           setSwiper(swiper);
           // Hacky solution to overcome issue with last slides block from being set to active
           swiper.snapGrid = [...swiper.slidesGrid];
         }}
-        onReachEnd={(swiper) => (swiper.snapGrid = [...swiper.slidesGrid])}
+        onReachEnd={(swiper: any) => (swiper.snapGrid = [...swiper.slidesGrid])}
         onSlideChange={handleSwiperHistory}
         breakpoints={{
           [parseInt(theme.screens.md)]: {
