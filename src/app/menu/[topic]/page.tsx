@@ -42,7 +42,7 @@ export default async function MenuByTopic({
   );
 
   return (
-    <article className='container mx-auto mt-10 md:max-h-[200vh] md:columns-2 md:gap-14'>
+    <article className='container mx-auto mt-10 md:columns-2 md:gap-14'>
       {categoriesByTopic.map(renderCategoryAccordion)}
     </article>
   );

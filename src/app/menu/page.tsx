@@ -22,7 +22,7 @@ export default async function Menu() {
 
   return (
     // Unfiltered menu items
-    <article className='container mx-auto mt-10 md:max-h-[200vh] md:columns-2 md:gap-14'>
+    <article className='container mx-auto mt-10 md:columns-2 md:gap-14'>
       {categories.map(renderCategoryAccordion)}
     </article>
   );

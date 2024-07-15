@@ -51,7 +51,7 @@ export default function Home() {
               <BookOpenIcon className='w-6' />
               Scopri il nostro menù
             </Link>
-            <ChevronDownIcon className='mx-auto mt-3 w-10 fill-smokyBrown-600 md:mt-4' />
+            <ChevronDownIcon className='mx-auto mt-5 w-10 animate-bounce fill-smokyBrown-600 md:mt-4' />
           </div>
         </section>
 
