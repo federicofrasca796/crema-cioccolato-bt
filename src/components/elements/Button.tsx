@@ -14,7 +14,7 @@ export type ButtonColors =
 export type ButtonSizes = 'tiny' | 'small' | 'medium' | 'large';
 
 export interface ButtonProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: React.HTMLAttributes<HTMLButtonElement>['className'];
   color?: ButtonColors;
   disabled?: boolean;

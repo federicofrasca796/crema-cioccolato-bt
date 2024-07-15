@@ -1,8 +1,10 @@
 'use client';
+
 import WeeklySchedule from '@/components/WeeklySchedule';
 import Logo from '@/components/icons/Logo';
 import Link from '@/components/elements/Link';
 import { MapPinIcon } from '@heroicons/react/24/solid';
+import { NAV_LINKS } from '@/data/navbar';
 
 export default function Footer() {
   return (
@@ -20,7 +22,7 @@ export default function Footer() {
           </div>
         </section>
 
-        <section>
+        <section id={NAV_LINKS[4].href}>
           <WeeklySchedule />
         </section>
 
@@ -29,13 +31,13 @@ export default function Footer() {
             <div className='mb-1 font-serif text-2xl text-primary'>
               Ci trovi qui
             </div>
-            <span>
+            <span id={NAV_LINKS[5].href}>
               Via Rocco Chinnici, 43 <br />
               Barletta (BT) <br />
-              +39 333 1234567
+              (+39) 328 4689986
             </span>
           </div>
-          <div>
+          <div id={NAV_LINKS[3].href}>
             <Link
               type='button'
               buttonVariant='outlined'
@@ -62,15 +64,13 @@ export default function Footer() {
 
         <section className='flex flex-col justify-between gap-y-4 text-xs md:flex-row'>
           <div>
-            {/* TODO - Check for copyright  */}
-            © 2023 Crema e Cioccolato di Andrea Bufo <br />
+            © 2024 Crema e Cioccolato di Andrea Bufo <br />
             Tutti i diritti riservati.
           </div>
 
           <ul className='inline-flex items-end gap-2'>
-            {/* TODO - Insert real P.Iva and handle policies */}
-            <li>P.Iva 03830581207</li>
-            <li>
+            <li>P.Iva 08663910720</li>
+            {/* <li>
               <Link href='#'>Privacy Policy</Link>
             </li>
             <li>
@@ -78,7 +78,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href='#'>Preferenze Cookie</Link>
-            </li>
+            </li> */}
           </ul>
         </section>
       </div>

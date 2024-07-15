@@ -101,7 +101,7 @@ const config: Config = {
               lineHeight: '115%'
             },
             p: {
-              fontSize: '1.1em',
+              fontSize: '1.1rem',
               lineHeight: '130%'
             }
           }

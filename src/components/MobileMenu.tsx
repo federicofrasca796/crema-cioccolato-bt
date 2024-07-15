@@ -9,7 +9,7 @@ import Socials from './Socials';
 const LINKS = [
   {
     label: 'Menù',
-    href: '/#menu'
+    href: '/menu'
   },
   {
     label: 'Come trovarci',
@@ -19,10 +19,6 @@ const LINKS = [
     label: 'Domande frequenti',
     href: '/#faq'
   },
-  // {
-  //   label: 'Dicono di noi',
-  //   href: '/#dicono-di-noi'
-  // },
   {
     label: 'Orari',
     href: '/#orari'
@@ -30,10 +26,6 @@ const LINKS = [
   {
     label: 'Contattaci',
     href: '/#contatti'
-  },
-  {
-    label: 'Consegna a domicilio',
-    href: '/#consegna-a-domicilio'
   }
 ];
 
@@ -74,7 +66,7 @@ export default function MobileMenu({
             <Button
               variant='text'
               className='px-0 text-smokyBrown'
-              onClick={() => handleClose()}
+              onClick={handleClose}
             >
               <XMarkIcon className='w-10' />
             </Button>
@@ -85,9 +77,10 @@ export default function MobileMenu({
               {LINKS.map((link, idx) => (
                 <li key={idx} className='mt-8'>
                   <Link
-                    href={`#${link.href}`}
+                    href={`${link.href}`}
                     className='rounded-md font-serif text-3xl text-smokyBrown-800'
                     underlineOnHover
+                    onClick={handleClose}
                   >
                     {link.label}
                   </Link>

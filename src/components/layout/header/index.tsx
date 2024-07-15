@@ -1,16 +1,16 @@
 'use client';
+
 import MobileMenu from '@/components/MobileMenu';
 import Socials from '@/components/Socials';
-import Logo from '@/components/icons/Logo';
 import Button from '@/components/elements/Button';
 import Link from '@/components/elements/Link';
+import Logo from '@/components/icons/Logo';
 import { MapPinIcon } from '@heroicons/react/20/solid';
 import { Bars2Icon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
-import Navbar from '../Navbar';
 
 export default function Header() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
     <header className='container mx-auto mb-5 pt-5 md:overflow-x-hidden'>
@@ -26,7 +26,8 @@ export default function Header() {
         </Link>
 
         <Link
-          href='#'
+          href='https://maps.app.goo.gl/V36pGd3jSGZ5tG7GA'
+          target='_blank'
           className='order-first inline-block w-fit gap-1 rounded-full p-3 text-smokyBrown-800 transition-colors hover:text-smokyBrown-600 md:order-none md:ml-auto md:bg-secondary-100 md:text-smokyBrown-700 md:hover:bg-smokyBrown-200 md:hover:text-smokyBrown-800'
         >
           <MapPinIcon className='h-5' />
@@ -41,8 +42,6 @@ export default function Header() {
           <Bars2Icon className='w-10' />
         </Button>
       </section>
-
-      <Navbar />
 
       <MobileMenu open={openMenu} onClose={() => setOpenMenu(false)} />
     </header>

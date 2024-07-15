@@ -1,11 +1,13 @@
 import { StarIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export interface ReviewCardProps {
   author: { name: string; lastname?: string; image?: string };
   rating: number;
   content: string;
+  url: string;
   className?: React.HTMLAttributes<HTMLDivElement>['className'];
 }
 
@@ -13,10 +15,12 @@ export default function ReviewCard({
   author,
   rating,
   content,
+  url,
   className
 }: ReviewCardProps) {
   return (
-    <div
+    <Link
+      href={url}
       className={clsx(
         'rounded-2xl border-2 border-secondary-100 bg-babyPowder p-4 transition-colors hover:bg-secondary-0/50',
         className
@@ -49,6 +53,6 @@ export default function ReviewCard({
       <div className='pt-5'>
         <p className='line-clamp-3'>{content}</p>
       </div>
-    </div>
+    </Link>
   );
 }
