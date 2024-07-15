@@ -57,7 +57,7 @@ const normalizeRow = (row: ItemsTableRow, index: number) => {
   return normalized;
 };
 
-export async function GET() {
+export async function GET(): Promise<Response> {
   const filePath = path.join(process.cwd(), 'public', 'data.csv');
 
   const results: MenuItem[] = [];
