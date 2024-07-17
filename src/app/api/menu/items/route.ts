@@ -66,7 +66,6 @@ export async function GET(): Promise<Response> {
     fs.createReadStream(filePath)
       .pipe(csv())
       .on('data', (data) => {
-        console.info('row', data);
         const normalizedRow = normalizeRow(data, currentItemId);
         if (!normalizedRow) return;
 
