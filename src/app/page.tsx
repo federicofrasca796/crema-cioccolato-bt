@@ -6,6 +6,10 @@ import Link from '@/components/elements/Link';
 import Carousel from '@/components/elements/carousel';
 import StickyCTABottom from '@/components/layout/BottomCTA';
 import Navbar from '@/components/layout/Navbar';
+import { aperitivoCarouselSlides } from '@/data/home/aperitivoCarouselSlides';
+import { faqs } from '@/data/home/faq';
+import { heroCarouselSlides } from '@/data/home/heroCarouselSlides';
+import { reviews } from '@/data/home/reviews';
 import { NAV_LINKS } from '@/data/navbar';
 import useSticky from '@/hooks/useSticky';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
@@ -13,10 +17,9 @@ import { BookOpenIcon } from '@heroicons/react/24/outline';
 import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import { useRef } from 'react';
-import IcecreamTransparent from '../../public/assets/icecream-transparent.png';
-import { heroCarouselSlides } from '@/data/home/heroCarouselSlides';
-import { faqs } from '@/data/home/faq';
-import { reviews } from '@/data/home/reviews';
+
+import IcecreamConeCutout from '../../public/images/icecream_cone_cutout.png';
+import CroissantIcecreamCutout from '../../public/images/croissant_icecream_cutout.png';
 
 export default function Home() {
   const section1 = useRef(null);
@@ -71,12 +74,13 @@ export default function Home() {
             <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2'>
               <Image
                 className='rounded-xl'
-                src={IcecreamTransparent}
-                alt='Icecream vanilla flavour with chocolate sprinkles on top'
+                src={IcecreamConeCutout}
+                alt='Icecream cone'
                 sizes='(max-width: 786px) 100vw, 50vw'
                 fill
                 style={{
-                  objectFit: 'cover'
+                  objectFit: 'contain',
+                  objectPosition: 'center 30px'
                 }}
               />
             </figure>
@@ -95,15 +99,14 @@ export default function Home() {
                 tuo dolce per una esperienza di gusto indimenticabile.
               </p>
             </div>
-            <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:-order-1 md:col-span-2'>
+            <figure className='relative mx-auto flex aspect-square w-full justify-center overflow-hidden rounded-full bg-gradient-to-t from-accent-100/50 md:-order-1 md:col-span-2'>
               <Image
                 className='rounded-xl'
-                src={IcecreamTransparent}
-                alt='Icecream vanilla flavour with chocolate sprinkles on top'
+                src={CroissantIcecreamCutout}
+                alt='Croissant with three balls of Icecream'
                 sizes='(max-width: 786px) 100vw, 50vw'
-                fill
                 style={{
-                  objectFit: 'cover'
+                  objectFit: 'contain'
                 }}
               />
             </figure>
@@ -142,7 +145,7 @@ export default function Home() {
               <div className='h-96 md:h-auto'>
                 <Carousel
                   id={'aperitivo'}
-                  slides={heroCarouselSlides}
+                  slides={aperitivoCarouselSlides}
                   pagination
                   spaceBetween={10}
                 />

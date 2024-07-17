@@ -2,7 +2,7 @@
 
 import { isObject } from '@/utils/generic';
 import clsx from 'clsx';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
@@ -16,7 +16,7 @@ import './styles.css';
 
 export type Slide = {
   alt: string;
-  src: string;
+  src: string | StaticImageData;
 };
 
 export interface CarouselProps {
@@ -46,16 +46,15 @@ export default function Carousel({
       ...(pagination ? [import('swiper/css/pagination')] : []),
       ...(props.navigation ? [import('swiper/css/navigation')] : [])
     ])
-      .then(() => {
-        setLoading(false);
-      })
       .catch((error) => {
         console.error(error);
+      })
+      .finally(() => {
         setLoading(false);
       });
   }, [pagination, props.navigation, slides]);
 
-  const renderSlides = (slide: { src: string; alt: string }, idx: number) => (
+  const renderSlides = (slide: Slide, idx: number) => (
     <SwiperSlide
       className='relative drop-shadow-md md:!w-9/12'
       key={`${id}-slide-${idx}`}
