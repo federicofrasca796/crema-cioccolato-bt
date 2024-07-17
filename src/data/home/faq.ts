@@ -2,7 +2,7 @@ export const faqs = [
   {
     question: 'Fino a che ora siete aperti?',
     answer:
-      'Restiamo aperti fino alle 23 dal lunedì al venerdì mentre il sabato e la domenica puoi venirci a trovare fino alle 01:00. Gli orari possono variare durante i festivi e le giornate più intense, dove potresti trovarci aperti anche oltre questi orari! \n Puoi sempre contattarci per accertartene.'
+      'Siamo aperti fino dal mercoledì al lunedì dalle 7:00 alle 13:00 e dalle 16:00 alle 23:00, ci riposiamo il martedì! Gli orari possono variare durante i festivi e le giornate più intense, dove potresti trovarci aperti anche oltre i classici orari! \n Chiamaci per ogni evenienza, ti aspettiamo!'
   },
   {
     question: 'Accettate prenotazioni per eventi, feste o compleanni?',
