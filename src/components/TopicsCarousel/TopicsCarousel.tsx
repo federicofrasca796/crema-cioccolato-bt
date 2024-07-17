@@ -62,7 +62,8 @@ export default function TopicsCarousel({
     /**
      * Activate aptic feedback on topic change.
      */
-    navigator.vibrate(1);
+    const canVibrate = typeof window !== 'undefined' && navigator;
+    if (canVibrate) navigator.vibrate(1);
 
     /**
      * Enables soft navigation between topics.

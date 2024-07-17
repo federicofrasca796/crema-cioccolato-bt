@@ -13,7 +13,7 @@ export default function StickyCTABottom({
 }: {
   sticky: boolean;
 } & ComponentProps<'div'>) {
-  const canShare = navigator && !!navigator.share;
+  const canShare = typeof window !== 'undefined' && navigator;
 
   const handleNativeShare = () => {
     navigator
