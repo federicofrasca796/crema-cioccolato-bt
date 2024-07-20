@@ -86,22 +86,12 @@ export const categories: Category[] = [
   },
   {
     id: 4,
-    name: 'Latte e cioccolato',
+    name: 'Latte e cioccolate',
     image: '',
-    slug: 'latte-cioccolato',
+    slug: 'latte-cioccolate',
     highlight: false,
     topics: [2],
-    extras: [
-      {
-        id: 3,
-        label: 'Aggiunta creme',
-        slug: 'aggiunta-creme',
-        price: 1.2,
-        available: true,
-        image: '',
-        ingredients: []
-      }
-    ]
+    extras: []
   },
   {
     id: 5,
@@ -114,31 +104,49 @@ export const categories: Category[] = [
   },
   {
     id: 6,
-    name: 'Cornetti e paste',
+    name: 'Dolci e paste',
     image: '',
-    slug: 'cornetti-paste',
+    slug: 'dolci-paste',
     highlight: false,
     topics: [2],
     extras: [
       {
         id: 3,
-        label: 'Aggiunta creme',
-        slug: 'aggiunta-creme',
-        price: 1.2,
+        label: 'Creme assortite',
+        slug: 'creme-assortite',
+        price: 0.5,
+        available: true,
+        image: '',
+        ingredients: []
+      },
+      {
+        id: 4,
+        label: 'Smarties',
+        slug: 'smarties',
+        price: 0.5,
+        available: true,
+        image: '',
+        ingredients: []
+      },
+      {
+        id: 4,
+        label: 'Granella nocciola',
+        slug: 'granella-nocciola',
+        price: 0.5,
+        available: true,
+        image: '',
+        ingredients: []
+      },
+      {
+        id: 4,
+        label: 'Farina di cocco',
+        slug: 'farina-cocco',
+        price: 0.5,
         available: true,
         image: '',
         ingredients: []
       }
     ]
-  },
-  {
-    id: 7,
-    name: 'Dolci',
-    image: '',
-    slug: 'dolci',
-    highlight: false,
-    topics: [2],
-    extras: []
   },
   {
     id: 8,

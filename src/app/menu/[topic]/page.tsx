@@ -38,6 +38,7 @@ export default async function MenuByTopic({
       items={filterItemsByCategory(category.slug)}
       icon={category.image}
       isOpen
+      className='animate-fadeIn'
     />
   );
 

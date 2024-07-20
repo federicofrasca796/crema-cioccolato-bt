@@ -15,8 +15,8 @@ export const topics: Topic[] = [
   },
   {
     id: 2,
-    name: "Caffe' & Pasticceria",
-    slug: 'caffe-pasticceria'
+    name: 'Caffetteria',
+    slug: 'caffetteria'
   },
   {
     id: 3,

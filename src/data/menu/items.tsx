@@ -122,7 +122,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelatoni',
+    category_id: 'gelati MAXI',
     slug: 'coppa-gelato-media'
   },
   {
@@ -134,7 +134,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelatoni',
+    category_id: 'gelati MAXI',
     slug: 'coppa-gelato-grande'
   },
   {
@@ -146,43 +146,43 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelatoni',
+    category_id: 'gelati MAXI',
     slug: 'frappè'
   },
   {
     id: 12,
-    label: 'Brioches farcita gelato',
-    description: '',
+    label: 'Brioches Gelato',
+    description: 'Brioches farcita con gelato',
     price: 3.5,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelatoni',
+    category_id: 'gelati MAXI',
     slug: 'brioches-farcita-gelato'
   },
   {
     id: 13,
-    label: 'Crepes farcita con gelato',
-    description: '',
+    label: 'Crepes Gelato',
+    description: 'Crepes farcita con gelato',
     price: 5,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelatoni',
+    category_id: 'gelati MAXI',
     slug: 'crepes-farcita-con-gelato'
   },
   {
     id: 14,
-    label: 'Cornetto Farcito con gelato',
-    description: '',
+    label: 'Cornetto Gelato',
+    description: 'Cornetto farcito con gelato',
     price: 3,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelatoni',
+    category_id: 'gelati MAXI',
     slug: 'cornetto-farcito-con-gelato'
   },
   {
@@ -374,7 +374,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-cioccolato',
+    category_id: 'latte-cioccolate',
     slug: 'latte-macchiato'
   },
   {
@@ -398,7 +398,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-cioccolato',
+    category_id: 'latte-cioccolate',
     slug: 'latte-bianco'
   },
   {
@@ -410,7 +410,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-cioccolato',
+    category_id: 'latte-cioccolate',
     slug: 'latte-bianco-senza-lattosio'
   },
   {
@@ -446,20 +446,32 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-cioccolato',
+    category_id: 'latte-cioccolate',
     slug: 'cioccolata-calda'
   },
   {
     id: 37,
     label: 'Cornetto',
     description: '',
-    price: 1,
+    price: 1.2,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'cornetti-paste',
+    category_id: 'dolci-paste',
     slug: 'cornetto'
+  },
+  {
+    id: 115,
+    label: 'Cornetto vegano',
+    description: '',
+    price: 1.3,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'dolci-paste',
+    slug: 'cornetto-vegano'
   },
   {
     id: 38,
@@ -470,7 +482,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'cornetti-paste',
+    category_id: 'dolci-paste',
     slug: 'treccia'
   },
   {
@@ -482,7 +494,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'cornetti-paste',
+    category_id: 'dolci-paste',
     slug: 'conchiglia'
   },
   {
@@ -494,7 +506,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelatoni',
+    category_id: 'gelati MAXI',
     slug: 'cornetto-ace'
   },
   {
@@ -518,32 +530,32 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci',
+    category_id: 'dolci-paste',
     slug: 'ciambella'
   },
   {
     id: 43,
     label: 'Muffin Nutella',
     description: '',
-    price: 2,
+    price: 2.5,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci',
+    category_id: 'dolci-paste',
     slug: 'muffin-nutella'
   },
   {
     id: 44,
-    label: 'Biscotti vari gusti',
-    description: '',
+    label: 'Biscotti',
+    description: 'Gusti assortiti',
     price: 1,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci',
-    slug: 'biscotti-vari-gusti'
+    category_id: 'dolci-paste',
+    slug: 'biscotti'
   },
   {
     id: 45,
@@ -554,20 +566,20 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci',
+    category_id: 'dolci-paste',
     slug: 'crepes'
   },
   {
     id: 46,
-    label: 'Pancake',
+    label: 'Pancakes',
     description: '',
     price: 4,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci',
-    slug: 'pancake'
+    category_id: 'dolci-paste',
+    slug: 'pancakes'
   },
   {
     id: 47,
@@ -631,39 +643,15 @@ export const items: MenuItem[] = [
   },
   {
     id: 52,
-    label: 'Lurisia limonata',
-    description: '',
-    price: 2.5,
+    label: 'Lurisia',
+    description: 'Limonata/Chinotto/Aranciata',
+    price: 3,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
     category_id: 'bibite',
-    slug: 'lurisia-limonata'
-  },
-  {
-    id: 53,
-    label: 'Lurisia chinotto',
-    description: '',
-    price: 2.5,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'lurisia-chinotto'
-  },
-  {
-    id: 54,
-    label: 'Lurisia Aranciata',
-    description: '',
-    price: 2.5,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'lurisia-aranciata'
+    slug: 'lurisia'
   },
   {
     id: 55,
@@ -764,7 +752,7 @@ export const items: MenuItem[] = [
   {
     id: 63,
     label: 'Succo di frutta',
-    description: '',
+    description: 'Gusti assortiti',
     price: 2,
     image: '',
     ingredients: [],
@@ -895,7 +883,7 @@ export const items: MenuItem[] = [
   },
   {
     id: 74,
-    label: 'Don Papa',
+    label: 'Don Papa Baroko',
     description: '',
     price: 5,
     image: '',
@@ -903,7 +891,19 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'rum',
-    slug: 'don-papa'
+    slug: 'don-papa-baroko'
+  },
+  {
+    id: 74,
+    label: 'Don Papa Masskara',
+    description: '',
+    price: 7,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'rum',
+    slug: 'don-papa-masskara'
   },
   {
     id: 75,
@@ -1206,6 +1206,18 @@ export const items: MenuItem[] = [
     slug: 'calice-vino-rosato'
   },
   {
+    id: 99,
+    label: 'Calice vino Bianco',
+    description: '',
+    price: 4,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'vini',
+    slug: 'calice-vino-bianco'
+  },
+  {
     id: 100,
     label: 'Patatine San Carlo',
     description: 'Gusti assortiti',
@@ -1219,15 +1231,15 @@ export const items: MenuItem[] = [
   },
   {
     id: 101,
-    label: 'Tris (patatine, arachidi, olive)',
-    description: '',
+    label: 'Tris',
+    description: 'Patatine, Arachidi, Olive',
     price: 3.5,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
     category_id: 'snacks',
-    slug: 'tris-(patatine,-arachidi,-olive)'
+    slug: 'tris-pat-ara-oli'
   },
   {
     id: 102,
@@ -1268,7 +1280,7 @@ export const items: MenuItem[] = [
   {
     id: 105,
     label: 'Ciotola Rice',
-    description: '',
+    description: 'Piccanti',
     price: 2,
     image: '',
     ingredients: [],
@@ -1280,8 +1292,9 @@ export const items: MenuItem[] = [
   {
     id: 106,
     label: 'Aperitivo grande',
-    description: '',
-    price: 7,
+    description:
+      'Tris snacks, Sandwich, mini Hamburger, Piadina, Tramezzino, Bruschetta, Wurstel, 4pz Fritti',
+    price: 8,
     image: '',
     ingredients: [],
     allergens: [],
@@ -1291,21 +1304,22 @@ export const items: MenuItem[] = [
   },
   {
     id: 107,
-    label: 'Aperitivo analcolico',
-    description: 'Con bevanda analcolica compresa',
-    price: 7,
+    label: 'Aperitivo piccolo',
+    description:
+      'Bevanda analcolica compresa + Tris snacks, Sandwich, mini Hamburger, Tramezzino, Bruschetta, Wurstel',
+    price: 8,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
     category_id: 'taglieri-panini',
-    slug: 'aperitivo-analcolico'
+    slug: 'aperitivo-piccolo'
   },
   {
     id: 108,
     label: 'Piadina',
     description: '',
-    price: 3,
+    price: 3.5,
     image: '',
     ingredients: [],
     allergens: [],
@@ -1364,7 +1378,7 @@ export const items: MenuItem[] = [
   {
     id: 113,
     label: 'Coni fritti',
-    description: '2 pezzi',
+    description: '4 pezzi',
     price: 5,
     image: '',
     ingredients: [],
