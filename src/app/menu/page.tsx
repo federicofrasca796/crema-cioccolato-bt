@@ -17,6 +17,7 @@ export default async function Menu() {
       items={filterItemsByCategory(category.slug)}
       icon={category.image}
       isOpen
+      className='animate-fadeIn'
     />
   );
 
