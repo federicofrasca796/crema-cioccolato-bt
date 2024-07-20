@@ -122,7 +122,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati MAXI',
+    category_id: 'gelati-maxi',
     slug: 'coppa-gelato-media'
   },
   {
@@ -134,7 +134,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati MAXI',
+    category_id: 'gelati-maxi',
     slug: 'coppa-gelato-grande'
   },
   {
@@ -146,7 +146,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati MAXI',
+    category_id: 'gelati-maxi',
     slug: 'frappè'
   },
   {
@@ -158,7 +158,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati MAXI',
+    category_id: 'gelati-maxi',
     slug: 'brioches-farcita-gelato'
   },
   {
@@ -170,7 +170,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati MAXI',
+    category_id: 'gelati-maxi',
     slug: 'crepes-farcita-con-gelato'
   },
   {
@@ -182,7 +182,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati MAXI',
+    category_id: 'gelati-maxi',
     slug: 'cornetto-farcito-con-gelato'
   },
   {
@@ -506,7 +506,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati MAXI',
+    category_id: 'gelati-maxi',
     slug: 'cornetto-ace'
   },
   {

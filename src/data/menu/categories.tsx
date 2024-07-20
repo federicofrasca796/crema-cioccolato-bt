@@ -49,9 +49,9 @@ export const categories: Category[] = [
   },
   {
     id: 2,
-    name: 'Gelatoni',
+    name: 'Gelati MAXI',
     image: IcecreamSweets,
-    slug: 'gelatoni',
+    slug: 'gelati-maxi',
     highlight: true,
     topics: [1],
     extras: [
