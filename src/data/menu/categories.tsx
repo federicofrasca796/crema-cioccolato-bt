@@ -82,17 +82,7 @@ export const categories: Category[] = [
     slug: 'caffe',
     highlight: false,
     topics: [2],
-    extras: [
-      {
-        id: 3,
-        label: 'Aggiunta creme',
-        slug: 'aggiunta-creme',
-        price: 1.2,
-        available: true,
-        image: '',
-        ingredients: []
-      }
-    ]
+    extras: []
   },
   {
     id: 4,

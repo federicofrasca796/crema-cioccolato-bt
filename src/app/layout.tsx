@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
-  variable: '--font-nunito-sans'
+  variable: '--font-nunito-sans',
+  adjustFontFallback: false
 });
 
 const rhozaOne = Rozha_One({

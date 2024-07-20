@@ -206,7 +206,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'caffè'
   },
   {
@@ -218,7 +218,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'caffè-decaffeinato'
   },
   {
@@ -230,7 +230,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'caffè-al-ghiaccio'
   },
   {
@@ -242,7 +242,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'caffè-corretto'
   },
   {
@@ -254,7 +254,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'caffè-leccese'
   },
   {
@@ -266,7 +266,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'espressino'
   },
   {
@@ -278,7 +278,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'espressino-decaffeinato'
   },
   {
@@ -290,7 +290,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'espressino-senza-lattosio'
   },
   {
@@ -302,7 +302,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'espressino-di-soia'
   },
   {
@@ -314,7 +314,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'ginseng'
   },
   {
@@ -326,7 +326,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: "caffè-d'orzo"
   },
   {
@@ -338,7 +338,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'cappuccino'
   },
   {
@@ -350,7 +350,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'cappuccino-senza-lattosio'
   },
   {
@@ -362,7 +362,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'cappuccino-di-soia'
   },
   {
@@ -386,7 +386,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: "caffe'",
+    category_id: 'caffe',
     slug: 'caffè-freddo'
   },
   {
