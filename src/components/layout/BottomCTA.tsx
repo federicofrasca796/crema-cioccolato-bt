@@ -3,7 +3,7 @@
 import { ShareIcon } from '@heroicons/react/16/solid';
 import { BookOpenIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
-import { ComponentProps } from 'react';
+import { ComponentProps, useEffect, useState } from 'react';
 import Button from '../elements/Button';
 import Link from '../elements/Link';
 
@@ -13,7 +13,7 @@ export default function StickyCTABottom({
 }: {
   sticky: boolean;
 } & ComponentProps<'div'>) {
-  const canShare = typeof window !== 'undefined' && navigator;
+  const [canShare, setCanShare] = useState(false);
 
   const handleNativeShare = () => {
     navigator
@@ -23,6 +23,11 @@ export default function StickyCTABottom({
       })
       .catch((error) => console.error('Sharing action went wrong:: \n', error));
   };
+
+  useEffect(() => {
+    const canShare = typeof window !== 'undefined' && navigator;
+    setCanShare(!!canShare);
+  }, []);
 
   return (
     <div
