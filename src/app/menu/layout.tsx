@@ -31,7 +31,9 @@ export default function MenuLayout({
             </h1>
           </div>
 
-          <TopicsCarousel activeTopic={params.topic} />
+          <div className='overflow-hidden'>
+            <TopicsCarousel activeTopic={params.topic} />
+          </div>
         </header>
       </section>
 
