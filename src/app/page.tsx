@@ -71,7 +71,7 @@ export default function Home() {
                 gusti.
               </p>
             </div>
-            <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2'>
+            <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2 md:w-4/5'>
               <Image
                 className='rounded-xl'
                 src={IcecreamConeCutout}
@@ -87,7 +87,7 @@ export default function Home() {
           </div>
 
           <div className='container mx-auto mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
-            <div className='prose md:col-span-2 md:col-start-4'>
+            <div className='prose md:col-span-3 md:col-start-3'>
               <h1>Prova i nostri dolci con farcitura al gelato!</h1>
               <p>
                 Scegli tra una vasta selezione di deliziosi dolci: soffici
@@ -99,24 +99,25 @@ export default function Home() {
                 tuo dolce per una esperienza di gusto indimenticabile.
               </p>
             </div>
-            <figure className='relative mx-auto flex aspect-square w-full justify-center overflow-hidden rounded-full bg-gradient-to-t from-accent-100/50 md:-order-1 md:col-span-2'>
+            <figure className='relative mx-auto flex aspect-square w-full justify-center overflow-hidden rounded-full bg-gradient-to-t from-accent-100/50 md:-order-1 md:col-span-2 md:w-4/5'>
               <Image
                 className='rounded-xl'
                 src={CroissantIcecreamCutout}
                 alt='Croissant with three balls of Icecream'
                 sizes='(max-width: 786px) 100vw, 50vw'
                 style={{
-                  objectFit: 'contain'
+                  objectFit: 'contain',
+                  width: '80%'
                 }}
               />
             </figure>
           </div>
 
           <div
-            className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-primary-0 py-16 md:mx-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl'
+            className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-primary-0 py-6 md:mx-auto md:max-w-screen-md md:py-16 lg:max-w-screen-lg xl:max-w-screen-xl'
             id='aperitivo'
           >
-            <div className='container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-12'>
+            <div className='container mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 md:gap-5'>
               <div className='prose prose-h1:text-primary-900'>
                 <h1>Aperitivo tra amici?</h1>
                 <p>
@@ -148,6 +149,7 @@ export default function Home() {
                   slides={aperitivoCarouselSlides}
                   pagination
                   spaceBetween={10}
+                  loop={false}
                 />
               </div>
             </div>
