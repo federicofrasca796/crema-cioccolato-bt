@@ -1,43 +1,42 @@
 import CategoryAccordion from '@/components/CategoryAccordion';
-import { type Category, categories } from '@/data/menu/categories';
-import { items, type MenuItem } from '@/data/menu/items';
-import { type Topic, topics } from '@/data/menu/topics';
+import prisma from '@/lib/db';
+import { Prisma } from '@prisma/client';
 
-const getCategoriesByTopic = (topicSlug: Topic['slug']) => {
-  const topic = topics.find((topic: Topic) => topic.slug === topicSlug);
-
-  if (!topic) throw new Error(`Topic '${topicSlug}' not found`);
-
-  const activeCategories = categories.filter((category) =>
-    category.topics.includes(topic.id)
-  );
-
-  return activeCategories;
-};
-
-export default async function MenuByTopic({
+export default async function MenuByTopicPage({
   params
 }: {
-  params: { topic: Topic['slug'] };
+  params: {
+    topic: Prisma.TopicGetPayload<{}>['slug'];
+  };
 }) {
   const { topic } = params;
 
-  const categoriesByTopic = getCategoriesByTopic(topic);
+  const categoriesByTopic: Prisma.CategoryGetPayload<{
+    include: { items: true; extras: true };
+  }>[] = await prisma.category.findMany({
+    where: {
+      topics: {
+        some: {
+          slug: topic
+        }
+      }
+    },
+    include: {
+      extras: true,
+      items: true
+    }
+  });
 
-  const filterItemsByCategory = (categorySlug: Category['slug']) =>
-    items.filter((item: MenuItem) => {
-      return item.category_id === categorySlug;
-    });
-
-  const renderCategoryAccordion = (category: Category) => (
+  const renderCategoryAccordion = (
+    category: (typeof categoriesByTopic)[number]
+  ) => (
     <CategoryAccordion
       key={category.id}
       title={category.name}
       extras={category.extras}
       accordionName={category.slug}
-      items={filterItemsByCategory(category.slug)}
-      icon={category.image}
-      isOpen
+      items={category.items}
+      // isOpen
       className='animate-fadeIn'
     />
   );

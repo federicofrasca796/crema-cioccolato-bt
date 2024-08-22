@@ -6,10 +6,11 @@ import Badge from './elements/Badge';
 import Button from './elements/Button';
 import Modal from './elements/Modal';
 import { useState } from 'react';
+import { Prisma } from '@prisma/client';
 
 interface MenuItemProps {
   title: string;
-  subtitle?: string;
+  subtitle?: string | null;
   price: number;
   badges?: { icon: string; className: string }[];
   tooltip?: string;
@@ -17,7 +18,7 @@ interface MenuItemProps {
   isExtraItem?: boolean;
 }
 
-const parsePrice = (price: number) => {
+const parsePrice = (price: MenuItemProps['price']) => {
   return '€' + ' ' + price.toFixed(2).toString().replace('.', ',');
 };
 
@@ -64,7 +65,7 @@ export default function MenuItem({
             label={parsePrice(price)}
             variant={isExtraItem ? 'outlined' : 'contained'}
             className={clsx('min-w-max', {
-              'border-none bg-secondary-200 text-primary hover:bg-secondary-300':
+              'border-none bg-secondary-200 text-primary group-hover:bg-secondary-400':
                 !isExtraItem
             })}
           />

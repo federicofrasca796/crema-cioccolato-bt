@@ -1,0 +1,137 @@
+label,description,price,allergens,ingredients,image,available,category
+Cono gelato medio,No servizio al tavolo ,"€ 2,50",,,,Si,Gelati
+Cono gelato grande ,No servizio al tavolo ,"€ 3,00",,,,Si,Gelati
+Cono gelato croccante ,No servizio al tavolo ,"€ 3,00",,,,Si,Gelati
+Coppetta gelato piccola ,No servizio al tavolo ,"€ 2,50",,,,Si,Gelati
+Coppetta gelato media ,No servizio al tavolo ,"€ 3,00",,,,Si,Gelati
+Coppetta gelato grande ,No servizio al tavolo ,"€ 3,50",,,,Si,Gelati
+Cialda Croccante ,No servizio al tavolo ,"€ 3,50",,,,Si,Gelati
+Panna ,,"€ 0,50",,,,Si,
+,,,,,,,
+Coppa gelato media,,"€ 4,00",,,,Si,Gelati Maxi
+Coppa gelato grande ,,"€ 6,00",,,,Si,Gelati Maxi
+Frappè ,,"€ 3,50",,,,Si,Gelati Maxi
+Brioches farcita gelato ,,"€ 3,50",,,,Si,Gelati Maxi
+Crepes farcita con gelato ,,"€ 5,00",,,,Si,Gelati Maxi
+Cornetto Farcito con gelato ,,"€ 3,00",,,,Si,Gelati Maxi
+Panna   ,,"€ 1,00",,,,Si,
+,,,,,,,
+Caffè ,,"€ 1,00",,,,Si,Caffe'
+Caffè decaffeinato ,,"€ 1,20",,,,Si,Caffe'
+Caffè al ghiaccio ,,"€ 1,20",,,,Si,Caffe'
+Caffè corretto ,,"€ 1,50",,,,Si,Caffe'
+Caffè leccese,,"€ 2,00",,,,Si,Caffe'
+Espressino,,"€ 1,20",,,,Si,Caffe'
+Espressino decaffeinato ,,"€ 1,40",,,,Si,Caffe'
+Espressino senza lattosio ,,"€ 1,40",,,,Si,Caffe'
+Espressino di soia ,,"€ 1,50",,,,Si,Caffe'
+Ginseng ,,"€ 1,20",,,,Si,Caffe'
+Caffè d'orzo,,"€ 1,50",,,,Si,Caffe'
+Cappuccino ,,"€ 1,50",,,,Si,Caffe'
+Cappuccino senza lattosio ,,"€ 1,70",,,,Si,Caffe'
+Cappuccino di soia,,"€ 1,80",,,,Si,Caffe'
+Caffè freddo ,,"€ 1,50",,,,Si,Caffe'
+,,,,,,,
+Latte e menta,,"€ 2,00",,,,Si,Latte e cioccolato
+Latte bianco ,,"€ 1,20",,,,Si,Latte e cioccolato
+Latte bianco senza lattosio ,,"€ 1,50",,,,Si,Latte e cioccolato
+Latte macchiato,,"€ 1,20",,,,Si,Latte e cioccolato
+Cioccolata calda ,,"€ 3,00",,,,Si,Latte e cioccolato
+,,,,,,,
+Ciambella ,,"€ 1,50",,,,Si,Dolci e Paste
+Muffin Nutella ,,"€ 2,50",,,,Si,Dolci e Paste
+Biscotti,Gusti assortiti,"€ 1,00",,,,Si,Dolci e Paste
+Crepes ,,"€ 3,00",,,,Si,Dolci e Paste
+Pancakes,,"€ 4,00",,,,Si,Dolci e Paste
+Cornetto,,"€ 1,20",,,,Si,Dolci e Paste
+Cornetto vegano,,"€ 1,30",,,,Si,Dolci e Paste
+Cornetto ace,,"€ 1,50",,,,Si,Dolci e Paste
+Treccia,,"€ 1,50",,,,Si,Dolci e Paste
+Conchiglia ,,"€ 1,50",,,,Si,Dolci e Paste
+Creme assortite,,"€ 0,50",,,,Si,
+Smarties,,"€ 0,50",,,,Si,
+Granella nocciola,,"€ 0,50",,,,Si,
+Farina di cocco,,"€ 0,50",,,,Si,
+,,,,,,,
+Estathè,,"€ 2,50",,,,Si,Bibite
+Fanta lattina,,"€ 2,00",,,,Si,Bibite
+Fanta bottiglia ,,"€ 2,50",,,,Si,Bibite
+Coca cola lattina,,"€ 2,00",,,,Si,Bibite
+Coca cola bottiglia ,,"€ 2,50",,,,Si,Bibite
+Lurisia,Gusti assortiti,"€ 3,00",,,,Si,Bibite
+Campari Soda,,"€ 2,50",,,,Si,Bibite
+Cocktail San Pellegrino ,,"€ 2,00",,,,Si,Bibite
+Cedrata San Pellegrino ,,"€ 2,00",,,,Si,Bibite
+Schweppes Limone,,"€ 2,00",,,,Si,Bibite
+Schweppes Tonica,,"€ 2,00",,,,Si,Bibite
+Crodino,,"€ 2,00",,,,Si,Bibite
+Bitter rosso ,,"€ 2,00",,,,Si,Bibite
+Bitter bianco,,"€ 2,00",,,,Si,Bibite
+Campari Soda,,"€ 2,50",,,,Si,Bibite
+Succhi di frutta ,Gusti assortiti,"€ 2,00",,,,Si,Bibite
+Succo di frutti rossi,,"€ 2,50",,,,Si,Bibite
+Acqua,,"€ 1,00",,,,Si,Bibite
+Spremuta di arancia,,"€ 3,00",,,,Si,Bibite
+Tisane,,"€ 2,00",,,,Si,Bibite
+The caldo ,,"€ 2,00",,,,Si,Bibite
+,,,,,,,
+Nastro Azzurro,,"€ 2,00",,,,Si,Birre
+Beck's,,"€ 2,50",,,,Si,Birre
+Peroni al limone ,,"€ 2,00",,,,Si,Birre
+Menabrea,,"€ 3,00",,,,Si,Birre
+Corona ,,"€ 3,00",,,,Si,Birre
+Bjorne,,"€ 3,00",,,,Si,Birre
+Tourtel analcolica,,"€ 2,00",,,,Si,Birre
+,,,,,,,
+Kraken,,"€ 5,00",,,,Si,Rum
+Don Papa Baroko,,"€ 5,00",,,,Si,Rum
+Don Papa Masskara,,"€ 7,00",,,,Si,Rum
+Diplomatico riserva ,,"€ 7,00",,,,Si,Rum
+Havana club especial ,,"€ 2,50",,,,Si,Rum
+,,,,,,,
+903 bianca,,"€ 3,00",,,,Si,Grappe
+903 barricata,,"€ 3,50",,,,Si,Grappe
+La corte barricata ,Invecchiata di 12 mesi,"€ 4,00",,,,Si,Grappe
+Poli Sarpa Oro,,"€ 4,00",,,,Si,Grappe
+,,,,,,,
+Lucano,,"€ 2,50",,,,Si,Amari e liquori
+Jägermeister,,"€ 2,50",,,,Si,Amari e liquori
+Montenegro ,,"€ 2,50",,,,Si,Amari e liquori
+Amaro del Capo,,"€ 2,50",,,,Si,Amari e liquori
+Disaronno,,"€ 2,50",,,,Si,Amari e liquori
+,,,,,,,
+Jameson,Irlanda,"€ 3,50",,,,Si,Whiskey
+Jack Daniel's,USA,"€ 4,00",,,,Si,Whiskey
+Four Roses,USA,"€ 5,00",,,,Si,Whiskey
+Laphroaig,Scozia,"€ 6,00",,,,Si,Whiskey
+,,,,,,,
+San Marzano ,,"€ 3,00",,,,Si,Amari e liquori
+Sambuca Molinari,,"€ 3,00",,,,Si,Amari e liquori
+Baileys,,"€ 3,00",,,,Si,Amari e liquori
+,,,,,,,
+Gin Broker's,,"€ 3,00",,,,Si,Gin
+Tanqueray,,"€ 4,50",,,,Si,Gin
+Hendrick's ,,"€ 6,00",,,,Si,Gin
+,,,,,,,
+Bottiglia Prosecco,Bollicina,"€ 25,00",,,,Si,Vini
+Calice prosecco,Bollicina,"€ 3,00",,,,Si,Vini
+Calice vino Bianco,,"€ 4,00",,,,Si,Vini
+Calice vino Rosso ,,"€ 3,50",,,,Si,Vini
+Calice vino Rosato,,"€ 5,00",,,,Si,Vini
+,,,,,,,
+Patatine San Carlo,Gusti assortiti,"€ 1,50",,,,Si,Snacks
+Tris,"Patatine, Arachidi, Olive","€ 3,50",,,,Si,Snacks
+Ciotola patatine,,"€ 1,00",,,,Si,Snacks
+Ciotola olive,,"€ 2,00",,,,Si,Snacks
+Ciotola arachidi ,,"€ 1,00",,,,Si,Snacks
+Ciotola Rice,Piccanti,"€ 2,00",,,,Si,Snacks
+Piadina,,"€ 3,50",,,,Si,Snacks
+Panino,,"€ 4,00",,,,Si,Snacks
+Tramezzino ,,"€ 2,00",,,,Si,Snacks
+Toast ,,"€ 2,00",,,,Si,Snacks
+Pinsa,,"€ 8,00",,,,Si,Snacks
+Coni fritti,2 pezzi,"€ 5,00",,,,Si,Snacks
+Bruschette,4 pezzi,"€ 3,50",,,,Si,Snacks
+,,,,,,,
+Aperitivo grande,"Tris, Sandwich, Mini Hamburger, Piadina, Tramezzino, Bruschetta, Wurstel, 4pz Fritti ","€ 8,00",,,,Si,Taglieri e Panini
+Aperitivo analcolico,"Tris, Sandwich, Mini Hamburger, Tramezzino, Bruschetta, Wurstel + Bevanda analcolica (chiedere allo staff)","€ 8,00",,,,Si,Taglieri e Panini

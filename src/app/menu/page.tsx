@@ -1,22 +1,27 @@
 import CategoryAccordion from '@/components/CategoryAccordion';
-import { type Category, categories } from '@/data/menu/categories';
-import { type MenuItem, items } from '@/data/menu/items';
+import prisma from '@/lib/db';
+import { Prisma } from '@prisma/client';
 
-export default async function Menu() {
-  const filterItemsByCategory = (categorySlug: Category['slug']) =>
-    items.filter((item: MenuItem) => {
-      return item.category_id === categorySlug;
-    });
+export default async function MenuPage() {
+  const categories = await prisma.category.findMany({
+    include: {
+      extras: true,
+      items: true
+    }
+  });
 
-  const renderCategoryAccordion = (category: Category) => (
+  const renderCategoryAccordion = (
+    category: Prisma.CategoryGetPayload<{
+      include: { items: true; extras: true };
+    }>
+  ) => (
     <CategoryAccordion
       key={category.id}
       title={category.name}
       extras={category.extras}
       accordionName={category.slug}
-      items={filterItemsByCategory(category.slug)}
-      icon={category.image}
-      isOpen
+      items={category.items}
+      // isOpen
       className='animate-fadeIn'
     />
   );

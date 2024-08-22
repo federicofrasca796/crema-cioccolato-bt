@@ -1,61 +1,55 @@
+import { Prisma } from '@prisma/client';
 import clsx from 'clsx';
+import { ChangeEventHandler } from 'react';
 import MenuItem from './MenuItem';
-import type { MenuItem as Item } from '@/data/menu/items';
-import { StaticImageData } from 'next/image';
-import { ExtraItem } from '@/data/menu/categories';
 
 interface CategoryAccordionProps {
-  items: Item[];
-  extras?: ExtraItem[];
+  items: Prisma.ItemGetPayload<{}>[];
+  extras?: Prisma.ExtraItemGetPayload<{}>[];
   title: string;
   highlighted?: boolean;
   className?: HTMLDivElement['className'];
   accordionName: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   isOpen?: boolean;
-  icon?: StaticImageData | string;
 }
 
 export default function CategoryAccordion({
   items,
   extras,
   title,
-  icon,
   className,
   accordionName,
   onChange,
-  isOpen,
-  highlighted
+  isOpen
 }: CategoryAccordionProps) {
   if (!items.length) return;
 
-  const renderItem = (item: Item) => {
-    return (
-      <MenuItem
-        key={item.id}
-        title={item.label}
-        subtitle={item.description}
-        price={item.price}
-        className='my-2.5'
-        {...(item?.allergens?.length && {
-          tooltip: `Allergeni: ${item?.allergens?.join(`, `)}`
-        })}
-      />
-    );
-  };
+  const renderItem = (item: CategoryAccordionProps['items'][number]) => (
+    <MenuItem
+      key={item.id}
+      title={item.label}
+      subtitle={item.description}
+      price={Number(item.price)}
+      className='my-2.5'
+      {...(item.allergens?.length && {
+        tooltip: `Allergeni: ${item.allergens?.join(`, `)}`
+      })}
+    />
+  );
 
-  const renderExtraItem = (item: ExtraItem) => {
-    return (
-      <MenuItem
-        key={item.id}
-        title={item.label}
-        subtitle={item.description}
-        price={item.price}
-        className='my-1'
-        isExtraItem
-      />
-    );
-  };
+  const renderExtraItem = (
+    extra: NonNullable<CategoryAccordionProps['extras']>[number]
+  ) => (
+    <MenuItem
+      key={extra.id}
+      title={extra.label}
+      subtitle={extra.description}
+      price={Number(extra.price)}
+      className='my-1'
+      isExtraItem
+    />
+  );
 
   return (
     <div className={clsx('collapse collapse-arrow transition-none', className)}>

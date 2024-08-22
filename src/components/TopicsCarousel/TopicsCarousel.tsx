@@ -1,21 +1,26 @@
 'use client';
 
-import 'swiper/css';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
-
-import { type Topic, topics } from '@/data/menu/topics';
+import { Prisma } from '@prisma/client';
 import clsx from 'clsx';
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import 'swiper/css';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../tailwind.config';
+import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
+
+interface TopicCarouselProps {
+  topics: Prisma.TopicGetPayload<{
+    select: { id: true; slug: true; name: true };
+  }>[];
+  activeTopic?: Prisma.TopicGetPayload<{}>['slug'] | Params[string];
+}
 
 export default function TopicsCarousel({
+  topics,
   activeTopic
-}: {
-  activeTopic?: Topic['slug'] | Params;
-}) {
+}: TopicCarouselProps) {
   const router = useRouter();
   const { theme } = resolveConfig(tailwindConfig);
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
@@ -31,7 +36,10 @@ export default function TopicsCarousel({
     }
   }, [swiper, activeTopic]);
 
-  const renderTopic = (topic: Topic, idx: number) => (
+  const renderTopicSlide = (
+    topic: TopicCarouselProps['topics'][number],
+    idx: number
+  ) => (
     <SwiperSlide
       tag='a'
       key={topic.id}
@@ -100,7 +108,7 @@ export default function TopicsCarousel({
         rewind
         className='mx-auto mt-5 h-max items-start max-md:!px-4 sm:max-w-[568px] md:max-w-[704px] md:!overflow-visible lg:max-w-[896px] xl:max-w-[1120px] 2xl:max-w-[1344px]'
       >
-        {renderTopic(
+        {renderTopicSlide(
           {
             name: 'Tutto il menù',
             slug: '',
@@ -108,7 +116,7 @@ export default function TopicsCarousel({
           },
           -1
         )}
-        {topics.map(renderTopic)}
+        {topics.map(renderTopicSlide)}
       </Swiper>
     </>
   );

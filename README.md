@@ -1,5 +1,7 @@
 # Crema e Cioccolato Barletta - Showcase and Menu site
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f0a41eed-68ca-4867-91c2-ddc5f4cc7749/deploy-status)](https://app.netlify.com/sites/astonishing-basbousa-49c73e/deploys)
+git
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## Getting Started
@@ -7,7 +9,7 @@
 First, run the development server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -24,7 +26,7 @@ To have a guidance on properly formatted commit messages you (again, talking to 
 ```bash
 git cz
 # or
-npm run commit-msg
+pnpm run commit-msg
 ```
 
 Commitizen is configured to use the custom [cz-emoji-conventional](https://github.com/promet99/cz-emoji-conventional) adapter to achieve fancier commits. Emojis help in a sea of text afterall.
