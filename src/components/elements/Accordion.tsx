@@ -23,7 +23,6 @@ export default function Accordion({
     <div
       className={clsx(
         'collapse collapse-arrow',
-        // 'rounded-full has-[:checked]:rounded-lg',
         'border-2 border-primary-100 bg-primary-0',
         className
       )}
