@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import csv from 'csv-parser';
 import { MenuItem } from '@/data/menu/items';
+import slugify from 'slugify';
 
 interface ItemsTableRow {
   label: string;
@@ -14,17 +15,7 @@ interface ItemsTableRow {
   category: string;
 }
 
-function slugify(str: string) {
-  return str
-    .toLowerCase() // Convert the string to lowercase
-    .replace(/\s+e\s+/g, '-') // Remove non-word characters and '&', 'e'
-    .replace(/\s+&\s+/g, '-') // Remove non-word characters and '&', 'e'
-    .replace(/\s+/g, '-') // Replace spaces with a dash
-    .replace(/--+/g, '-') // Replace multiple dashes with a single dash
-    .trim(); // Trim leading and trailing whitespace
-}
-
-const normalizeRow = (row: ItemsTableRow, index: number) => {
+const normalizeItem = (row: ItemsTableRow, index: number) => {
   if (!row.label) return;
 
   const normalized: MenuItem = {
@@ -41,14 +32,22 @@ const normalizeRow = (row: ItemsTableRow, index: number) => {
   };
 
   normalized.label = row.label.trim();
-  normalized.slug = slugify(normalized.label);
+  normalized.slug = slugify(normalized.label, {
+    lower: true,
+    trim: true,
+    strict: true
+  });
   normalized.description = row.description.trim();
   normalized.price = parseFloat(
     row.price.replace(/[^\d,.-]/g, '').replace(',', '.')
   );
   normalized.image = row.image;
-  normalized.available = row.available === 'Si' ? true : false;
-  normalized.category_id = slugify(row.category);
+  normalized.available = row.available === 'Si';
+  normalized.category_id = slugify(row.category, {
+    lower: true,
+    trim: true,
+    strict: true
+  });
   normalized.allergens = row.allergens.length ? row.allergens.split(',') : [];
   normalized.ingredients = row.ingredients.length
     ? row.ingredients.split(',')
@@ -58,7 +57,7 @@ const normalizeRow = (row: ItemsTableRow, index: number) => {
 };
 
 export async function GET(): Promise<Response> {
-  const filePath = path.join(process.cwd(), 'public', 'data.csv');
+  const filePath = path.join(process.cwd(), 'public', 'items.csv');
 
   const results: MenuItem[] = [];
   let currentItemId = 1;
@@ -66,7 +65,7 @@ export async function GET(): Promise<Response> {
     fs.createReadStream(filePath)
       .pipe(csv())
       .on('data', (data) => {
-        const normalizedRow = normalizeRow(data, currentItemId);
+        const normalizedRow = normalizeItem(data, currentItemId);
         if (!normalizedRow) return;
 
         currentItemId++;
