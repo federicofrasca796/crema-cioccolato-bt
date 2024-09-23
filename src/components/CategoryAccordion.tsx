@@ -1,8 +1,8 @@
-import clsx from 'clsx';
-import MenuItem from './MenuItem';
-import type { MenuItem as Item } from '@/data/menu/items';
-import { StaticImageData } from 'next/image';
 import { ExtraItem } from '@/data/menu/categories';
+import type { MenuItem as Item } from '@/data/menu/items';
+import clsx from 'clsx';
+import { StaticImageData } from 'next/image';
+import MenuItem from './MenuItem';
 
 interface CategoryAccordionProps {
   items: Item[];
@@ -11,7 +11,7 @@ interface CategoryAccordionProps {
   highlighted?: boolean;
   className?: HTMLDivElement['className'];
   accordionName: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   isOpen?: boolean;
   icon?: StaticImageData | string;
 }
@@ -20,12 +20,12 @@ export default function CategoryAccordion({
   items,
   extras,
   title,
-  icon,
+  // icon,
   className,
   accordionName,
   onChange,
-  isOpen,
-  highlighted
+  isOpen
+  // highlighted
 }: CategoryAccordionProps) {
   if (!items.length) return;
 

@@ -108,12 +108,17 @@ const config: Config = {
         }
       }),
       animation: {
-        fadeIn: 'fadeIn 0.3s ease-in-out'
+        fadeIn: 'fadeIn 0.3s ease-in-out',
+        wavyLine:
+          '30s cubic-bezier(0.010, 0.000, 1.000, 1.000) forwards infinite wavyScroll'
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }
+        },
+        wavyScroll: {
+          '100%': { 'mask-position': 'right' }
         }
       }
     },

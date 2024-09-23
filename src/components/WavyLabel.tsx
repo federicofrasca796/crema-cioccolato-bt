@@ -10,9 +10,9 @@ export default function WavyLabel({
   subtitle
 }: WavyLabelProps) {
   return (
-    <div className='inline-flex min-h-10 w-full'>
+    <div className='group inline-flex min-h-10 w-full'>
       <div className='grow'>
-        <div className="mb-0.5 after:block after:h-[0.45rem] after:bg-smokyBrown-400 after:[mask-image:url('/assets/wavy-dotted-line.svg')]">
+        <div className='wavy-dotted-line mb-0.5 group-hover:after:animate-wavyLine'>
           {title}
         </div>
         <p className='text-sm text-smokyBrown-600'>{subtitle}</p>
