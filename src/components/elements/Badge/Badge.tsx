@@ -17,6 +17,8 @@ export type BadgeProps = {
   variant?: BadgeVariants;
   size?: BadgeSizes;
   className?: React.HTMLAttributes<HTMLSpanElement>['className'];
+  iconLeft?: React.ReactNode;
+  iconRight?: React.ReactNode;
 };
 
 const COLORS: Record<
@@ -56,16 +58,20 @@ export default function Badge({
   color = 'primary',
   variant = 'contained',
   size = 'medium',
-  className
+  className,
+  iconLeft,
+  iconRight
 }: BadgeProps) {
   return (
     <span
       className={clsx(
-        ['badge', COLORS[color], VARIANTS[variant], SIZES[size]],
+        ['badge flex-shrink-0', COLORS[color], VARIANTS[variant], SIZES[size]],
         className
       )}
     >
+      {iconLeft && <span className='mr-1'>{iconLeft}</span>}
       {label}
+      {iconRight && <span className='ml-1'>{iconRight}</span>}
     </span>
   );
 }
