@@ -9,32 +9,38 @@
 }
 
 /* Customize DaisyUI components */
-.btn {
-  @apply border-2 text-base font-bold;
-}
+@layer components {
+  .btn {
+    @apply border-2 text-base font-bold;
+  }
 
-.badge {
-  @apply h-auto rounded font-semibold;
-}
+  .badge {
+    @apply h-auto rounded font-semibold;
+  }
 
-.badge,
-.badge-md {
-  @apply px-1.5 py-0.5;
-}
+  .badge,
+  .badge-md {
+    @apply px-1.5 py-0.5;
+  }
 
-.skeleton {
-  @apply bg-secondary-100/80;
-}
+  .skeleton {
+    @apply bg-secondary-100/80;
+  }
 
-/* Custom classes */
-.top-wave {
-  @apply relative mt-10 before:absolute before:-top-10 before:left-0 before:block before:h-10 before:w-full before:bg-secondary before:[mask-image:url('/assets/wave-1.svg')] before:[mask-repeat:no-repeat] before:[mask-size:cover];
-}
+  /* Custom classes */
+  .top-wave {
+    @apply relative mt-10 before:absolute before:-top-10 before:left-0 before:block before:h-10 before:w-full before:bg-secondary before:[mask-image:url('/assets/wave-1.svg')] before:[mask-repeat:no-repeat] before:[mask-size:cover];
+  }
 
-.bottom-wave {
-  @apply relative mb-10 after:absolute after:left-0 after:top-[99.9%] after:block after:h-10 after:w-full after:rotate-180 after:bg-secondary after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
-}
+  .bottom-wave {
+    @apply relative mb-10 after:absolute after:left-0 after:top-[99.9%] after:block after:h-10 after:w-full after:rotate-180 after:bg-secondary after:[mask-image:url('/assets/wave-1.svg')] after:[mask-repeat:no-repeat] after:[mask-size:cover];
+  }
 
-/* .sparkles-couple {
-  @apply after:absolute after:left-0 after:top-0 after:block after:h-10 after:bg-secondary after:[mask-repeat:no-repeat] after:[mask-size:cover] after:[mask-image:url('/assets/sparkles-couple.svg')];
-} */
+  /* .sparkles-couple {
+    @apply after:absolute after:left-0 after:top-0 after:block after:h-10 after:bg-secondary after:[mask-repeat:no-repeat] after:[mask-size:cover] after:[mask-image:url('/assets/sparkles-couple.svg')];
+  } */
+
+  .wavy-dotted-line {
+    @apply after:block after:h-[0.45rem] after:bg-smokyBrown-400 after:[mask-image:url('/assets/wavy-dotted-line.svg')];
+  }
+}
