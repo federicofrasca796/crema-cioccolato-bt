@@ -4,10 +4,10 @@ import 'swiper/css';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 
 import { type Topic, topics } from '@/data/menu/topics';
-import clsx from 'clsx';
 import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import clsx from 'clsx';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../tailwind.config';
 
@@ -22,7 +22,7 @@ export default function TopicsCarousel({
 
   useEffect(() => {
     // Preserve active topic on page load
-    if (swiper && activeTopic) {
+    if (swiper) {
       const activeSlideIdx = swiper.slides.findIndex(
         (slide) => slide.dataset.history === activeTopic
       );
@@ -45,10 +45,10 @@ export default function TopicsCarousel({
         <span
           title={topic.name}
           className={clsx(
-            'cursor-pointer font-serif text-5xl no-underline underline-offset-4 transition-all duration-500',
+            'cursor-pointer font-serif no-underline underline-offset-4 transition-all duration-500 md:text-5xl',
             {
-              'text-smokyBrown/20': !isActive,
-              'text-smokyBrown': isActive
+              'text-3xl text-smokyBrown/20': !isActive,
+              'text-4xl text-smokyBrown': isActive
             }
           )}
         >
@@ -96,8 +96,9 @@ export default function TopicsCarousel({
           }
         }}
         spaceBetween={60}
-        slidesPerView={1.45}
+        slidesPerView={2}
         rewind
+        wrapperClass='items-center'
         className='mx-auto mt-5 h-max items-start max-md:!px-4 sm:max-w-[568px] md:max-w-[704px] md:!overflow-visible lg:max-w-[896px] xl:max-w-[1120px] 2xl:max-w-[1344px]'
       >
         {renderTopic(

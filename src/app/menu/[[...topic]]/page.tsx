@@ -1,12 +1,12 @@
 import CategoryAccordion from '@/components/CategoryAccordion';
-import { type Category, categories } from '@/data/menu/categories';
-import { items, type MenuItem } from '@/data/menu/items';
+import { categories, type Category } from '@/data/menu/categories';
 import { type Topic, topics } from '@/data/menu/topics';
+import { getItemsByCategory } from '@/service/menu';
 
 const getCategoriesByTopic = (topicSlug: Topic['slug']) => {
   const topic = topics.find((topic: Topic) => topic.slug === topicSlug);
 
-  if (!topic) throw new Error(`Topic '${topicSlug}' not found`);
+  if (!topic) throw new Error(`Sezione '${topicSlug}' non trovata`);
 
   const activeCategories = categories.filter((category) =>
     category.topics.includes(topic.id)
@@ -18,16 +18,14 @@ const getCategoriesByTopic = (topicSlug: Topic['slug']) => {
 export default async function MenuByTopic({
   params
 }: {
-  params: { topic: Topic['slug'] };
+  // TODO: fix topic type, this is not typesafe as I can change it to string, while for nextjs it's an array
+  params: { topic: Topic['slug'][] };
 }) {
   const { topic } = params;
 
-  const categoriesByTopic = getCategoriesByTopic(topic);
+  const categoriesByTopic = topic ? getCategoriesByTopic(topic[0]) : categories;
 
-  const filterItemsByCategory = (categorySlug: Category['slug']) =>
-    items.filter((item: MenuItem) => {
-      return item.category_id === categorySlug;
-    });
+  if (topic?.length > 1) throw new Error(`Questa non è una sezione valida`);
 
   const renderCategoryAccordion = (category: Category) => (
     <CategoryAccordion
@@ -35,15 +33,14 @@ export default async function MenuByTopic({
       title={category.name}
       extras={category.extras}
       accordionName={category.slug}
-      items={filterItemsByCategory(category.slug)}
+      items={getItemsByCategory(category.slug)}
       icon={category.image}
-      isOpen
       className='animate-fadeIn'
     />
   );
 
   return (
-    <article className='container mx-auto mt-10 md:columns-2 md:gap-14'>
+    <article className='container mx-auto md:columns-2 md:gap-14'>
       {categoriesByTopic.map(renderCategoryAccordion)}
     </article>
   );

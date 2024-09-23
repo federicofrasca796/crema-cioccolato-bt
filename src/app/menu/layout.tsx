@@ -1,5 +1,6 @@
 'use client';
 
+import TopicFilters from '@/components/TopicFilters';
 import TopicsCarousel from '@/components/TopicsCarousel/TopicsCarousel';
 import { ArrowLeftIcon } from '@heroicons/react/16/solid';
 import Link from 'next/link';
@@ -12,11 +13,11 @@ export default function MenuLayout({
   children: React.ReactNode;
 }) {
   const router = useRouter();
-  const params = useParams();
+  const { topic } = useParams();
 
   return (
     <section id='menu-layout'>
-      <section className='mb-10 mt-20'>
+      <section className='mb-8 mt-10 md:mb-10 md:mt-20'>
         <header>
           <div className='container mx-auto'>
             <Link
@@ -31,8 +32,12 @@ export default function MenuLayout({
             </h1>
           </div>
 
-          <div className='overflow-hidden'>
-            <TopicsCarousel activeTopic={params.topic} />
+          <div className='overflow-hidden max-lg:hidden'>
+            <TopicsCarousel activeTopic={topic ? topic[0] : topic} />
+          </div>
+
+          <div className='container mx-auto mt-8 lg:hidden'>
+            <TopicFilters activeTopic={topic ? topic[0] : topic} />
           </div>
         </header>
       </section>
