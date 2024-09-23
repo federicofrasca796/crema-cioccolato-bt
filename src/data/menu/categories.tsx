@@ -49,9 +49,9 @@ export const categories: Category[] = [
   },
   {
     id: 2,
-    name: 'Gelati MAXI',
+    name: 'Coppe e farciture gelato',
     image: IcecreamSweets,
-    slug: 'gelati-maxi',
+    slug: 'coppe-farciture-gelato',
     highlight: true,
     topics: [1],
     extras: [

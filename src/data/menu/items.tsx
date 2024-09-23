@@ -103,7 +103,7 @@ export const items: MenuItem[] = [
   },
   {
     id: 8,
-    label: 'Aggiunta panna',
+    label: 'Panna',
     description: '',
     price: 0.5,
     image: '',
@@ -111,7 +111,7 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: '',
-    slug: 'aggiunta-panna'
+    slug: 'panna'
   },
   {
     id: 9,
@@ -122,7 +122,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati-maxi',
+    category_id: 'coppe-farciture-gelato',
     slug: 'coppa-gelato-media'
   },
   {
@@ -134,7 +134,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati-maxi',
+    category_id: 'coppe-farciture-gelato',
     slug: 'coppa-gelato-grande'
   },
   {
@@ -146,48 +146,48 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati-maxi',
-    slug: 'frappè'
+    category_id: 'coppe-farciture-gelato',
+    slug: 'frappe'
   },
   {
     id: 12,
-    label: 'Brioches Gelato',
-    description: 'Brioches farcita con gelato',
+    label: 'Brioches farcita gelato',
+    description: '',
     price: 3.5,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati-maxi',
+    category_id: 'coppe-farciture-gelato',
     slug: 'brioches-farcita-gelato'
   },
   {
     id: 13,
-    label: 'Crepes Gelato',
-    description: 'Crepes farcita con gelato',
+    label: 'Crepes farcita con gelato',
+    description: '',
     price: 5,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati-maxi',
+    category_id: 'coppe-farciture-gelato',
     slug: 'crepes-farcita-con-gelato'
   },
   {
     id: 14,
-    label: 'Cornetto Gelato',
-    description: 'Cornetto farcito con gelato',
+    label: 'Cornetto Farcito con gelato',
+    description: '',
     price: 3,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'gelati-maxi',
+    category_id: 'coppe-farciture-gelato',
     slug: 'cornetto-farcito-con-gelato'
   },
   {
     id: 15,
-    label: 'Aggiunta panna',
+    label: 'Panna',
     description: '',
     price: 1,
     image: '',
@@ -195,7 +195,7 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: '',
-    slug: 'aggiunta-panna'
+    slug: 'panna'
   },
   {
     id: 16,
@@ -207,7 +207,7 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'caffe',
-    slug: 'caffè'
+    slug: 'caffe'
   },
   {
     id: 17,
@@ -219,7 +219,7 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'caffe',
-    slug: 'caffè-decaffeinato'
+    slug: 'caffe-decaffeinato'
   },
   {
     id: 18,
@@ -231,7 +231,7 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'caffe',
-    slug: 'caffè-al-ghiaccio'
+    slug: 'caffe-al-ghiaccio'
   },
   {
     id: 19,
@@ -243,7 +243,7 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'caffe',
-    slug: 'caffè-corretto'
+    slug: 'caffe-corretto'
   },
   {
     id: 20,
@@ -255,7 +255,7 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'caffe',
-    slug: 'caffè-leccese'
+    slug: 'caffe-leccese'
   },
   {
     id: 21,
@@ -327,7 +327,7 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'caffe',
-    slug: "caffè-d'orzo"
+    slug: 'caffe-dorzo'
   },
   {
     id: 27,
@@ -366,18 +366,6 @@ export const items: MenuItem[] = [
     slug: 'cappuccino-di-soia'
   },
   {
-    id: 33,
-    label: 'Latte macchiato',
-    description: '',
-    price: 1.6,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'latte-cioccolate',
-    slug: 'latte-macchiato'
-  },
-  {
     id: 30,
     label: 'Caffè freddo',
     description: '',
@@ -387,10 +375,22 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'caffe',
-    slug: 'caffè-freddo'
+    slug: 'caffe-freddo'
   },
   {
     id: 31,
+    label: 'Latte e menta',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'latte-e-cioccolato',
+    slug: 'latte-e-menta'
+  },
+  {
+    id: 32,
     label: 'Latte bianco',
     description: '',
     price: 1.2,
@@ -398,11 +398,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-cioccolate',
+    category_id: 'latte-e-cioccolato',
     slug: 'latte-bianco'
   },
   {
-    id: 32,
+    id: 33,
     label: 'Latte bianco senza lattosio',
     description: '',
     price: 1.5,
@@ -410,35 +410,23 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-cioccolate',
+    category_id: 'latte-e-cioccolato',
     slug: 'latte-bianco-senza-lattosio'
   },
   {
     id: 34,
-    label: 'Tisane',
+    label: 'Latte macchiato',
     description: '',
-    price: 2,
+    price: 1.2,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'bibite',
-    slug: 'tisane'
+    category_id: 'latte-e-cioccolato',
+    slug: 'latte-macchiato'
   },
   {
     id: 35,
-    label: 'The caldo',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'the-caldo'
-  },
-  {
-    id: 36,
     label: 'Cioccolata calda',
     description: '',
     price: 3,
@@ -446,83 +434,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-cioccolate',
+    category_id: 'latte-e-cioccolato',
     slug: 'cioccolata-calda'
   },
   {
-    id: 37,
-    label: 'Cornetto',
-    description: '',
-    price: 1.2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'dolci-paste',
-    slug: 'cornetto'
-  },
-  {
-    id: 115,
-    label: 'Cornetto vegano',
-    description: '',
-    price: 1.3,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'dolci-paste',
-    slug: 'cornetto-vegano'
-  },
-  {
-    id: 38,
-    label: 'Treccia',
-    description: '',
-    price: 1.5,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'dolci-paste',
-    slug: 'treccia'
-  },
-  {
-    id: 39,
-    label: 'Conchiglia',
-    description: '',
-    price: 1.5,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'dolci-paste',
-    slug: 'conchiglia'
-  },
-  {
-    id: 40,
-    label: 'Cornetto ace',
-    description: '',
-    price: 1.5,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'gelati-maxi',
-    slug: 'cornetto-ace'
-  },
-  {
-    id: 41,
-    label: 'Aggiunta creme',
-    description: '',
-    price: 1.2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: '',
-    slug: 'aggiunta-creme'
-  },
-  {
-    id: 42,
+    id: 36,
     label: 'Ciambella',
     description: '',
     price: 1.5,
@@ -530,11 +446,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci-paste',
+    category_id: 'dolci-e-paste',
     slug: 'ciambella'
   },
   {
-    id: 43,
+    id: 37,
     label: 'Muffin Nutella',
     description: '',
     price: 2.5,
@@ -542,11 +458,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci-paste',
+    category_id: 'dolci-e-paste',
     slug: 'muffin-nutella'
   },
   {
-    id: 44,
+    id: 38,
     label: 'Biscotti',
     description: 'Gusti assortiti',
     price: 1,
@@ -554,11 +470,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci-paste',
+    category_id: 'dolci-e-paste',
     slug: 'biscotti'
   },
   {
-    id: 45,
+    id: 39,
     label: 'Crepes',
     description: '',
     price: 3,
@@ -566,11 +482,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci-paste',
+    category_id: 'dolci-e-paste',
     slug: 'crepes'
   },
   {
-    id: 46,
+    id: 40,
     label: 'Pancakes',
     description: '',
     price: 4,
@@ -578,11 +494,119 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'dolci-paste',
+    category_id: 'dolci-e-paste',
     slug: 'pancakes'
   },
   {
+    id: 41,
+    label: 'Cornetto',
+    description: '',
+    price: 1.2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'dolci-e-paste',
+    slug: 'cornetto'
+  },
+  {
+    id: 42,
+    label: 'Cornetto vegano',
+    description: '',
+    price: 1.3,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'dolci-e-paste',
+    slug: 'cornetto-vegano'
+  },
+  {
+    id: 43,
+    label: 'Cornetto ace',
+    description: '',
+    price: 1.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'dolci-e-paste',
+    slug: 'cornetto-ace'
+  },
+  {
+    id: 44,
+    label: 'Treccia',
+    description: '',
+    price: 1.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'dolci-e-paste',
+    slug: 'treccia'
+  },
+  {
+    id: 45,
+    label: 'Conchiglia',
+    description: '',
+    price: 1.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'dolci-e-paste',
+    slug: 'conchiglia'
+  },
+  {
+    id: 46,
+    label: 'Creme assortite',
+    description: '',
+    price: 0.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: '',
+    slug: 'creme-assortite'
+  },
+  {
     id: 47,
+    label: 'Smarties',
+    description: '',
+    price: 0.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: '',
+    slug: 'smarties'
+  },
+  {
+    id: 48,
+    label: 'Granella nocciola',
+    description: '',
+    price: 0.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: '',
+    slug: 'granella-nocciola'
+  },
+  {
+    id: 49,
+    label: 'Farina di cocco',
+    description: '',
+    price: 0.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: '',
+    slug: 'farina-di-cocco'
+  },
+  {
+    id: 50,
     label: 'Estathè',
     description: '',
     price: 2.5,
@@ -591,10 +615,10 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'bibite',
-    slug: 'estathè'
+    slug: 'estathe'
   },
   {
-    id: 48,
+    id: 51,
     label: 'Fanta lattina',
     description: '',
     price: 2,
@@ -606,7 +630,7 @@ export const items: MenuItem[] = [
     slug: 'fanta-lattina'
   },
   {
-    id: 49,
+    id: 52,
     label: 'Fanta bottiglia',
     description: '',
     price: 2.5,
@@ -618,7 +642,7 @@ export const items: MenuItem[] = [
     slug: 'fanta-bottiglia'
   },
   {
-    id: 50,
+    id: 53,
     label: 'Coca cola lattina',
     description: '',
     price: 2,
@@ -630,7 +654,7 @@ export const items: MenuItem[] = [
     slug: 'coca-cola-lattina'
   },
   {
-    id: 51,
+    id: 54,
     label: 'Coca cola bottiglia',
     description: '',
     price: 2.5,
@@ -642,9 +666,9 @@ export const items: MenuItem[] = [
     slug: 'coca-cola-bottiglia'
   },
   {
-    id: 52,
+    id: 55,
     label: 'Lurisia',
-    description: 'Limonata/Chinotto/Aranciata',
+    description: 'Gusti assortiti',
     price: 3,
     image: '',
     ingredients: [],
@@ -654,91 +678,7 @@ export const items: MenuItem[] = [
     slug: 'lurisia'
   },
   {
-    id: 55,
-    label: 'Cocktail San Pellegrino',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'cocktail-san-pellegrino'
-  },
-  {
     id: 56,
-    label: 'Cedrata San Pellegrino',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'cedrata-san-pellegrino'
-  },
-  {
-    id: 57,
-    label: 'Schweppes Limone',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'schweppes-limone'
-  },
-  {
-    id: 58,
-    label: 'Schweppes Tonica',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'schweppes-tonica'
-  },
-  {
-    id: 59,
-    label: 'Crodino',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'crodino'
-  },
-  {
-    id: 60,
-    label: 'Bitter rosso',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'bitter-rosso'
-  },
-  {
-    id: 61,
-    label: 'Bitter bianco',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'bibite',
-    slug: 'bitter-bianco'
-  },
-  {
-    id: 62,
     label: 'Campari Soda',
     description: '',
     price: 2.5,
@@ -750,8 +690,104 @@ export const items: MenuItem[] = [
     slug: 'campari-soda'
   },
   {
+    id: 57,
+    label: 'Cocktail San Pellegrino',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'cocktail-san-pellegrino'
+  },
+  {
+    id: 58,
+    label: 'Cedrata San Pellegrino',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'cedrata-san-pellegrino'
+  },
+  {
+    id: 59,
+    label: 'Schweppes Limone',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'schweppes-limone'
+  },
+  {
+    id: 60,
+    label: 'Schweppes Tonica',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'schweppes-tonica'
+  },
+  {
+    id: 61,
+    label: 'Crodino',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'crodino'
+  },
+  {
+    id: 62,
+    label: 'Bitter rosso',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'bitter-rosso'
+  },
+  {
     id: 63,
-    label: 'Succo di frutta',
+    label: 'Bitter bianco',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'bitter-bianco'
+  },
+  {
+    id: 64,
+    label: 'Campari Soda',
+    description: '',
+    price: 2.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'campari-soda'
+  },
+  {
+    id: 65,
+    label: 'Succhi di frutta',
     description: 'Gusti assortiti',
     price: 2,
     image: '',
@@ -759,10 +795,10 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'bibite',
-    slug: 'succo-di-frutta'
+    slug: 'succhi-di-frutta'
   },
   {
-    id: 64,
+    id: 66,
     label: 'Succo di frutti rossi',
     description: '',
     price: 2.5,
@@ -774,91 +810,7 @@ export const items: MenuItem[] = [
     slug: 'succo-di-frutti-rossi'
   },
   {
-    id: 65,
-    label: 'Nastro Azzurro',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'birre',
-    slug: 'nastro-azzurro'
-  },
-  {
-    id: 66,
-    label: "Beck's",
-    description: '',
-    price: 2.5,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'birre',
-    slug: "beck's"
-  },
-  {
     id: 67,
-    label: 'Peroni al limone',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'birre',
-    slug: 'peroni-al-limone'
-  },
-  {
-    id: 68,
-    label: 'Menabrea',
-    description: '',
-    price: 3,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'birre',
-    slug: 'menabrea'
-  },
-  {
-    id: 69,
-    label: 'Corona',
-    description: '',
-    price: 3,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'birre',
-    slug: 'corona'
-  },
-  {
-    id: 70,
-    label: 'Bjorne',
-    description: '',
-    price: 3,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'birre',
-    slug: 'bjorne'
-  },
-  {
-    id: 71,
-    label: 'Tourtel analcolica',
-    description: '',
-    price: 2,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'birre',
-    slug: 'tourtel-analcolica'
-  },
-  {
-    id: 72,
     label: 'Acqua',
     description: '',
     price: 1,
@@ -870,7 +822,127 @@ export const items: MenuItem[] = [
     slug: 'acqua'
   },
   {
+    id: 68,
+    label: 'Spremuta di arancia',
+    description: '',
+    price: 3,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'spremuta-di-arancia'
+  },
+  {
+    id: 69,
+    label: 'Tisane',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'tisane'
+  },
+  {
+    id: 70,
+    label: 'The caldo',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'bibite',
+    slug: 'the-caldo'
+  },
+  {
+    id: 71,
+    label: 'Nastro Azzurro',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'birre',
+    slug: 'nastro-azzurro'
+  },
+  {
+    id: 72,
+    label: "Beck's",
+    description: '',
+    price: 2.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'birre',
+    slug: 'becks'
+  },
+  {
     id: 73,
+    label: 'Peroni al limone',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'birre',
+    slug: 'peroni-al-limone'
+  },
+  {
+    id: 74,
+    label: 'Menabrea',
+    description: '',
+    price: 3,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'birre',
+    slug: 'menabrea'
+  },
+  {
+    id: 75,
+    label: 'Corona',
+    description: '',
+    price: 3,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'birre',
+    slug: 'corona'
+  },
+  {
+    id: 76,
+    label: 'Bjorne',
+    description: '',
+    price: 3,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'birre',
+    slug: 'bjorne'
+  },
+  {
+    id: 77,
+    label: 'Tourtel analcolica',
+    description: '',
+    price: 2,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'birre',
+    slug: 'tourtel-analcolica'
+  },
+  {
+    id: 78,
     label: 'Kraken',
     description: '',
     price: 5,
@@ -882,7 +954,7 @@ export const items: MenuItem[] = [
     slug: 'kraken'
   },
   {
-    id: 74,
+    id: 79,
     label: 'Don Papa Baroko',
     description: '',
     price: 5,
@@ -894,7 +966,7 @@ export const items: MenuItem[] = [
     slug: 'don-papa-baroko'
   },
   {
-    id: 74,
+    id: 80,
     label: 'Don Papa Masskara',
     description: '',
     price: 7,
@@ -906,7 +978,7 @@ export const items: MenuItem[] = [
     slug: 'don-papa-masskara'
   },
   {
-    id: 75,
+    id: 81,
     label: 'Diplomatico riserva',
     description: '',
     price: 7,
@@ -918,7 +990,7 @@ export const items: MenuItem[] = [
     slug: 'diplomatico-riserva'
   },
   {
-    id: 76,
+    id: 82,
     label: 'Havana club especial',
     description: '',
     price: 2.5,
@@ -930,7 +1002,7 @@ export const items: MenuItem[] = [
     slug: 'havana-club-especial'
   },
   {
-    id: 77,
+    id: 83,
     label: '903 bianca',
     description: '',
     price: 3,
@@ -942,7 +1014,7 @@ export const items: MenuItem[] = [
     slug: '903-bianca'
   },
   {
-    id: 78,
+    id: 84,
     label: '903 barricata',
     description: '',
     price: 3.5,
@@ -954,7 +1026,7 @@ export const items: MenuItem[] = [
     slug: '903-barricata'
   },
   {
-    id: 79,
+    id: 85,
     label: 'La corte barricata',
     description: 'Invecchiata di 12 mesi',
     price: 4,
@@ -966,7 +1038,7 @@ export const items: MenuItem[] = [
     slug: 'la-corte-barricata'
   },
   {
-    id: 80,
+    id: 86,
     label: 'Poli Sarpa Oro',
     description: '',
     price: 4,
@@ -978,7 +1050,7 @@ export const items: MenuItem[] = [
     slug: 'poli-sarpa-oro'
   },
   {
-    id: 81,
+    id: 87,
     label: 'Lucano',
     description: '',
     price: 2.5,
@@ -986,11 +1058,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'amari-liquori',
+    category_id: 'amari-e-liquori',
     slug: 'lucano'
   },
   {
-    id: 82,
+    id: 88,
     label: 'Jägermeister',
     description: '',
     price: 2.5,
@@ -998,11 +1070,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'amari-liquori',
-    slug: 'jägermeister'
+    category_id: 'amari-e-liquori',
+    slug: 'jagermeister'
   },
   {
-    id: 83,
+    id: 89,
     label: 'Montenegro',
     description: '',
     price: 2.5,
@@ -1010,11 +1082,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'amari-liquori',
+    category_id: 'amari-e-liquori',
     slug: 'montenegro'
   },
   {
-    id: 84,
+    id: 90,
     label: 'Amaro del Capo',
     description: '',
     price: 2.5,
@@ -1022,11 +1094,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'amari-liquori',
+    category_id: 'amari-e-liquori',
     slug: 'amaro-del-capo'
   },
   {
-    id: 85,
+    id: 91,
     label: 'Disaronno',
     description: '',
     price: 2.5,
@@ -1034,11 +1106,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'amari-liquori',
+    category_id: 'amari-e-liquori',
     slug: 'disaronno'
   },
   {
-    id: 86,
+    id: 92,
     label: 'Jameson',
     description: 'Irlanda',
     price: 3.5,
@@ -1050,7 +1122,7 @@ export const items: MenuItem[] = [
     slug: 'jameson'
   },
   {
-    id: 87,
+    id: 93,
     label: "Jack Daniel's",
     description: 'USA',
     price: 4,
@@ -1059,10 +1131,10 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'whiskey',
-    slug: "jack-daniel's"
+    slug: 'jack-daniels'
   },
   {
-    id: 88,
+    id: 94,
     label: 'Four Roses',
     description: 'USA',
     price: 5,
@@ -1074,7 +1146,7 @@ export const items: MenuItem[] = [
     slug: 'four-roses'
   },
   {
-    id: 89,
+    id: 95,
     label: 'Laphroaig',
     description: 'Scozia',
     price: 6,
@@ -1086,7 +1158,7 @@ export const items: MenuItem[] = [
     slug: 'laphroaig'
   },
   {
-    id: 90,
+    id: 96,
     label: 'San Marzano',
     description: '',
     price: 3,
@@ -1094,11 +1166,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'amari-liquori',
+    category_id: 'amari-e-liquori',
     slug: 'san-marzano'
   },
   {
-    id: 91,
+    id: 97,
     label: 'Sambuca Molinari',
     description: '',
     price: 3,
@@ -1106,11 +1178,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'amari-liquori',
+    category_id: 'amari-e-liquori',
     slug: 'sambuca-molinari'
   },
   {
-    id: 92,
+    id: 98,
     label: 'Baileys',
     description: '',
     price: 3,
@@ -1118,11 +1190,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'amari-liquori',
+    category_id: 'amari-e-liquori',
     slug: 'baileys'
   },
   {
-    id: 93,
+    id: 99,
     label: "Gin Broker's",
     description: '',
     price: 3,
@@ -1131,10 +1203,10 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'gin',
-    slug: "gin-broker's"
+    slug: 'gin-brokers'
   },
   {
-    id: 94,
+    id: 100,
     label: 'Tanqueray',
     description: '',
     price: 4.5,
@@ -1146,7 +1218,7 @@ export const items: MenuItem[] = [
     slug: 'tanqueray'
   },
   {
-    id: 95,
+    id: 101,
     label: "Hendrick's",
     description: '',
     price: 6,
@@ -1155,10 +1227,10 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'gin',
-    slug: "hendrick's"
+    slug: 'hendricks'
   },
   {
-    id: 96,
+    id: 102,
     label: 'Bottiglia Prosecco',
     description: 'Bollicina',
     price: 25,
@@ -1170,7 +1242,7 @@ export const items: MenuItem[] = [
     slug: 'bottiglia-prosecco'
   },
   {
-    id: 97,
+    id: 103,
     label: 'Calice prosecco',
     description: 'Bollicina',
     price: 3,
@@ -1182,31 +1254,7 @@ export const items: MenuItem[] = [
     slug: 'calice-prosecco'
   },
   {
-    id: 98,
-    label: 'Calice vino Rosso',
-    description: '',
-    price: 3.5,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'vini',
-    slug: 'calice-vino-rosso'
-  },
-  {
-    id: 99,
-    label: 'Calice vino Rosato',
-    description: '',
-    price: 5,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'vini',
-    slug: 'calice-vino-rosato'
-  },
-  {
-    id: 99,
+    id: 104,
     label: 'Calice vino Bianco',
     description: '',
     price: 4,
@@ -1218,7 +1266,31 @@ export const items: MenuItem[] = [
     slug: 'calice-vino-bianco'
   },
   {
-    id: 100,
+    id: 105,
+    label: 'Calice vino Rosso',
+    description: '',
+    price: 3.5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'vini',
+    slug: 'calice-vino-rosso'
+  },
+  {
+    id: 106,
+    label: 'Calice vino Rosato',
+    description: '',
+    price: 5,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'vini',
+    slug: 'calice-vino-rosato'
+  },
+  {
+    id: 107,
     label: 'Patatine San Carlo',
     description: 'Gusti assortiti',
     price: 1.5,
@@ -1230,7 +1302,7 @@ export const items: MenuItem[] = [
     slug: 'patatine-san-carlo'
   },
   {
-    id: 101,
+    id: 108,
     label: 'Tris',
     description: 'Patatine, Arachidi, Olive',
     price: 3.5,
@@ -1239,10 +1311,10 @@ export const items: MenuItem[] = [
     allergens: [],
     available: true,
     category_id: 'snacks',
-    slug: 'tris-pat-ara-oli'
+    slug: 'tris'
   },
   {
-    id: 102,
+    id: 109,
     label: 'Ciotola patatine',
     description: '',
     price: 1,
@@ -1254,7 +1326,7 @@ export const items: MenuItem[] = [
     slug: 'ciotola-patatine'
   },
   {
-    id: 103,
+    id: 110,
     label: 'Ciotola olive',
     description: '',
     price: 2,
@@ -1266,7 +1338,7 @@ export const items: MenuItem[] = [
     slug: 'ciotola-olive'
   },
   {
-    id: 104,
+    id: 111,
     label: 'Ciotola arachidi',
     description: '',
     price: 1,
@@ -1278,7 +1350,7 @@ export const items: MenuItem[] = [
     slug: 'ciotola-arachidi'
   },
   {
-    id: 105,
+    id: 112,
     label: 'Ciotola Rice',
     description: 'Piccanti',
     price: 2,
@@ -1290,33 +1362,7 @@ export const items: MenuItem[] = [
     slug: 'ciotola-rice'
   },
   {
-    id: 106,
-    label: 'Aperitivo grande',
-    description:
-      'Tris snacks, Sandwich, mini Hamburger, Piadina, Tramezzino, Bruschetta, Wurstel, 4pz Fritti',
-    price: 8,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'taglieri-panini',
-    slug: 'aperitivo-grande'
-  },
-  {
-    id: 107,
-    label: 'Aperitivo piccolo',
-    description:
-      'Bevanda analcolica compresa + Tris snacks, Sandwich, mini Hamburger, Tramezzino, Bruschetta, Wurstel',
-    price: 8,
-    image: '',
-    ingredients: [],
-    allergens: [],
-    available: true,
-    category_id: 'taglieri-panini',
-    slug: 'aperitivo-piccolo'
-  },
-  {
-    id: 108,
+    id: 113,
     label: 'Piadina',
     description: '',
     price: 3.5,
@@ -1324,11 +1370,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'taglieri-panini',
+    category_id: 'snacks',
     slug: 'piadina'
   },
   {
-    id: 109,
+    id: 114,
     label: 'Panino',
     description: '',
     price: 4,
@@ -1336,11 +1382,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'taglieri-panini',
+    category_id: 'snacks',
     slug: 'panino'
   },
   {
-    id: 110,
+    id: 115,
     label: 'Tramezzino',
     description: '',
     price: 2,
@@ -1348,11 +1394,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'taglieri-panini',
+    category_id: 'snacks',
     slug: 'tramezzino'
   },
   {
-    id: 111,
+    id: 116,
     label: 'Toast',
     description: '',
     price: 2,
@@ -1360,11 +1406,11 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'taglieri-panini',
+    category_id: 'snacks',
     slug: 'toast'
   },
   {
-    id: 112,
+    id: 117,
     label: 'Pinsa',
     description: '',
     price: 8,
@@ -1372,23 +1418,23 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'taglieri-panini',
+    category_id: 'snacks',
     slug: 'pinsa'
   },
   {
-    id: 113,
+    id: 118,
     label: 'Coni fritti',
-    description: '4 pezzi',
+    description: '2 pezzi',
     price: 5,
     image: '',
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'taglieri-panini',
+    category_id: 'snacks',
     slug: 'coni-fritti'
   },
   {
-    id: 114,
+    id: 119,
     label: 'Bruschette',
     description: '4 pezzi',
     price: 3.5,
@@ -1396,7 +1442,33 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'taglieri-panini',
+    category_id: 'snacks',
     slug: 'bruschette'
+  },
+  {
+    id: 120,
+    label: 'Aperitivo grande',
+    description:
+      'Tris, Sandwich, Mini Hamburger, Piadina, Tramezzino, Bruschetta, Wurstel, 4pz Fritti',
+    price: 8,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'taglieri',
+    slug: 'aperitivo-grande'
+  },
+  {
+    id: 121,
+    label: 'Aperitivo analcolico',
+    description:
+      'Tris, Sandwich, Mini Hamburger, Tramezzino, Bruschetta, Wurstel + Bevanda analcolica (chiedere allo staff)',
+    price: 8,
+    image: '',
+    ingredients: [],
+    allergens: [],
+    available: true,
+    category_id: 'taglieri',
+    slug: 'aperitivo-analcolico'
   }
 ];
