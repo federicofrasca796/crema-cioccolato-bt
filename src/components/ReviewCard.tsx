@@ -45,7 +45,7 @@ export default function ReviewCard({
           <span className='flex items-center gap-x-1'>
             <StarIcon className='inline-block w-4 fill-primary-400' />
             <span className='relative top-[1px] text-sm font-semibold text-smokyBrown-700'>
-              {rating}
+              {rating}/5
             </span>
           </span>
         </div>
