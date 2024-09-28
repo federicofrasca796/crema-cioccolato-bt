@@ -14,6 +14,7 @@ export default function MenuLayout({
 }) {
   const router = useRouter();
   const { topic } = useParams();
+  const parsedTopic = topic ? topic[0] : topic;
 
   return (
     <section id='menu-layout'>
@@ -23,7 +24,7 @@ export default function MenuLayout({
             <Link
               onClick={() => router.back()}
               href=''
-              className='inline-block w-6'
+              className='mb-8 inline-block w-6'
             >
               <ArrowLeftIcon />
             </Link>
@@ -33,11 +34,11 @@ export default function MenuLayout({
           </div>
 
           <div className='overflow-hidden max-lg:hidden'>
-            <TopicsCarousel activeTopic={topic ? topic[0] : topic} />
+            <TopicsCarousel activeTopic={parsedTopic} />
           </div>
 
-          <div className='container mx-auto mt-8 lg:hidden'>
-            <TopicFilters activeTopic={topic ? topic[0] : topic} />
+          <div className='mt-4 lg:hidden'>
+            <TopicFilters activeTopic={parsedTopic} />
           </div>
         </header>
       </section>

@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { ReactNode } from 'react';
 
 export type BadgeVariants = 'contained' | 'outlined';
 export type BadgeColors =
@@ -12,13 +13,13 @@ export type BadgeColors =
   | 'info';
 export type BadgeSizes = 'tiny' | 'small' | 'medium' | 'large';
 export type BadgeProps = {
-  label: string;
+  label: ReactNode;
   color?: BadgeColors;
   variant?: BadgeVariants;
   size?: BadgeSizes;
   className?: React.HTMLAttributes<HTMLSpanElement>['className'];
-  iconLeft?: React.ReactNode;
-  iconRight?: React.ReactNode;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
 };
 
 const COLORS: Record<

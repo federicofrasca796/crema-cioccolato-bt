@@ -18,9 +18,10 @@ export default function ClickableBadge({
   };
 
   return (
-    <button onClick={handleClick} className='flex-shrink-0'>
+    <button onClick={handleClick}>
       <Badge
         {...badgeProps}
+        className='rounded-lg border-2 px-2 py-1 font-bold'
         label={label}
         variant={isActive ? 'contained' : 'outlined'}
       />
