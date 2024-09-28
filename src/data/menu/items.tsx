@@ -1455,7 +1455,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'taglieri',
+    category_id: 'taglieri-e-panini',
     slug: 'aperitivo-grande'
   },
   {
@@ -1468,7 +1468,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'taglieri',
+    category_id: 'taglieri-e-panini',
     slug: 'aperitivo-analcolico'
   }
 ];

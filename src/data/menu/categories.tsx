@@ -106,7 +106,7 @@ export const categories: Category[] = [
     id: 6,
     name: 'Dolci e paste',
     image: '',
-    slug: 'dolci-paste',
+    slug: 'dolci-e-paste',
     highlight: false,
     topics: [2],
     extras: [
@@ -181,7 +181,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'birre',
     highlight: false,
-    topics: [3, 4, 5],
+    topics: [3, 5],
     extras: []
   },
   {
@@ -242,7 +242,7 @@ export const categories: Category[] = [
     id: 18,
     name: 'Taglieri e panini',
     image: '',
-    slug: 'taglieri-panini',
+    slug: 'taglieri-e-panini',
     highlight: false,
     topics: [3]
   }
