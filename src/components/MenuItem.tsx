@@ -64,7 +64,7 @@ export default function MenuItem({
             label={parsePrice(price)}
             variant={isExtraItem ? 'outlined' : 'contained'}
             className={clsx('min-w-max', {
-              'border-none bg-secondary-200 text-primary hover:bg-secondary-300':
+              'border-none bg-secondary-200 text-primary group-hover:bg-secondary-300':
                 !isExtraItem
             })}
           />

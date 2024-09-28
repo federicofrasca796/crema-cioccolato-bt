@@ -110,7 +110,7 @@ const config: Config = {
       animation: {
         fadeIn: 'fadeIn 0.3s ease-in-out',
         wavyLine:
-          '30s cubic-bezier(0.010, 0.000, 1.000, 1.000) forwards infinite wavyScroll'
+          '30s cubic-bezier(0.010, 0.000, 1.000, 1.000) wavyScroll forwards'
       },
       keyframes: {
         fadeIn: {
