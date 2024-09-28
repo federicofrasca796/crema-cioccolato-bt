@@ -1,8 +1,10 @@
-import { ExtraItem } from '@/data/menu/categories';
+import { categories, Category, ExtraItem } from '@/data/menu/categories';
 import type { MenuItem as Item } from '@/data/menu/items';
 import clsx from 'clsx';
 import { StaticImageData } from 'next/image';
 import MenuItem from './MenuItem';
+import { Topic, topics } from '@/data/menu/topics';
+import { getItemsByCategory } from '@/service/menu';
 
 interface CategoryAccordionProps {
   items: Item[];
@@ -82,3 +84,39 @@ export default function CategoryAccordion({
     </div>
   );
 }
+
+const getCategoriesByTopic = (topicSlug: Topic['slug']) => {
+  if (topicSlug === 'all') return categories;
+
+  const topic = topics.find((topic: Topic) => topic.slug === topicSlug);
+
+  if (!topic) throw new Error(`Sezione '${topicSlug}' non trovata`);
+
+  const activeCategories = categories.filter((category) =>
+    category.topics.includes(topic.id)
+  );
+
+  return activeCategories;
+};
+
+CategoryAccordion.List = function CategoryAccordionList({
+  topic
+}: {
+  topic: Topic['slug'];
+}) {
+  const categoriesByTopic = topic ? getCategoriesByTopic(topic) : categories;
+
+  const renderCategoryAccordion = (category: Category) => (
+    <CategoryAccordion
+      key={category.id}
+      title={category.name}
+      extras={category.extras}
+      accordionName={category.slug}
+      items={getItemsByCategory(category.slug)}
+      icon={category.image}
+      className='animate-fadeIn'
+    />
+  );
+
+  return categoriesByTopic.map(renderCategoryAccordion);
+};
