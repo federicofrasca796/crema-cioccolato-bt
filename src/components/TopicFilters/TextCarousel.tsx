@@ -11,7 +11,7 @@ import clsx from 'clsx';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../tailwind.config';
 
-export default function TopicsCarousel({
+export default function TextCarousel({
   activeTopic
 }: {
   activeTopic?: Topic['slug'] | Params;

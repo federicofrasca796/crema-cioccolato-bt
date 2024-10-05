@@ -1,15 +1,31 @@
+'use client';
+
+import 'swiper/css';
+
 import { Topic, topics } from '@/data/menu/topics';
 import { useRouter } from 'next/navigation';
 import ClickableBadge from '../elements/Badge/ClickableBadge';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
+import { useEffect, useState } from 'react';
 
-export default function TopicFilters({
+export default function BadgeCarousel({
   activeTopic
 }: {
   activeTopic?: Topic['slug'];
 }) {
   const router = useRouter();
+  const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+
+  useEffect(() => {
+    if (swiper && !swiper.destroyed) {
+      const activeSlideIdx = swiper.slides.findIndex(
+        (slide) => slide.dataset.history === activeTopic
+      );
+
+      swiper.slideTo(activeSlideIdx);
+    }
+  }, [swiper, activeTopic]);
 
   const handleSelect = (topic: Topic['slug']) => () => {
     router.replace(`/menu/${topic}`);
@@ -17,24 +33,30 @@ export default function TopicFilters({
 
   return (
     <Swiper
+      onSwiper={(swiper: any) => {
+        setSwiper(swiper);
+      }}
       modules={[FreeMode]}
       freeMode
       slidesPerView={'auto'}
-      spaceBetween={10}
       slidesOffsetBefore={16}
       slidesOffsetAfter={16}
     >
-      <SwiperSlide key={0} className='!w-fit'>
+      <SwiperSlide key={0} className='!w-fit' data-history='all'>
         <ClickableBadge
           label={'Tutte'}
-          isActive={undefined === activeTopic}
+          isActive={'all' === activeTopic}
           onClick={handleSelect('')}
           size='large'
           className='flex-shrink-0 rounded-full px-3 shadow-sm'
         />
       </SwiperSlide>
       {topics.map((topic) => (
-        <SwiperSlide key={topic.id} className='!w-fit'>
+        <SwiperSlide
+          key={topic.id}
+          className='ml-2 !w-fit'
+          data-history={topic.slug}
+        >
           <ClickableBadge
             label={topic.name}
             iconLeft={topic.icon}

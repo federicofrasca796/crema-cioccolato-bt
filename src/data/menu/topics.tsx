@@ -1,3 +1,5 @@
+// TODO - Change file type to .ts, no need for .tsx
+
 export interface Topic {
   id: number;
   name: string;
@@ -22,17 +24,18 @@ export const topics: Topic[] = [
     // icon: '☕️'
   },
   {
+    id: 4,
+    name: 'Bibite',
+    slug: 'bibite'
+    // icon: '🥤'
+  },
+  {
     id: 3,
     name: 'Aperitivo',
     slug: 'aperitivo'
     // icon: '🥂'
   },
-  {
-    id: 4,
-    name: 'Bibite & Drinks',
-    slug: 'bibite-drinks'
-    // icon: '🥤'
-  },
+
   {
     id: 5,
     name: 'Birre & Liquori',

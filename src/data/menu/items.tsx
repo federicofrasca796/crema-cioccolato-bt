@@ -1,3 +1,4 @@
+// TODO - Change file type to .ts, no need for .tsx
 import { Category } from './categories';
 
 export interface MenuItem {

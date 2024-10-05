@@ -1,3 +1,4 @@
+// TODO - Change file type to .ts, no need for .tsx
 import { StaticImageData } from 'next/image';
 import { Topic } from './topics';
 import { MenuItem } from './items';
@@ -15,6 +16,9 @@ export interface Category {
 
 export interface ExtraItem extends Omit<MenuItem, 'category_id'> {}
 
+export interface CategoryWithItems extends Category {
+  items: MenuItem[];
+}
 /**
  * Categories in which the Menu Items are grouped. Categories are part of topics.
  */
@@ -111,7 +115,7 @@ export const categories: Category[] = [
     topics: [2],
     extras: [
       {
-        id: 3,
+        id: 1,
         label: 'Creme assortite',
         slug: 'creme-assortite',
         price: 0.5,
@@ -120,7 +124,7 @@ export const categories: Category[] = [
         ingredients: []
       },
       {
-        id: 4,
+        id: 2,
         label: 'Smarties',
         slug: 'smarties',
         price: 0.5,
@@ -129,7 +133,7 @@ export const categories: Category[] = [
         ingredients: []
       },
       {
-        id: 4,
+        id: 3,
         label: 'Granella nocciola',
         slug: 'granella-nocciola',
         price: 0.5,
@@ -170,7 +174,7 @@ export const categories: Category[] = [
     id: 10,
     name: 'Amari e liquori',
     image: '',
-    slug: 'amari-liquori',
+    slug: 'amari-e-liquori',
     highlight: false,
     topics: [5],
     extras: []
