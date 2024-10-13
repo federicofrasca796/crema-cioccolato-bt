@@ -39,6 +39,7 @@ export default function InputSearch({
       }
       iconPosition='start'
       onChange={handleChange}
+      wrapperClass={clsx('max-w-screen-sm')}
       className={clsx('', className)}
       value={value}
     />

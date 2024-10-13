@@ -91,7 +91,7 @@ CategoryAccordion.Content = function CategoryAccordionContent({
   };
 
   return (
-    <div className={clsx('collapse-content my-5 bg-babyPowder')}>
+    <div className={clsx('collapse-content mt-5 bg-babyPowder')}>
       {items.map(renderItem)}
 
       {/* Extra items */}

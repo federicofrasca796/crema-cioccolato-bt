@@ -55,7 +55,7 @@ export const categories: Category[] = [
     id: 2,
     name: 'Coppe e farciture gelato',
     image: IcecreamSweets,
-    slug: 'coppe-farciture-gelato',
+    slug: 'coppe-e-farciture-gelato',
     highlight: true,
     topics: [1],
     extras: [
@@ -84,15 +84,6 @@ export const categories: Category[] = [
     name: "Caffe'",
     image: IcecreamSweets,
     slug: 'caffe',
-    highlight: false,
-    topics: [2],
-    extras: []
-  },
-  {
-    id: 4,
-    name: 'Latte e cioccolate',
-    image: '',
-    slug: 'latte-cioccolate',
     highlight: false,
     topics: [2],
     extras: []
@@ -161,15 +152,16 @@ export const categories: Category[] = [
     topics: [4],
     extras: []
   },
-  {
-    id: 9,
-    name: 'Cocktails',
-    image: '',
-    slug: 'cocktails',
-    highlight: false,
-    topics: [3, 5],
-    extras: []
-  },
+  // TODO - Cocktails category should be present since they are served with the Aperitivo
+  // {
+  //   id: 9,
+  //   name: 'Cocktails',
+  //   image: '',
+  //   slug: 'cocktails',
+  //   highlight: false,
+  //   topics: [3, 5],
+  //   extras: []
+  // },
   {
     id: 10,
     name: 'Amari e liquori',
@@ -239,7 +231,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'snacks',
     highlight: false,
-    topics: [3],
+    topics: [3, 6],
     extras: []
   },
   {
@@ -248,6 +240,6 @@ export const categories: Category[] = [
     image: '',
     slug: 'taglieri-e-panini',
     highlight: false,
-    topics: [3]
+    topics: [3, 6]
   }
 ];

@@ -28,7 +28,7 @@
   }
 
   .input {
-    @apply h-[3.25rem];
+    @apply h-16;
   }
   /* Custom classes */
   .top-wave {

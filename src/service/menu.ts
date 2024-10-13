@@ -61,7 +61,7 @@ const buildMenu = (
         itemsCount: acc.itemsCount + items.length,
         categories: {
           ...acc.categories,
-          ...(items && {
+          ...(items.length && {
             [cat.slug]: {
               ...cat,
               items: items

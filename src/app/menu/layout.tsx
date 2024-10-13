@@ -42,7 +42,7 @@ export default function MenuLayout({
               <BadgeCarousel activeTopic={parsedTopic} />
             </div>
 
-            <div className='container mx-auto mt-4'>
+            <div className='container mx-auto mt-6'>
               <InputSearch
                 placeholder='Cerca tra le nostre delizie'
                 onChange={(e) => setSearchword(e.target.value)}

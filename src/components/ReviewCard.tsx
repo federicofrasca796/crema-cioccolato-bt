@@ -1,8 +1,8 @@
-import { StarIcon } from '@heroicons/react/24/solid';
+import { ArrowUpRightIcon, StarIcon } from '@heroicons/react/24/solid';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import googleG from '../../public/images/google_g.png';
 export interface ReviewCardProps {
   author: { name: string; lastname?: string; image?: string };
   rating: number;
@@ -40,14 +40,26 @@ export default function ReviewCard({
             />
           </figure>
         )}
-        <div>
-          <div className='font-serif text-2xl text-primary'>{`${author.name} ${author?.lastname}`}</div>
-          <span className='flex items-center gap-x-1'>
-            <StarIcon className='inline-block w-4 fill-primary-400' />
-            <span className='relative top-[1px] text-sm font-semibold text-smokyBrown-700'>
-              {rating}/5
+        <div className='w-full'>
+          <div className='flex justify-between'>
+            <div className='font-serif text-2xl text-primary'>{`${author.name} ${author?.lastname}`}</div>
+            <ArrowUpRightIcon className='size-5 text-primary md:size-6' />
+          </div>
+          <div className='flex items-center gap-x-2'>
+            <Image
+              src={googleG}
+              alt='google reviews logo'
+              width={25}
+              height={25}
+            />
+
+            <span className='flex items-center gap-x-1'>
+              <StarIcon className='inline-block w-4 fill-primary-400' />
+              <span className='relative top-[1px] text-sm font-semibold text-smokyBrown-700'>
+                {rating}/5
+              </span>
             </span>
-          </span>
+          </div>
         </div>
       </div>
       <div className='pt-5'>

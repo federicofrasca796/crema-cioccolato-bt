@@ -123,7 +123,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'coppe-farciture-gelato',
+    category_id: 'coppe-e-farciture-gelato',
     slug: 'coppa-gelato-media'
   },
   {
@@ -135,7 +135,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'coppe-farciture-gelato',
+    category_id: 'coppe-e-farciture-gelato',
     slug: 'coppa-gelato-grande'
   },
   {
@@ -147,7 +147,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'coppe-farciture-gelato',
+    category_id: 'coppe-e-farciture-gelato',
     slug: 'frappe'
   },
   {
@@ -159,7 +159,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'coppe-farciture-gelato',
+    category_id: 'coppe-e-farciture-gelato',
     slug: 'brioches-farcita-gelato'
   },
   {
@@ -171,7 +171,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'coppe-farciture-gelato',
+    category_id: 'coppe-e-farciture-gelato',
     slug: 'crepes-farcita-con-gelato'
   },
   {
@@ -183,7 +183,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'coppe-farciture-gelato',
+    category_id: 'coppe-e-farciture-gelato',
     slug: 'cornetto-farcito-con-gelato'
   },
   {
@@ -387,7 +387,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-e-cioccolato',
+    category_id: 'caffe',
     slug: 'latte-e-menta'
   },
   {
@@ -399,7 +399,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-e-cioccolato',
+    category_id: 'caffe',
     slug: 'latte-bianco'
   },
   {
@@ -411,7 +411,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-e-cioccolato',
+    category_id: 'caffe',
     slug: 'latte-bianco-senza-lattosio'
   },
   {
@@ -423,7 +423,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-e-cioccolato',
+    category_id: 'caffe',
     slug: 'latte-macchiato'
   },
   {
@@ -435,7 +435,7 @@ export const items: MenuItem[] = [
     ingredients: [],
     allergens: [],
     available: true,
-    category_id: 'latte-e-cioccolato',
+    category_id: 'caffe',
     slug: 'cioccolata-calda'
   },
   {
