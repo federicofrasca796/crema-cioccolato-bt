@@ -2,7 +2,6 @@
 
 import Link from '@/components/elements/Link';
 import Logo from '@/components/icons/Logo';
-import MeltedIcecream from '@/components/icons/MeltedIcecream';
 
 export default function ErrorMenuByTopic({
   error

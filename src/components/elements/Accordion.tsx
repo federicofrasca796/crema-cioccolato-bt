@@ -37,7 +37,10 @@ export default function Accordion({
         {title}
       </div>
       <div className='collapse-content bg-babyPowder'>
-        <p className='py-4 text-lg'>{content}</p>
+        <p
+          className='py-4 text-lg'
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></p>
       </div>
     </div>
   );

@@ -12,6 +12,6 @@ export const faqs: { question: string; answer: string }[] = [
   {
     question: 'Fate consegne a domicilio?',
     answer:
-      'Si! Chiamaci al <a href="tel:+39 328 4689986">+39 328 4689986</a> per pianificare la tua consegna.'
+      'Si! Chiamaci al <a style="text-decoration: underline" href="tel:+39 328 4689986">+39 328 4689986</a> per pianificare la tua consegna.'
   }
 ];

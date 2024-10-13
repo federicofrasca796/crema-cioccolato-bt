@@ -1,15 +1,14 @@
 'use client';
 
 import { CategoryWithItems } from '@/data/menu/categories';
-import { CategoryAccordionList } from './CategoryAccordion/CategoryAccordionList';
-import { useContext, useMemo } from 'react';
-import buildMenu from '@/service/menu';
 import { Topic } from '@/data/menu/topics';
-import { searchContext } from '@/app/menu/layout';
-import clsx from 'clsx';
+import buildMenu from '@/service/menu';
+import { SearchContext } from '@/store/searchword';
+import { useContext, useMemo } from 'react';
+import { CategoryAccordionList } from './CategoryAccordion/CategoryAccordionList';
 
 export default function MenuRenderer({ topic }: { topic: Topic['slug'] }) {
-  const searchword = useContext(searchContext);
+  const searchword = useContext(SearchContext);
 
   const menuDataByTopic: { itemsCount: number; data: CategoryWithItems[] } =
     useMemo(() => {

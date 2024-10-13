@@ -6,23 +6,22 @@ import GoBack from '@/components/elements/GoBack';
 import InputSearch from '@/components/elements/Input/InputSearch';
 import BadgeCarousel from '@/components/TopicFilters/BadgeCarousel';
 import TextCarousel from '@/components/TopicFilters/TextCarousel';
+import { SearchContext } from '@/store/searchword';
 import { useParams } from 'next/navigation';
-import React, { createContext, useState } from 'react';
-
-export const searchContext = createContext<string>('');
+import React, { useState } from 'react';
 
 export default function MenuLayout({
   children
 }: {
   children: React.ReactNode;
 }) {
-  const [searchword, setSearchword] = useState('');
+  const [searchword, setSearchword] = useState<string>('');
 
   const { topic } = useParams();
   const parsedTopic = topic ? topic[0] : 'all';
 
   return (
-    <searchContext.Provider value={searchword}>
+    <SearchContext.Provider value={searchword}>
       <section id='menu-layout'>
         <section className='mb-8 mt-10 md:mb-10 md:mt-20'>
           <header>
@@ -54,6 +53,6 @@ export default function MenuLayout({
 
         {children}
       </section>
-    </searchContext.Provider>
+    </SearchContext.Provider>
   );
 }
