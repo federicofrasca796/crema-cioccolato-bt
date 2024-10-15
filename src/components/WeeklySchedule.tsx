@@ -1,5 +1,5 @@
 import WavyLabel from './WavyLabel';
-import Badge from './elements/Badge';
+import Badge from './elements/Badge/Badge';
 
 const schedule = [
   {

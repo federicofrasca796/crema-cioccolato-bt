@@ -16,7 +16,7 @@ const SOCIALS = [
   },
   {
     icon: Facebook,
-    href: 'https://www.facebook.com/crema_e_cioccolato_barletta/'
+    href: 'https://www.facebook.com/profile.php?id=100082459368047'
   }
 ];
 
@@ -33,6 +33,7 @@ export default function Socials({
         <Grid.Item key={idx}>
           <Link
             href={social.href}
+            target='_blank'
             className={clsx([
               'inline-block w-full rounded-full fill-smokyBrown-700 p-1.5 transition ease-in-out hover:fill-smokyBrown-600',
               {

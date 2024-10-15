@@ -23,7 +23,6 @@ export default function Accordion({
     <div
       className={clsx(
         'collapse collapse-arrow',
-        // 'rounded-full has-[:checked]:rounded-lg',
         'border-2 border-primary-100 bg-primary-0',
         className
       )}
@@ -38,7 +37,10 @@ export default function Accordion({
         {title}
       </div>
       <div className='collapse-content bg-babyPowder'>
-        <p className='py-4 text-lg'>{content}</p>
+        <p
+          className='py-4 text-lg'
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></p>
       </div>
     </div>
   );

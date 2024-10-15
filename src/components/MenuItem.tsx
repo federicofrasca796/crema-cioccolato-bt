@@ -2,7 +2,7 @@
 
 import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
-import Badge from './elements/Badge';
+import Badge from './elements/Badge/Badge';
 import Button from './elements/Button';
 import Modal from './elements/Modal';
 import { useState } from 'react';
@@ -37,9 +37,9 @@ export default function MenuItem({
 
   return (
     <>
-      <div className={clsx('inline-flex min-h-10 w-full', className)}>
+      <div className={clsx('group inline-flex min-h-10 w-full', className)}>
         <div className='grow'>
-          <div className="mb-0.5 after:block after:h-[0.45rem] after:bg-smokyBrown-400 after:[mask-image:url('/assets/wavy-dotted-line.svg')]">
+          <div className='wavy-dotted-line mb-0.5 group-hover:after:animate-wavyLine'>
             <h3 title={title} className='max-w-[80%]'>
               {title}
             </h3>
@@ -64,7 +64,7 @@ export default function MenuItem({
             label={parsePrice(price)}
             variant={isExtraItem ? 'outlined' : 'contained'}
             className={clsx('min-w-max', {
-              'border-none bg-secondary-200 text-primary hover:bg-secondary-300':
+              'border-none bg-secondary-200 text-primary group-hover:bg-secondary-300':
                 !isExtraItem
             })}
           />

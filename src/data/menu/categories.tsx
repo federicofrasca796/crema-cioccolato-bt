@@ -1,3 +1,4 @@
+// TODO - Change file type to .ts, no need for .tsx
 import { StaticImageData } from 'next/image';
 import { Topic } from './topics';
 import { MenuItem } from './items';
@@ -15,6 +16,9 @@ export interface Category {
 
 export interface ExtraItem extends Omit<MenuItem, 'category_id'> {}
 
+export interface CategoryWithItems extends Category {
+  items: MenuItem[];
+}
 /**
  * Categories in which the Menu Items are grouped. Categories are part of topics.
  */
@@ -49,9 +53,9 @@ export const categories: Category[] = [
   },
   {
     id: 2,
-    name: 'Gelati MAXI',
+    name: 'Coppe e farciture gelato',
     image: IcecreamSweets,
-    slug: 'gelati-maxi',
+    slug: 'coppe-e-farciture-gelato',
     highlight: true,
     topics: [1],
     extras: [
@@ -85,15 +89,6 @@ export const categories: Category[] = [
     extras: []
   },
   {
-    id: 4,
-    name: 'Latte e cioccolate',
-    image: '',
-    slug: 'latte-cioccolate',
-    highlight: false,
-    topics: [2],
-    extras: []
-  },
-  {
     id: 5,
     name: 'Té e tisane',
     image: '',
@@ -106,12 +101,12 @@ export const categories: Category[] = [
     id: 6,
     name: 'Dolci e paste',
     image: '',
-    slug: 'dolci-paste',
+    slug: 'dolci-e-paste',
     highlight: false,
     topics: [2],
     extras: [
       {
-        id: 3,
+        id: 1,
         label: 'Creme assortite',
         slug: 'creme-assortite',
         price: 0.5,
@@ -120,7 +115,7 @@ export const categories: Category[] = [
         ingredients: []
       },
       {
-        id: 4,
+        id: 2,
         label: 'Smarties',
         slug: 'smarties',
         price: 0.5,
@@ -129,7 +124,7 @@ export const categories: Category[] = [
         ingredients: []
       },
       {
-        id: 4,
+        id: 3,
         label: 'Granella nocciola',
         slug: 'granella-nocciola',
         price: 0.5,
@@ -157,20 +152,21 @@ export const categories: Category[] = [
     topics: [4],
     extras: []
   },
-  {
-    id: 9,
-    name: 'Cocktails',
-    image: '',
-    slug: 'cocktails',
-    highlight: false,
-    topics: [3, 5],
-    extras: []
-  },
+  // TODO - Cocktails category should be present since they are served with the Aperitivo
+  // {
+  //   id: 9,
+  //   name: 'Cocktails',
+  //   image: '',
+  //   slug: 'cocktails',
+  //   highlight: false,
+  //   topics: [3, 5],
+  //   extras: []
+  // },
   {
     id: 10,
     name: 'Amari e liquori',
     image: '',
-    slug: 'amari-liquori',
+    slug: 'amari-e-liquori',
     highlight: false,
     topics: [5],
     extras: []
@@ -181,7 +177,7 @@ export const categories: Category[] = [
     image: '',
     slug: 'birre',
     highlight: false,
-    topics: [3, 4, 5],
+    topics: [3, 5],
     extras: []
   },
   {
@@ -235,15 +231,15 @@ export const categories: Category[] = [
     image: '',
     slug: 'snacks',
     highlight: false,
-    topics: [3],
+    topics: [3, 6],
     extras: []
   },
   {
     id: 18,
     name: 'Taglieri e panini',
     image: '',
-    slug: 'taglieri-panini',
+    slug: 'taglieri-e-panini',
     highlight: false,
-    topics: [3]
+    topics: [3, 6]
   }
 ];

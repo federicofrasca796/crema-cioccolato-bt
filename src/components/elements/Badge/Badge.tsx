@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { ReactNode } from 'react';
 
 export type BadgeVariants = 'contained' | 'outlined';
 export type BadgeColors =
@@ -12,11 +13,13 @@ export type BadgeColors =
   | 'info';
 export type BadgeSizes = 'tiny' | 'small' | 'medium' | 'large';
 export type BadgeProps = {
-  label: string;
+  label: ReactNode;
   color?: BadgeColors;
   variant?: BadgeVariants;
   size?: BadgeSizes;
   className?: React.HTMLAttributes<HTMLSpanElement>['className'];
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
 };
 
 const COLORS: Record<
@@ -56,16 +59,20 @@ export default function Badge({
   color = 'primary',
   variant = 'contained',
   size = 'medium',
-  className
+  className,
+  iconLeft,
+  iconRight
 }: BadgeProps) {
   return (
     <span
       className={clsx(
-        ['badge', COLORS[color], VARIANTS[variant], SIZES[size]],
+        ['badge flex-shrink-0', COLORS[color], VARIANTS[variant], SIZES[size]],
         className
       )}
     >
+      {iconLeft && <span className='mr-1'>{iconLeft}</span>}
       {label}
+      {iconRight && <span className='ml-1'>{iconRight}</span>}
     </span>
   );
 }

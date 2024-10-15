@@ -3,7 +3,7 @@
 import ReviewCard from '@/components/ReviewCard';
 import Accordion from '@/components/elements/Accordion';
 import Link from '@/components/elements/Link';
-import Carousel from '@/components/elements/carousel';
+import Carousel from '@/components/elements/Carousel';
 import StickyCTABottom from '@/components/layout/BottomCTA';
 import Navbar from '@/components/layout/Navbar';
 import { aperitivoCarouselSlides } from '@/data/home/aperitivoCarouselSlides';
@@ -21,19 +21,19 @@ import { useRef } from 'react';
 import IcecreamConeCutout from '../../public/images/icecream_cone_cutout.png';
 import CroissantIcecreamCutout from '../../public/images/croissant_icecream_cutout.png';
 
-export default function Home() {
+export default function HomePage() {
   const section1 = useRef(null);
   const section2 = useRef(null);
   const section3 = useRef(null);
-  const topCTA = useRef(null);
+  const heroCTA = useRef(null);
 
-  const { isSticky } = useSticky(topCTA);
+  const { isSticky } = useSticky(heroCTA);
 
   return (
     <>
       <Navbar trackedSections={[section1, section2, section3]} />
 
-      <section ref={section1} id={NAV_LINKS[0].href}>
+      <section>
         <section className='bottom-wave h-[calc(100dvh-112px)] bg-gradient-to-b from-transparent to-secondary px-3.5 after:h-8 md:mt-10 md:h-[calc(100dvh-174px)] md:px-0'>
           <div className='mx-auto h-[calc(100%-150px)] md:h-[calc(100%-180px)]'>
             <Carousel
@@ -44,7 +44,7 @@ export default function Home() {
               autoplay
             />
           </div>
-          <div className='mt-5 text-center md:mt-3' ref={topCTA}>
+          <div className='mt-5 text-center md:mt-3' ref={heroCTA}>
             <Link
               href='menu'
               type='button'
@@ -54,11 +54,18 @@ export default function Home() {
               <BookOpenIcon className='w-6' />
               Scopri il nostro menù
             </Link>
-            <ChevronDownIcon className='mx-auto mt-5 w-10 animate-bounce fill-smokyBrown-600 md:mt-4' />
+
+            <a href={'#' + NAV_LINKS[0].href}>
+              <ChevronDownIcon className='mx-auto mt-5 w-10 animate-bounce fill-smokyBrown-600 md:mt-4' />
+            </a>
           </div>
         </section>
 
-        <section className='mb-20 mt-24 md:mt-40'>
+        <section
+          ref={section1}
+          id={NAV_LINKS[0].href}
+          className='mb-20 mt-24 md:mt-40'
+        >
           <div className='container mx-auto mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
             <div className='prose md:col-span-3'>
               <h1>Gusta la nostra varietà di dolci e gelati</h1>
@@ -117,18 +124,17 @@ export default function Home() {
             className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-primary-0 py-6 md:mx-auto md:max-w-screen-md md:py-16 lg:max-w-screen-lg xl:max-w-screen-xl'
             id='aperitivo'
           >
-            <div className='container mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 md:gap-5'>
+            <div className='container mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12'>
               <div className='prose prose-h1:text-primary-900'>
                 <h1>Aperitivo tra amici?</h1>
                 <p>
-                  Deliziati con abbondanti taglieri di salumi, formaggi
-                  selezionati e stuzzichini irresistibili che renderanno i tuoi
-                  incontri ancora più speciali. Accompagnati da una vasta scelta
-                  di bevande, dai classici ai creativi, il nostro aperitivo è
-                  l&apos;occasione perfetta per condividere risate e buon cibo
-                  in compagnia dei tuoi cari. Scegli la qualità e
-                  l&apos;abbondanza dei nostri taglieri per un momento di
-                  convivialità indimenticabile.
+                  Gusta i nostri{' '}
+                  <strong>taglieri di salumi, formaggi e stuzzichini</strong>{' '}
+                  per rendere i tuoi incontri speciali. Accompagnati da una
+                  vasta scelta di bevande, il nostro aperitivo è un&apos;ottima
+                  occasione per condividere buon cibo e momenti piacevoli con le
+                  persone che ami. Scegli la qualità dei nostri taglieri per un
+                  momento di convivialità memorabile.
                 </p>
 
                 <Link
@@ -172,7 +178,6 @@ export default function Home() {
               title={faq.question}
               content={faq.answer}
               multiselection
-              // checked={idx === 0}
               key={idx}
             />
           ))}

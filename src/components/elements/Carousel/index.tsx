@@ -4,14 +4,14 @@ import { isObject } from '@/utils/generic';
 import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
-import 'swiper/css';
-import 'swiper/css/scrollbar';
 import { A11y, Autoplay, Keyboard, Pagination } from 'swiper/modules';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import type { AutoplayOptions, PaginationOptions } from 'swiper/types';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../../tailwind.config';
 import Skeleton from './skeleton';
+import 'swiper/css';
+import 'swiper/css/scrollbar';
 import './styles.css';
 
 export type Slide = {

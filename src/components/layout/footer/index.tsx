@@ -34,7 +34,7 @@ export default function Footer() {
             <span id={NAV_LINKS[5].href}>
               Via Rocco Chinnici, 43 <br />
               Barletta (BT) <br />
-              (+39) 328 4689986
+              <Link href='tel:+393284689986'>(+39) 328 4689986</Link>
             </span>
           </div>
           <div id={NAV_LINKS[3].href}>
