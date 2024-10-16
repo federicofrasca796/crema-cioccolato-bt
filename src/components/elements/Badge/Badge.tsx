@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ReactNode } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 
 export type BadgeVariants = 'contained' | 'outlined';
 export type BadgeColors =
@@ -12,7 +12,8 @@ export type BadgeColors =
   | 'success'
   | 'info';
 export type BadgeSizes = 'tiny' | 'small' | 'medium' | 'large';
-export type BadgeProps = {
+
+export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
   label: ReactNode;
   color?: BadgeColors;
   variant?: BadgeVariants;
@@ -20,7 +21,7 @@ export type BadgeProps = {
   className?: React.HTMLAttributes<HTMLSpanElement>['className'];
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
-};
+}
 
 const COLORS: Record<
   BadgeColors,
@@ -61,7 +62,8 @@ export default function Badge({
   size = 'medium',
   className,
   iconLeft,
-  iconRight
+  iconRight,
+  ...props
 }: BadgeProps) {
   return (
     <span
@@ -69,6 +71,7 @@ export default function Badge({
         ['badge flex-shrink-0', COLORS[color], VARIANTS[variant], SIZES[size]],
         className
       )}
+      {...props}
     >
       {iconLeft && <span className='mr-1'>{iconLeft}</span>}
       {label}

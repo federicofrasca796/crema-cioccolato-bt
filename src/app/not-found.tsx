@@ -4,7 +4,7 @@ import Link from '@/components/elements/Link';
 
 export default function NotFound() {
   return (
-    <div className='container mx-auto min-h-[80dvh] items-center gap-16 pb-24 pt-10 md:grid md:grid-flow-col'>
+    <div className='container min-h-[80dvh] items-center gap-16 pb-24 pt-10 md:grid md:grid-flow-col'>
       <MeltedIcecream
         className='md: relative -left-6 mb-10 h-96 md:-top-20 md:left-0 md:mb-0 md:h-[calc(100%+5rem)] md:w-full'
         outlineClassName='fill-smokyBrown-800'

@@ -66,7 +66,7 @@ export default function HomePage() {
           id={NAV_LINKS[0].href}
           className='mb-20 mt-24 md:mt-40'
         >
-          <div className='container mx-auto mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
+          <div className='container mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
             <div className='prose md:col-span-3'>
               <h1>Gusta la nostra varietà di dolci e gelati</h1>
               <p>
@@ -93,7 +93,7 @@ export default function HomePage() {
             </figure>
           </div>
 
-          <div className='container mx-auto mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
+          <div className='container mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
             <div className='prose md:col-span-3 md:col-start-3'>
               <h1>Prova i nostri dolci con farcitura al gelato!</h1>
               <p>
@@ -124,7 +124,7 @@ export default function HomePage() {
             className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-primary-0 py-6 md:mx-auto md:max-w-screen-md md:py-16 lg:max-w-screen-lg xl:max-w-screen-xl'
             id='aperitivo'
           >
-            <div className='container mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12'>
+            <div className='container grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12'>
               <div className='prose prose-h1:text-primary-900'>
                 <h1>Aperitivo tra amici?</h1>
                 <p>
@@ -164,7 +164,7 @@ export default function HomePage() {
       </section>
 
       <section
-        className='container mx-auto mb-20'
+        className='container mb-20'
         id={NAV_LINKS[1].href}
         ref={section2}
       >
@@ -189,11 +189,9 @@ export default function HomePage() {
         id={NAV_LINKS[2].href}
         ref={section3}
       >
-        <h1 className='container mx-auto mb-8 font-serif text-4xl'>
-          Dicono di noi
-        </h1>
+        <h1 className='container mb-8 font-serif text-4xl'>Dicono di noi</h1>
 
-        <div className='container mx-auto hidden gap-5 md:grid md:grid-cols-2'>
+        <div className='container hidden gap-5 md:grid md:grid-cols-2'>
           {reviews.slice(0, 4).map((review, idx) => (
             <ReviewCard
               author={review.author}

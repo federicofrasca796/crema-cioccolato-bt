@@ -24,6 +24,8 @@ export default function ClickableBadge({
         className='rounded-lg border-2 px-2 py-1 font-bold'
         label={label}
         variant={isActive ? 'contained' : 'outlined'}
+        title={`${isActive ? 'Selected' : ''} ${label}`}
+        aria-selected={isActive}
       />
     </button>
   );

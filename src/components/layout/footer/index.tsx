@@ -9,7 +9,7 @@ import { NAV_LINKS } from '@/data/navbar';
 export default function Footer() {
   return (
     <footer className='top-wave relative mt-24 bg-secondary pb-5 pt-4 after:-top-14 after:h-14'>
-      <div className='container mx-auto grid gap-10'>
+      <div className='container grid gap-10'>
         <section className='flex items-center gap-4'>
           <Logo secondary className='w-[5.625rem] fill-primary' />
           <div>

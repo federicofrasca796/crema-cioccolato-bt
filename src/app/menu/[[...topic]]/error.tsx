@@ -10,7 +10,7 @@ export default function ErrorMenuByTopic({
   reset: () => void;
 }) {
   return (
-    <div className='container mx-auto min-h-[80dvh] items-center gap-16 pb-24 pt-10 md:grid md:grid-flow-col'>
+    <div className='container min-h-[80dvh] items-center gap-16 pb-24 pt-10 md:grid md:grid-flow-col'>
       <article className='prose'>
         <Logo
           secondary

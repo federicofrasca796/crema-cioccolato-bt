@@ -39,8 +39,12 @@ export default function BadgeCarousel({
       modules={[FreeMode]}
       freeMode
       slidesPerView={'auto'}
-      slidesOffsetBefore={16}
-      slidesOffsetAfter={16}
+      // slidesOffsetBefore={16}
+      // slidesOffsetAfter={16}
+      // wrapperClass='swiper-wrapper container !box-border'
+      className='mx-auto mt-5 h-max items-start max-md:!px-4 sm:max-w-[568px] md:max-w-[704px] md:!overflow-visible lg:max-w-[896px] xl:max-w-[1120px] 2xl:max-w-[1344px]'
+      // cssMode
+      grabCursor
     >
       <SwiperSlide key={0} className='!w-fit' data-history='all'>
         <ClickableBadge

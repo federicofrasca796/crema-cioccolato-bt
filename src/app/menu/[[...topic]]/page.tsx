@@ -19,7 +19,7 @@ export default function MenuByTopic({
   if (topic?.length > 1) throw new Error(`Questa non è una sezione valida`);
 
   return (
-    <article className='container mx-auto min-h-48'>
+    <article className='container min-h-48'>
       <MenuRenderer topic={topic} />
     </article>
   );

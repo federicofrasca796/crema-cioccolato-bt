@@ -80,6 +80,7 @@ export default function Carousel({
       ) : (
         <>
           <Swiper
+            containerModifierClass='hero-carousel-'
             className={clsx('h-full !overflow-visible md:-m-5', className)}
             modules={[
               A11y,
