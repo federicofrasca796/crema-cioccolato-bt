@@ -23,9 +23,9 @@ export default function MenuLayout({
   return (
     <SearchContext.Provider value={searchword}>
       <section id='menu-layout'>
-        <section className='mb-8 mt-10 md:mb-10 md:mt-20'>
+        <section className='mb-12 mt-10 md:mb-14 md:mt-20'>
           <header>
-            <div className='container mx-auto'>
+            <div className='container'>
               <GoBack />
               <h1 className='font-display text-3xl font-bold text-primary-600'>
                 Menù
@@ -41,7 +41,7 @@ export default function MenuLayout({
               <BadgeCarousel activeTopic={parsedTopic} />
             </div>
 
-            <div className='container mx-auto mt-6'>
+            <div className='container mt-6 grid gap-5 xl:grid-cols-2'>
               <InputSearch
                 placeholder='Cerca tra le nostre delizie'
                 onChange={(e) => setSearchword(e.target.value)}

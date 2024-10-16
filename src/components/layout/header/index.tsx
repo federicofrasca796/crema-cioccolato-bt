@@ -13,7 +13,7 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
-    <header className='container mx-auto mb-5 pt-5 md:overflow-x-hidden'>
+    <header className='container mb-5 pt-5 md:overflow-x-hidden'>
       <section className='grid min-h-[72px] grid-cols-3 items-center'>
         <Socials className='hidden md:grid' rounded />
 
