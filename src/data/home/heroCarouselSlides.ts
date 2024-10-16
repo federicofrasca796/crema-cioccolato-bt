@@ -8,31 +8,31 @@ import donuts from '../../../public/images/donuts.jpeg';
 
 export const heroCarouselSlides = [
   {
-    alt: 'test3',
+    alt: 'Crepes farcite con gelato',
     src: crepesIcecream
   },
   {
-    alt: 'test6',
+    alt: 'Gusti variegati di gelato artigianale',
     src: icecreams
   },
   {
-    alt: 'test1',
+    alt: 'Cornetto con crema',
     src: breakfast
   },
   {
-    alt: 'test1',
+    alt: 'Donuts al cioccolato',
     src: donuts
   },
   {
-    alt: 'test2',
+    alt: 'Brioche col tuppo farcita di gelato e abbondante panna',
     src: brioche
   },
   {
-    alt: 'test5',
+    alt: 'Tre torte cheesecakes con gusti assortiti',
     src: cheesecakes
   },
   {
-    alt: 'test4',
+    alt: 'Bancone della colazione di Crema e Cioccolato',
     src: countertop
   }
 ];

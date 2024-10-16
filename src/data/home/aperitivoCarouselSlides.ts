@@ -3,11 +3,11 @@ import aperol from '../../../public/images/aperol1.jpg';
 
 export const aperitivoCarouselSlides = [
   {
-    alt: 'test3',
+    alt: 'Tagliere abbondante con appetizer e cocktail',
     src: aperitivoPlatter
   },
   {
-    alt: 'test3',
+    alt: "Calice di Aperol spritz mentre viene versato l'aperol",
     src: aperol
   }
 ];
