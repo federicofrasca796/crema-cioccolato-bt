@@ -1,6 +1,6 @@
 {
   "name": "crema-cioccolato-bt",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "author": {
     "name": "Federico Frascà",
@@ -18,7 +18,7 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write --list-different .",
     "prepare": "husky install",
-    "commit-msg": "cz"
+    "commit": "cz"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
