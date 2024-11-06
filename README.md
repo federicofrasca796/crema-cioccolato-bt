@@ -9,7 +9,27 @@
   <img src="public/assets/cc_logo_color_bg.png" alt="Crema e Cioccolato logo" width="150px">
 </p>
 
-## Getting Started
+---
+
+Crema & Cioccolato is a renowned Italian company known for franchising ice cream parlors and coffee shops. This project showcases the delicacies and vibrant experience offered at the Barletta store in Puglia.
+
+Please note that this project is an independent effort and is not officially affiliated with the Crema & Cioccolato franchising network. Instead, it is a collaboration with the family who proudly operates the Barletta location.
+
+---
+
+## Highlights
+
+- 🧁 A simple homepage displaying some of the most requested items, FAQs and more shop's infos
+
+- ✨ An interactive menu
+
+  - 🥅 Category filtering: Filter available items in each of the 6 categories: 🍦 Icecreams, ☕ Coffee, 🥤 Drinks, 🥂Aperitivo, 🍕 Food & Snacks, 🍻 Beers & Liquors.
+  - 🔎 Text search: Search the desired item by typing its name within a filtered category or in the whole menu
+  - 🧺 Items grouping: products are grouped in subcategories to improve readability of over 100 items.
+
+- 🎨 A basic but custom design system built on top of DaisyUI. Planned to expand and improve animations using Rive.
+
+## Run it locally
 
 First, run the development server:
 
