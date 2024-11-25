@@ -20,7 +20,8 @@ Please note that this project is an independent effort and is not officially aff
 <br>
 <a href="https://crema-cioccolato-bt.netlify.app/">
   <div align="center">
-    <img width="90%" src="./public/promo/cc_bt_promo.gif" >
+    <img width="90%" src="./public/promo/home_dsk.png" >
+    <img width="90%" src="./public/promo/menu_dsk.png" >
   </div>
 </a>
 
