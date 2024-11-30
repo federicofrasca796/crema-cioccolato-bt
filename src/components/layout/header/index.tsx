@@ -13,11 +13,11 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState<boolean>(false);
 
   return (
-    <header className='container mb-5 pt-5 md:overflow-x-hidden'>
-      <section className='grid min-h-[72px] grid-cols-3 items-center'>
+    <header className='container mb-5 pt-5 '>
+      <section className='grid min-h-[var(--header-height)] grid-cols-3 items-center'>
         <Socials className='hidden md:grid' rounded />
 
-        <Link href='/' className='mx-auto h-full rounded-lg'>
+        <Link href='/' className='mx-auto h-full rounded-full'>
           <Logo
             className='hidden h-20 fill-primary transition-colors duration-700 ease-in hover:fill-primary-800 md:block'
             secondary
@@ -27,10 +27,11 @@ export default function Header() {
 
         <Link
           href='https://maps.app.goo.gl/V36pGd3jSGZ5tG7GA'
+          type='button'
           target='_blank'
-          className='order-first inline-block w-fit gap-1 rounded-full p-3 text-smokyBrown-800 transition-colors hover:text-smokyBrown-600 md:order-none md:ml-auto md:bg-secondary-100 md:text-smokyBrown-700 md:hover:bg-smokyBrown-200 md:hover:text-smokyBrown-800'
+          className='order-first flex size-12 items-center rounded-full border-none bg-transparent p-0 text-smokyBrown-700 shadow-none transition-colors hover:bg-smokyBrown-200 hover:text-smokyBrown-800 md:order-none md:ml-auto md:bg-secondary-100'
         >
-          <MapPinIcon className='h-5' />
+          <MapPinIcon className='size-5' />
         </Link>
 
         <Button

@@ -2,6 +2,7 @@
 import clsx from 'clsx';
 import NextLink from 'next/link';
 import { BUTTON_VARIANTS, ButtonVariants } from './Button';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/16/solid';
 
 type LinkTypes = 'link' | 'button';
 export type LinkColors =
@@ -99,6 +100,9 @@ export default function Link({
       {...props}
     >
       {children}
+      {type === 'link' && target === '_blank' && (
+        <ArrowTopRightOnSquareIcon className='ml-1 inline size-4 align-baseline' />
+      )}
     </NextLink>
   );
 }
