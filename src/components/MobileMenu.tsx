@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import Button from './elements/Button';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import Socials from './Socials';
+import { motion } from 'motion/react';
 
 // TODO - This should be centralized for Navbar and MobileMenu components
 const LINKS = [
@@ -61,7 +62,7 @@ export default function MobileMenu({
         id='mobile-menu'
         ref={modalRef}
       >
-        <div className='align-end grid h-full w-full grid-flow-row grid-rows-[max-content_minmax(0,1fr)_max-content] gap-10 rounded-xl bg-babyPowder px-5 py-6'>
+        <div className='align-end grid h-full w-full grid-flow-row grid-rows-[max-content_minmax(0,1fr)_max-content] gap-10 overflow-hidden rounded-xl bg-babyPowder px-5 py-6'>
           <div className='text-end'>
             <Button
               variant='text'
@@ -75,7 +76,13 @@ export default function MobileMenu({
           <nav>
             <ul className='text-end'>
               {LINKS.map((link, idx) => (
-                <li key={idx} className='mt-8'>
+                <motion.li
+                  key={idx}
+                  className='mt-8'
+                  initial={{ x: 200, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.3, delay: idx * 0.1 }}
+                >
                   <Link
                     href={`${link.href}`}
                     className='rounded-md font-serif text-3xl text-smokyBrown-800'
@@ -84,7 +91,7 @@ export default function MobileMenu({
                   >
                     {link.label}
                   </Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </nav>
