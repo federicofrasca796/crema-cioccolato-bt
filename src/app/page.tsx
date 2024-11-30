@@ -16,6 +16,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { BookOpenIcon } from '@heroicons/react/24/outline';
 import { ArrowLongRightIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 import { useRef } from 'react';
 
 import IcecreamConeCutout from '../../public/images/icecream_cone_cutout.png';
@@ -46,15 +47,20 @@ export default function HomePage() {
             />
           </div>
           <div className='mt-5 text-center md:mt-3' ref={heroCTA}>
-            <Link
-              href='menu'
-              type='button'
-              buttonVariant='contained'
-              color='accent'
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <BookOpenIcon className='w-6' />
-              Scopri il nostro menù
-            </Link>
+              <Link
+                href='menu'
+                type='button'
+                buttonVariant='contained'
+                color='accent'
+              >
+                <BookOpenIcon className='w-6' />
+                Scopri il nostro menù
+              </Link>
+            </motion.button>
 
             <a href={'#' + NAV_LINKS[0].href}>
               <ChevronDownIcon className='mx-auto mt-5 w-10 animate-bounce fill-smokyBrown-600 md:mt-4' />
@@ -79,7 +85,13 @@ export default function HomePage() {
                 gusti.
               </p>
             </div>
-            <figure className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2 md:w-4/5'>
+            <motion.figure
+              className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2 md:w-4/5'
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.1, type: 'tween' }}
+            >
               <Image
                 className='rounded-xl'
                 src={IcecreamConeCutout}
@@ -91,7 +103,7 @@ export default function HomePage() {
                   objectPosition: 'center 30px'
                 }}
               />
-            </figure>
+            </motion.figure>
           </div>
 
           <div className='container mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
@@ -107,7 +119,13 @@ export default function HomePage() {
                 tuo dolce per una esperienza di gusto indimenticabile.
               </p>
             </div>
-            <figure className='relative mx-auto flex aspect-square w-full justify-center overflow-hidden rounded-full bg-gradient-to-t from-accent-100/50 md:-order-1 md:col-span-2 md:w-4/5'>
+            <motion.figure
+              className='relative mx-auto flex aspect-square w-full justify-center overflow-hidden rounded-full bg-gradient-to-t from-accent-100/50 md:-order-1 md:col-span-2 md:w-4/5'
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.1, type: 'tween' }}
+            >
               <Image
                 className='rounded-xl'
                 src={CroissantIcecreamCutout}
@@ -118,7 +136,7 @@ export default function HomePage() {
                   width: '80%'
                 }}
               />
-            </figure>
+            </motion.figure>
           </div>
 
           <div
