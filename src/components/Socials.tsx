@@ -33,6 +33,7 @@ export default function Socials({
         <Grid.Item key={idx}>
           <Link
             type='button'
+            buttonVariant='text'
             href={social.href}
             target='_blank'
             className={clsx([
