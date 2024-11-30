@@ -19,12 +19,19 @@ export type Slide = {
   src: string | StaticImageData;
 };
 
-export interface CarouselProps {
+export interface CarouselProps extends SwiperProps {
   slides: Slide[];
   className?: React.ComponentProps<typeof Swiper>['className'];
   pagination?: boolean | PaginationOptions | undefined;
-  id: string; // A unique identifier for the carousel in order to get the correct swiper instance
+  /**
+   * A unique identifier for the carousel in order to get the correct swiper instance
+   */
+  id: string;
   autoplay?: boolean | AutoplayOptions | undefined;
+  /**
+   * Prioritizes preload of the specified slide index or all of the slides
+   */
+  prioritize?: number | 'all';
 }
 
 const { theme } = resolveConfig(tailwindConfig);
@@ -36,8 +43,9 @@ export default function Carousel({
   pagination,
   autoplay,
   spaceBetween,
+  prioritize,
   ...props
-}: CarouselProps & SwiperProps) {
+}: CarouselProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -63,12 +71,11 @@ export default function Carousel({
         className='rounded-xl'
         src={slide.src}
         alt={slide.alt}
-        sizes='(max-width: 768px) 100vw, 50vw'
-        fill
         style={{
           objectFit: 'cover'
         }}
-        priority={idx === 0 || idx === slides.length - 1}
+        fill
+        priority={prioritize === 'all' || prioritize === idx}
       />
     </SwiperSlide>
   );

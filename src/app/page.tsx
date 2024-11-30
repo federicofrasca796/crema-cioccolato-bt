@@ -42,6 +42,7 @@ export default function HomePage() {
               pagination
               spaceBetween={20}
               autoplay
+              prioritize='all'
             />
           </div>
           <div className='mt-5 text-center md:mt-3' ref={heroCTA}>
