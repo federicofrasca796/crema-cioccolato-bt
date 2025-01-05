@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import resolveConfig from 'tailwindcss/resolveConfig';
 import tailwindConfig from '../../../tailwind.config';
+import useVibrate from '@/hooks/useVibrate';
 
 export default function TextCarousel({
   activeTopic
@@ -19,6 +20,7 @@ export default function TextCarousel({
   const router = useRouter();
   const { theme } = resolveConfig(tailwindConfig);
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+  const vibrate = useVibrate(1);
 
   useEffect(() => {
     // Preserve active topic on page load
@@ -60,10 +62,9 @@ export default function TextCarousel({
 
   const handleSwiperHistory = (swiper: SwiperClass) => {
     /**
-     * Activate aptic feedback on topic change.
+     * Trigger aptic feedback on topic change.
      */
-    const canVibrate = typeof window !== 'undefined' && navigator;
-    if (canVibrate) navigator.vibrate(1);
+    vibrate();
 
     /**
      * Enables soft navigation between topics.
