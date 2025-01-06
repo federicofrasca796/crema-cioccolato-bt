@@ -10,7 +10,7 @@ import CookiePolicyLink from '@/components/scripts/CookiePolicyLink';
 
 export default function Footer() {
   return (
-    <footer className='top-wave relative mt-24 bg-secondary pb-5 pt-4 after:-top-14 after:h-14'>
+    <footer className='top-wave relative mt-24 bg-secondary pb-8 pt-4 after:-top-14 after:h-14'>
       <div className='container grid gap-10'>
         <div className='flex items-center gap-4' role='heading' aria-level={2}>
           <Logo secondary className='w-[5.625rem] fill-primary' />
