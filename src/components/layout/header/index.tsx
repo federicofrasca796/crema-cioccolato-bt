@@ -40,7 +40,10 @@ export default function Header() {
           className='ml-auto w-fit px-0 text-smokyBrown-800 md:hidden'
           color='neutral'
         >
-          <Bars2Icon className='w-10' />
+          <span id='menu-opener' className='sr-only'>
+            menù
+          </span>
+          <Bars2Icon className='w-10' aria-describedby='menu-opener' />
         </Button>
       </section>
 

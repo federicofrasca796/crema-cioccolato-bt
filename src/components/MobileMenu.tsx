@@ -9,16 +9,16 @@ import { motion } from 'motion/react';
 // TODO - This should be centralized for Navbar and MobileMenu components
 const LINKS = [
   {
-    label: 'Menù',
-    href: '/menu'
-  },
-  {
-    label: 'Come trovarci',
-    href: '/#dove-siamo'
+    label: 'Le nostre delizie',
+    href: '/#delizie'
   },
   {
     label: 'Domande frequenti',
     href: '/#faq'
+  },
+  {
+    label: 'Come trovarci',
+    href: '/#dove-siamo'
   },
   {
     label: 'Orari',
@@ -62,7 +62,12 @@ export default function MobileMenu({
         id='mobile-menu'
         ref={modalRef}
       >
-        <div className='align-end grid h-full w-full grid-flow-row grid-rows-[max-content_minmax(0,1fr)_max-content] gap-10 overflow-hidden rounded-xl bg-babyPowder px-5 py-6'>
+        <motion.div
+          initial={{ y: -200, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.3, easings: 'easeInOut' }}
+          className='align-end grid h-full w-full grid-flow-row grid-rows-[max-content_minmax(0,1fr)_max-content] gap-10 overflow-hidden rounded-xl bg-babyPowder px-5 py-6'
+        >
           <div className='text-end'>
             <Button
               variant='text'
@@ -74,11 +79,10 @@ export default function MobileMenu({
           </div>
 
           <nav>
-            <ul className='text-end'>
+            <ul className='flex flex-col gap-6 text-end'>
               {LINKS.map((link, idx) => (
                 <motion.li
                   key={idx}
-                  className='mt-8'
                   initial={{ x: 200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 0.3, delay: idx * 0.1 }}
@@ -93,11 +97,22 @@ export default function MobileMenu({
                   </Link>
                 </motion.li>
               ))}
+
+              <motion.li
+                className='mt-4'
+                initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.3, delay: LINKS.length * 0.1 }}
+              >
+                <Link type='button' href='/menu' className='btn-accent '>
+                  Scopri il nostro menù
+                </Link>
+              </motion.li>
             </ul>
           </nav>
 
           <Socials className='content-end justify-center' />
-        </div>
+        </motion.div>
       </dialog>
     </>
   );

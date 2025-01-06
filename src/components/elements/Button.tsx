@@ -1,5 +1,6 @@
 'use client';
 import clsx from 'clsx';
+import { HTMLMotionProps, motion } from 'motion/react';
 
 export type ButtonVariants = 'contained' | 'outlined' | 'text';
 export type ButtonColors =
@@ -13,7 +14,7 @@ export type ButtonColors =
   | 'info';
 export type ButtonSizes = 'tiny' | 'small' | 'medium' | 'large';
 
-export interface ButtonProps {
+export interface ButtonProps extends HTMLMotionProps<'button'> {
   children?: React.ReactNode;
   className?: React.HTMLAttributes<HTMLButtonElement>['className'];
   color?: ButtonColors;
@@ -75,7 +76,7 @@ export default function Button({
   variant = 'contained'
 }: ButtonProps) {
   return (
-    <button
+    <motion.button
       type={type}
       onClick={onClick}
       className={clsx([
@@ -91,6 +92,6 @@ export default function Button({
       {startIcon && startIcon}
       {children}
       {endIcon && endIcon}
-    </button>
+    </motion.button>
   );
 }

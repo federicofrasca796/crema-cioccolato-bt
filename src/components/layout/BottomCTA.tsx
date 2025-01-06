@@ -34,7 +34,7 @@ export default function StickyCTABottom({
       className={clsx(
         'hidden justify-center gap-5 text-center transition-transform md:mt-3',
         {
-          'z-10 max-md:sticky max-md:bottom-0 max-md:!flex max-md:-translate-y-10':
+          'z-10 max-md:sticky max-md:bottom-0 max-md:!flex max-md:-translate-y-8':
             sticky
         }
       )}

@@ -28,7 +28,10 @@ export default function ReviewCard({
     >
       <div className='flex items-start gap-4'>
         {author.image && (
-          <figure className='relative aspect-square w-16 overflow-hidden rounded-full'>
+          <figure
+            className='relative aspect-square w-16 overflow-hidden rounded-full'
+            role='none'
+          >
             <Image
               src={author.image}
               alt={'author image'}

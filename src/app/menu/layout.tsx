@@ -41,13 +41,16 @@ export default function MenuLayout({
               <BadgeCarousel activeTopic={parsedTopic} />
             </div>
 
-            <div className='container mt-6 grid gap-5 xl:grid-cols-2'>
+            <form
+              className='container mt-6 grid gap-5 xl:grid-cols-2'
+              onSubmit={(e) => e.preventDefault()}
+            >
               <InputSearch
                 placeholder='Cerca tra le nostre delizie'
                 onChange={(e) => setSearchword(e.target.value)}
                 onCancel={() => setSearchword('')}
               />
-            </div>
+            </form>
           </header>
         </section>
 

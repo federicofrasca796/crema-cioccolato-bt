@@ -66,7 +66,8 @@ export default function Footer() {
 
         <section className='flex flex-col justify-between gap-y-4 text-xs md:flex-row'>
           <div>
-            © 2024 Crema e Cioccolato di Andrea Bufo <br />
+            © {new Date().getFullYear()} Crema e Cioccolato di Andrea Bufo{' '}
+            <br />
             Tutti i diritti riservati.
           </div>
 
