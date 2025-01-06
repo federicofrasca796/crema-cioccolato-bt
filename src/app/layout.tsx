@@ -1,5 +1,7 @@
 import Footer from '@/components/layout/footer';
 import Header from '@/components/layout/header';
+import CookieComplianceWidget from '@/components/scripts/CookieComplianceWidget';
+import GoogleAnalytics from '@/components/scripts/GoogleAnalytics';
 import type { Metadata } from 'next';
 import { Dancing_Script, Nunito_Sans, Rozha_One } from 'next/font/google';
 import { ReactElement } from 'react';
@@ -41,6 +43,9 @@ export default function RootLayout({ children }: { children: ReactElement }) {
         </div>
 
         <Footer />
+
+        <GoogleAnalytics />
+        <CookieComplianceWidget />
       </body>
     </html>
   );

@@ -5,12 +5,14 @@ import Logo from '@/components/icons/Logo';
 import Link from '@/components/elements/Link';
 import { MapPinIcon } from '@heroicons/react/24/solid';
 import { NAV_LINKS } from '@/data/navbar';
+import PrivacyPolicyLink from '@/components/scripts/PrivacyPolicyLink';
+import CookiePolicyLink from '@/components/scripts/CookiePolicyLink';
 
 export default function Footer() {
   return (
     <footer className='top-wave relative mt-24 bg-secondary pb-5 pt-4 after:-top-14 after:h-14'>
       <div className='container grid gap-10'>
-        <section className='flex items-center gap-4'>
+        <div className='flex items-center gap-4' role='heading' aria-level={2}>
           <Logo secondary className='w-[5.625rem] fill-primary' />
           <div>
             <div className='font-display text-3xl font-bold text-primary'>
@@ -20,7 +22,7 @@ export default function Footer() {
               Barletta
             </span>
           </div>
-        </section>
+        </div>
 
         <section id={NAV_LINKS[4].href}>
           <WeeklySchedule />
@@ -70,15 +72,12 @@ export default function Footer() {
 
           <ul className='inline-flex items-end gap-2'>
             <li>P.Iva 08663910720</li>
-            {/* <li>
-              <Link href='#'>Privacy Policy</Link>
+            <li>
+              <PrivacyPolicyLink />
             </li>
             <li>
-              <Link href='#'>Cookie Policy</Link>
+              <CookiePolicyLink />
             </li>
-            <li>
-              <Link href='#'>Preferenze Cookie</Link>
-            </li> */}
           </ul>
         </section>
       </div>
