@@ -104,7 +104,12 @@ export default function MobileMenu({
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.3, delay: LINKS.length * 0.1 }}
               >
-                <Link type='button' href='/menu' className='btn-accent '>
+                <Link
+                  type='button'
+                  href='/menu'
+                  className='btn-accent'
+                  onClick={handleClose}
+                >
                   Scopri il nostro menù
                 </Link>
               </motion.li>
