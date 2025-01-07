@@ -21,6 +21,7 @@ import { useRef } from 'react';
 
 import IcecreamConeCutout from '../../public/images/icecream_cone_cutout.png';
 import CroissantIcecreamCutout from '../../public/images/croissant_icecream_cutout.png';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 export default function HomePage() {
   const section1 = useRef(null);
@@ -69,7 +70,7 @@ export default function HomePage() {
           className='mb-20 mt-24 md:mt-40'
         >
           <div className='container mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
-            <div className='prose md:col-span-3'>
+            <div className='prose md:col-span-2 lg:col-span-3'>
               <h1>Gusta la nostra varietà di dolci e gelati</h1>
               <p>
                 Scegli tra una vasta selezione di deliziosi dolci artigianali,
@@ -81,7 +82,7 @@ export default function HomePage() {
               </p>
             </div>
             <motion.figure
-              className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-2 md:w-4/5'
+              className='relative mx-auto aspect-square w-full overflow-hidden rounded-full bg-gradient-to-t from-secondary-300 md:col-span-3 md:w-4/5 lg:col-span-2'
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -103,7 +104,7 @@ export default function HomePage() {
           </div>
 
           <div className='container mb-20 grid grid-cols-1 gap-20 md:grid-cols-5'>
-            <div className='prose md:col-span-3 md:col-start-3'>
+            <div className='prose md:col-span-2 lg:col-span-3 lg:col-start-3'>
               <h2 className='text-4xl'>
                 Prova i nostri dolci con farcitura al gelato!
               </h2>
@@ -118,7 +119,7 @@ export default function HomePage() {
               </p>
             </div>
             <motion.figure
-              className='relative mx-auto flex aspect-square w-full justify-center overflow-hidden rounded-full bg-gradient-to-t from-accent-100/50 md:-order-1 md:col-span-2 md:w-4/5'
+              className='relative mx-auto flex aspect-square w-full justify-center overflow-hidden rounded-full bg-gradient-to-t from-accent-100/50 md:-order-1 md:col-span-3 md:w-4/5 lg:col-span-2'
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -139,7 +140,7 @@ export default function HomePage() {
           </div>
 
           <motion.div
-            className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-primary-0 py-6 md:mx-auto md:max-w-screen-md md:py-16 lg:max-w-screen-lg xl:max-w-screen-xl'
+            className='mx-2 mb-20 rounded-2xl border-2 border-primary-100 bg-secondary py-6 md:mx-auto md:max-w-screen-md md:py-16 lg:max-w-screen-lg xl:max-w-screen-2xl'
             id='aperitivo'
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -200,7 +201,6 @@ export default function HomePage() {
           {faqs.map((faq, idx) => (
             <Accordion
               datasetName='main-faqs'
-              className=''
               title={faq.question}
               content={faq.answer}
               multiselection
@@ -257,6 +257,7 @@ export default function HomePage() {
       </section>
 
       <StickyCTABottom sticky={isSticky} />
+      <ScrollToTopButton sticky={isSticky} />
     </>
   );
 }
