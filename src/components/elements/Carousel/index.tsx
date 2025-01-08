@@ -66,6 +66,7 @@ export default function Carousel({
     <SwiperSlide
       className='relative drop-shadow-md md:!w-9/12'
       key={`${id}-slide-${idx}`}
+      lazy={false}
     >
       <Image
         className='rounded-xl'
@@ -75,6 +76,7 @@ export default function Carousel({
           objectFit: 'cover'
         }}
         fill
+        loading='eager'
         priority={prioritize === 'all' || prioritize === idx}
       />
     </SwiperSlide>
@@ -87,6 +89,7 @@ export default function Carousel({
       ) : (
         <>
           <Swiper
+            lazyPreloadPrevNext={2}
             containerModifierClass='hero-carousel-'
             className={clsx('h-full !overflow-visible md:-m-5', className)}
             modules={[

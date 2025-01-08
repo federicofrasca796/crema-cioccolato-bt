@@ -1,7 +1,5 @@
 'use client';
 
-// TODO - Encapsulate components and prefer server component for layout if possible
-
 import GoBack from '@/components/elements/GoBack';
 import InputSearch from '@/components/elements/Input/InputSearch';
 import BadgeCarousel from '@/components/TopicFilters/BadgeCarousel';
@@ -10,6 +8,11 @@ import { SearchContext } from '@/store/searchword';
 import { useParams } from 'next/navigation';
 import React, { useState } from 'react';
 
+// TODO - transform component in server component to allow for easy metadata settings
+// export const metadata: Metadata = {
+//   title: 'Menù - Crema & Cioccolato BT',
+//   description: 'La gelateria dai gusti più folli e golosi di Barletta'
+// };
 export default function MenuLayout({
   children
 }: {
