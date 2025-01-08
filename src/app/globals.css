@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --header-height: 72px;
+}
+
 @layer base {
   html {
     @apply scroll-smooth text-[18px] leading-snug text-smokyBrown md:text-[16px];

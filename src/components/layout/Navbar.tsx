@@ -31,7 +31,7 @@ export default function Navbar({
     >
       <ul
         className={clsx(
-          'inline-flex items-center gap-3 rounded-full border-2 border-secondary-200/50 bg-secondary-100 p-1.5',
+          'inline-flex items-center gap-3 rounded-full border-2 border-secondary-200/50 bg-secondary-0 p-1.5',
           {
             'shadow-xl': isSticky
           }

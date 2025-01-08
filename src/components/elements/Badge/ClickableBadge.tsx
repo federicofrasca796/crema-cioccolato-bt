@@ -1,3 +1,4 @@
+import useVibrate from '@/hooks/useVibrate';
 import Badge, { BadgeProps } from './Badge';
 
 export interface ClickableBadgeProps extends BadgeProps {
@@ -11,9 +12,10 @@ export default function ClickableBadge({
   isActive = false,
   ...badgeProps
 }: ClickableBadgeProps) {
+  const vibrate = useVibrate(1);
+
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const canVibrate = typeof window !== 'undefined' && navigator;
-    if (canVibrate) navigator.vibrate(1);
+    vibrate();
     if (onClick) onClick(event);
   };
 

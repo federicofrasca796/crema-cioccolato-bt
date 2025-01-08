@@ -3,7 +3,7 @@ import Grid from './grid';
 import Facebook from './icons/socials/Facebook';
 import Instagram from './icons/socials/Instagram';
 import Whatsapp from './icons/socials/Whatsapp';
-import Link from 'next/link';
+import Link from './elements/Link';
 
 const SOCIALS = [
   {
@@ -32,16 +32,18 @@ export default function Socials({
       {SOCIALS.map((social, idx) => (
         <Grid.Item key={idx}>
           <Link
+            type='button'
+            buttonVariant='text'
             href={social.href}
             target='_blank'
             className={clsx([
-              'inline-block w-full rounded-full fill-smokyBrown-700 p-1.5 transition ease-in-out hover:fill-smokyBrown-600',
+              'flex size-8 min-h-0 rounded-full border-none fill-smokyBrown-700 p-1.5 transition ease-in-out hover:fill-smokyBrown-600',
               {
                 'bg-secondary-100 hover:bg-smokyBrown-200': rounded
               }
             ])}
           >
-            <social.icon className='w-5' />
+            <social.icon className='fill-inherit' />
           </Link>
         </Grid.Item>
       ))}

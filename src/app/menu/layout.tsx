@@ -1,7 +1,5 @@
 'use client';
 
-// TODO - Encapsulate components and prefer server component for layout if possible
-
 import GoBack from '@/components/elements/GoBack';
 import InputSearch from '@/components/elements/Input/InputSearch';
 import BadgeCarousel from '@/components/TopicFilters/BadgeCarousel';
@@ -10,6 +8,11 @@ import { SearchContext } from '@/store/searchword';
 import { useParams } from 'next/navigation';
 import React, { useState } from 'react';
 
+// TODO - transform component in server component to allow for easy metadata settings
+// export const metadata: Metadata = {
+//   title: 'Menù - Crema & Cioccolato BT',
+//   description: 'La gelateria dai gusti più folli e golosi di Barletta'
+// };
 export default function MenuLayout({
   children
 }: {
@@ -41,13 +44,16 @@ export default function MenuLayout({
               <BadgeCarousel activeTopic={parsedTopic} />
             </div>
 
-            <div className='container mt-6 grid gap-5 xl:grid-cols-2'>
+            <form
+              className='container mt-6 grid gap-5 xl:grid-cols-2'
+              onSubmit={(e) => e.preventDefault()}
+            >
               <InputSearch
                 placeholder='Cerca tra le nostre delizie'
                 onChange={(e) => setSearchword(e.target.value)}
                 onCancel={() => setSearchword('')}
               />
-            </div>
+            </form>
           </header>
         </section>
 
