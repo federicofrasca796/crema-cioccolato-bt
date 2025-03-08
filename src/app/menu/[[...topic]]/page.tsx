@@ -9,7 +9,7 @@ export function generateStaticParams() {
   return params;
 }
 
-export default function MenuByTopic({
+export default async function MenuByTopic({
   params
 }: {
   // TODO: fix topic type, this is not typesafe as I can change it to string, while for nextjs it's an array
@@ -18,9 +18,13 @@ export default function MenuByTopic({
   const { topic } = params;
   if (topic?.length > 1) throw new Error(`Questa non è una sezione valida`);
 
+  const items = await (
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/menu/items`)
+  ).json();
+
   return (
     <article className='container min-h-48'>
-      <MenuRenderer topic={topic} />
+      <MenuRenderer topic={topic} items={items} />
     </article>
   );
 }
