@@ -2,17 +2,27 @@
 
 import { CategoryWithItems } from '@/data/menu/categories';
 import { Topic } from '@/data/menu/topics';
-import buildMenu from '@/service/menu';
 import { SearchContext } from '@/store/searchword';
 import { useContext, useMemo } from 'react';
 import { CategoryAccordionList } from './CategoryAccordion/CategoryAccordionList';
+import { MenuItem } from '@/data/menu/items';
+import { useMenuBuilder } from '@/hooks/useMenuBuilder';
 
-export default function MenuRenderer({ topic }: { topic: Topic['slug'] }) {
+export default function MenuRenderer({
+  topic,
+  items
+}: {
+  topic: Topic['slug'];
+  items: MenuItem[];
+}) {
   const searchword = useContext(SearchContext);
-
+  const menuData = useMenuBuilder(items, {
+    topic: topic?.[0] ?? 'all',
+    searchword
+  });
   const menuDataByTopic: { itemsCount: number; data: CategoryWithItems[] } =
     useMemo(() => {
-      const menuData = buildMenu(topic?.[0] ?? 'all', searchword);
+      // const menuData = buildMenu(topic?.[0] ?? 'all', searchword);
       return {
         itemsCount: menuData.itemsCount,
         data: Object.values(menuData.categories)
