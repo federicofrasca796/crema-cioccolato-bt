@@ -8,46 +8,53 @@ Coppetta gelato grande ,No servizio al tavolo ,"€ 3,50",,,,Si,Gelati
 Cialda Croccante ,No servizio al tavolo ,"€ 3,50",,,,Si,Gelati
 Panna ,,"€ 0,50",,,,Si,
 ,,,,,,,
-Coppa gelato media,,"€ 4,00",,,,Si,Gelati Maxi
-Coppa gelato grande ,,"€ 6,00",,,,Si,Gelati Maxi
-Frappè ,,"€ 3,50",,,,Si,Gelati Maxi
-Brioches farcita gelato ,,"€ 3,50",,,,Si,Gelati Maxi
-Crepes farcita con gelato ,,"€ 5,00",,,,Si,Gelati Maxi
-Cornetto Farcito con gelato ,,"€ 3,00",,,,Si,Gelati Maxi
+Coppa gelato media,,"€ 4,00",,,,Si,Coppe e farciture gelato
+Coppa gelato grande ,,"€ 6,00",,,,Si,Coppe e farciture gelato
+Frappè ,,"€ 3,50",,,,Si,Coppe e farciture gelato
+Brioches farcita gelato ,,"€ 3,50",,,,Si,Coppe e farciture gelato
+Crepes farcita con gelato ,,"€ 5,00",,,,Si,Coppe e farciture gelato
+Cornetto Farcito con gelato ,,"€ 3,00",,,,Si,Coppe e farciture gelato
 Panna   ,,"€ 1,00",,,,Si,
 ,,,,,,,
-Caffè ,,"€ 1,00",,,,Si,Caffe'
-Caffè decaffeinato ,,"€ 1,20",,,,Si,Caffe'
-Caffè al ghiaccio ,,"€ 1,20",,,,Si,Caffe'
-Caffè corretto ,,"€ 1,50",,,,Si,Caffe'
-Caffè leccese,,"€ 2,00",,,,Si,Caffe'
-Espressino,,"€ 1,20",,,,Si,Caffe'
+Caffè ,,"€ 1,20",,,,Si,Caffe'
+Caffè decaffeinato ,,"€ 1,40",,,,Si,Caffe'
+Caffè al ghiaccio ,,"€ 1,50",,,,Si,Caffe'
+Caffè freddo ,,"€ 2,00",,,,Si,Caffe'
+Caffè corretto nazionale,,"€ 2,00",,,,Si,Caffe'
+Caffè leccese,,"€ 2,50",,,,Si,Caffe'
+Espressino,,"€ 1,40",,,,Si,Caffe'
 Espressino decaffeinato ,,"€ 1,40",,,,Si,Caffe'
-Espressino senza lattosio ,,"€ 1,40",,,,Si,Caffe'
-Espressino di soia ,,"€ 1,50",,,,Si,Caffe'
-Ginseng ,,"€ 1,20",,,,Si,Caffe'
+Espressino senza lattosio ,,"€ 1,60",,,,Si,Caffe'
+Espressino freddo sconvolto ,,"€ 3,00",,,,Si,Caffe'
+Ginseng ,,"€ 1,40",,,,Si,Caffe'
 Caffè d'orzo,,"€ 1,50",,,,Si,Caffe'
 Cappuccino ,,"€ 1,50",,,,Si,Caffe'
-Cappuccino senza lattosio ,,"€ 1,70",,,,Si,Caffe'
-Cappuccino di soia,,"€ 1,80",,,,Si,Caffe'
-Caffè freddo ,,"€ 1,50",,,,Si,Caffe'
+Cappuccino senza lattosio ,,"€ 1,90",,,,Si,Caffe'
+Cappuccino ginseng,,"€ 2,00",,,,Si,Caffe'
+Latte e menta,,"€ 2,00",,,,Si,Caffe'
+Latte bianco ,,"€ 1,20",,,,Si,Caffe'
+Latte bianco senza lattosio ,,"€ 1,50",,,,Si,Caffe'
+Latte macchiato,,"€ 1,40",,,,Si,Caffe'
+Cioccolata calda ,,"€ 3,00",,,,Si,Caffe'
+Tisane,,"€ 2,50",,,,Si,Caffe'
+The caldo ,,"€ 2,00",,,,Si,Caffe'
 ,,,,,,,
-Latte e menta,,"€ 2,00",,,,Si,Latte e cioccolato
-Latte bianco ,,"€ 1,20",,,,Si,Latte e cioccolato
-Latte bianco senza lattosio ,,"€ 1,50",,,,Si,Latte e cioccolato
-Latte macchiato,,"€ 1,20",,,,Si,Latte e cioccolato
-Cioccolata calda ,,"€ 3,00",,,,Si,Latte e cioccolato
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
 ,,,,,,,
 Ciambella ,,"€ 1,50",,,,Si,Dolci e Paste
 Muffin Nutella ,,"€ 2,50",,,,Si,Dolci e Paste
 Biscotti,Gusti assortiti,"€ 1,00",,,,Si,Dolci e Paste
 Crepes ,,"€ 3,00",,,,Si,Dolci e Paste
 Pancakes,,"€ 4,00",,,,Si,Dolci e Paste
-Cornetto,,"€ 1,20",,,,Si,Dolci e Paste
+Cornetto,Vuoto o farcito,"€ 1,20",,,,Si,Dolci e Paste
 Cornetto vegano,,"€ 1,30",,,,Si,Dolci e Paste
 Cornetto ace,,"€ 1,50",,,,Si,Dolci e Paste
-Treccia,,"€ 1,50",,,,Si,Dolci e Paste
+Treccia,Con noci pecan,"€ 1,50",,,,Si,Dolci e Paste
 Conchiglia ,,"€ 1,50",,,,Si,Dolci e Paste
+Krapfen,,"€ 1,20",,,,Si,Dolci e Paste
 Creme assortite,,"€ 0,50",,,,Si,
 Smarties,,"€ 0,50",,,,Si,
 Granella nocciola,,"€ 0,50",,,,Si,
@@ -72,22 +79,23 @@ Succhi di frutta ,Gusti assortiti,"€ 2,00",,,,Si,Bibite
 Succo di frutti rossi,,"€ 2,50",,,,Si,Bibite
 Acqua,,"€ 1,00",,,,Si,Bibite
 Spremuta di arancia,,"€ 3,00",,,,Si,Bibite
-Tisane,,"€ 2,00",,,,Si,Bibite
-The caldo ,,"€ 2,00",,,,Si,Bibite
+,,,,,,,
+,,,,,,,
 ,,,,,,,
 Nastro Azzurro,,"€ 2,00",,,,Si,Birre
+Heineken,,"€ 2,50",,,,Si,Birre
 Beck's,,"€ 2,50",,,,Si,Birre
 Peroni al limone ,,"€ 2,00",,,,Si,Birre
-Menabrea,,"€ 3,00",,,,Si,Birre
+Alambra,,"€ 3,00",,,,Si,Birre
 Corona ,,"€ 3,00",,,,Si,Birre
 Bjorne,,"€ 3,00",,,,Si,Birre
 Tourtel analcolica,,"€ 2,00",,,,Si,Birre
 ,,,,,,,
-Kraken,,"€ 5,00",,,,Si,Rum
+Diplomatico Mantuano,,"€ 5,00",,,,Si,Rum
 Don Papa Baroko,,"€ 5,00",,,,Si,Rum
 Don Papa Masskara,,"€ 7,00",,,,Si,Rum
 Diplomatico riserva ,,"€ 7,00",,,,Si,Rum
-Havana club especial ,,"€ 2,50",,,,Si,Rum
+Havana club especial ,,"€ 3,00",,,,Si,Rum
 ,,,,,,,
 903 bianca,,"€ 3,00",,,,Si,Grappe
 903 barricata,,"€ 3,50",,,,Si,Grappe
@@ -133,8 +141,8 @@ Pinsa,,"€ 8,00",,,,Si,Snacks
 Coni fritti,2 pezzi,"€ 5,00",,,,Si,Snacks
 Bruschette,4 pezzi,"€ 3,50",,,,Si,Snacks
 ,,,,,,,
-Aperitivo grande,"Tris, Sandwich, Mini Hamburger, Piadina, Tramezzino, Bruschetta, Wurstel, 4pz Fritti ","€ 8,00",,,,Si,Taglieri
-Aperitivo analcolico,"Tris, Sandwich, Mini Hamburger, Tramezzino, Bruschetta, Wurstel + Bevanda analcolica (chiedere allo staff)","€ 8,00",,,,Si,Taglieri
+Aperitivo grande,"Tris, Sandwich, Mini Hamburger, Piadina, Tramezzino, Bruschetta, Wurstel, 4pz Fritti ","€ 8,00",,,,Si,Taglieri e panini
+Aperitivo analcolico,"Tris, Sandwich, Mini Hamburger, Tramezzino, Bruschetta, Wurstel + Bevanda analcolica (chiedere allo staff)","€ 8,00",,,,Si,Taglieri e panini
 ,,,,,,,
 ,,,,,,,
 ,,,,,,,
